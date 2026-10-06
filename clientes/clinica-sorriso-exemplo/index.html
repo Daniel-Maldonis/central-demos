@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Sorriso | Odontologia Especializada</title>
+  <meta name="description" content="Tratamentos odontológicos modernos, implantes e alinhadores invisíveis com atendimento acolhedor. Agende sua avaliação.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --accent: #0f172a;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    
+    /* Nav */
+    nav { background: #fff; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 50; }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 74px; }
+    .nav-logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+    .nav-cta { background: var(--primary); color: #fff; padding: 0.7rem 1.4rem; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--primary-dark); }
+
+    /* Hero */
+    .hero { padding: 4.5rem 0 3.5rem; text-align: center; }
+    .badge-google { display: inline-flex; align-items: center; gap: 0.5rem; background: #e0f2fe; color: #0369a1; padding: 0.4rem 1rem; border-radius: 999px; font-weight: 700; font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.5rem); color: var(--accent); line-height: 1.15; max-width: 800px; margin: 0 auto 1.25rem; }
+    .hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem; }
+    .hero-btn { background: #25d366; color: #fff; padding: 1rem 2.2rem; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 0.6rem; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); transition: transform 0.2s; }
+    .hero-btn:hover { transform: translateY(-2px); }
+
+    /* Services */
+    .services { padding: 3.5rem 0; }
+    .section-title { text-align: center; margin-bottom: 2.5rem; }
+    .section-title h2 { font-size: 2rem; color: var(--accent); font-weight: 800; }
+    .section-title p { color: var(--text-muted); font-size: 1rem; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--card-bg); padding: 2rem; border-radius: var(--radius); border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03); }
+    .card-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--accent); }
+    .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+    /* Social Proof */
+    .proof { background: #fff; border-radius: var(--radius); padding: 3rem 2rem; margin: 3rem 0; border: 1px solid #e2e8f0; text-align: center; }
+    .stars { color: #f59e0b; font-size: 1.3rem; margin-bottom: 0.75rem; }
+    .proof-quote { font-size: 1.15rem; font-style: italic; color: #334155; max-width: 650px; margin: 0 auto 1rem; }
+    .proof-author { font-weight: 700; color: var(--accent); font-size: 0.95rem; }
+
+    /* Footer */
+    footer { border-top: 1px solid #e2e8f0; padding: 2.5rem 0; text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: 4rem; }
+
+    /* Floating WhatsApp */
+    .float-wa { position: fixed; bottom: 1.5rem; right: 1.5rem; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; box-shadow: 0 10px 25px rgba(0,0,0,0.25); text-decoration: none; z-index: 100; transition: transform 0.2s; }
+    .float-wa:hover { transform: scale(1.08); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">✨ Clínica Sorriso</a>
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="nav-cta">Agendar Consulta</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="badge-google">⭐ 5.0 no Google (180+ avaliações reais)</div>
+      <h1>Seu melhor sorriso com o acolhimento que você merece</h1>
+      <p>Tecnologia digital e conforto total para você voltar a sorrir sem medo. Atendimento humanizado no coração da cidade.</p>
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="hero-btn">
+        💬 Agendar pelo WhatsApp
+      </a>
+    </section>
+
+    <section class="services">
+      <div class="section-title">
+        <h2>Tratamentos em Destaque</h2>
+        <p>Soluções completas para a sua saúde bucal e estética</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon">💎</div>
+          <h3>Alinhadores Invisíveis</h3>
+          <p>Dentes alinhados com discrição e conforto. Sem aparelhos metálicos convencionais.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Implantes Imediatos</h3>
+          <p>Recupere a segurança para mastigar e sorrir com tecnologia 3D de alta precisão.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">✨</div>
+          <h3>Clareamento a Laser</h3>
+          <p>Sorriso mais branco e radiante já na primeira sessão com acompanhamento profissional.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof">
+      <div class="stars">★★★★★</div>
+      <p class="proof-quote">"A experiência foi impecável do início ao fim! Não senti absolutamente nenhuma dor e a equipe me tratou com um carinho que nunca vi antes."</p>
+      <p class="proof-author">Mariana S. &middot; Paciente Verificada</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Clínica Sorriso Odontologia. Todos os direitos reservados. CRO-SP 00000.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="float-wa" title="Falar no WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>

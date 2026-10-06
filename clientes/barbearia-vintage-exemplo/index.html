@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vintage Club Barbearia | Estilo, Cerveja Gelada & Tradição</title>
+  <meta name="description" content="O melhor corte, barba na toalha quente e atendimento clássico para o homem moderno. Reserve seu horário.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #d97706;
+      --gold-hover: #b45309;
+      --dark: #0f172a;
+      --card-bg: #1e293b;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: var(--text); line-height: 1.6; }
+    
+    .container { max-width: 1050px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Nav */
+    nav { background: #090d16; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50; }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+    .nav-logo { font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: #fff; text-transform: uppercase; letter-spacing: 0.05em; text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-btn { background: var(--gold); color: #000; padding: 0.65rem 1.3rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; transition: background 0.2s; }
+    .nav-btn:hover { background: var(--gold-hover); color: #fff; }
+
+    /* Hero */
+    .hero { padding: 5rem 0 4rem; text-align: center; }
+    .badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(217, 119, 6, 0.15); color: #fbbf24; border: 1px solid rgba(217, 119, 6, 0.3); padding: 0.4rem 1rem; border-radius: 999px; font-weight: 700; font-size: 0.85rem; margin-bottom: 1.5rem; text-transform: uppercase; }
+    .hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(2.5rem, 6vw, 4.2rem); text-transform: uppercase; line-height: 1.05; letter-spacing: 0.02em; margin-bottom: 1.25rem; }
+    .hero h1 span { color: var(--gold); }
+    .hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 580px; margin: 0 auto 2.2rem; }
+    .hero-btn { background: #25d366; color: #fff; padding: 1.1rem 2.2rem; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 1rem; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.6rem; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.25); transition: transform 0.2s; }
+    .hero-btn:hover { transform: translateY(-2px); }
+
+    /* Services / Tabela */
+    .services { padding: 3rem 0; }
+    .section-title { text-align: center; margin-bottom: 2.5rem; }
+    .section-title h2 { font-family: 'Oswald', sans-serif; font-size: 2.2rem; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; }
+    .section-title p { color: var(--text-muted); font-size: 0.95rem; }
+
+    .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .menu-item { background: var(--card-bg); border: 1px solid var(--border); padding: 1.75rem; border-radius: 12px; display: flex; justify-content: space-between; align-items: flex-start; }
+    .menu-item-info h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .menu-item-info p { color: var(--text-muted); font-size: 0.875rem; }
+    .menu-item-price { font-family: 'Oswald', sans-serif; font-size: 1.35rem; color: var(--gold); font-weight: 700; white-space: nowrap; margin-left: 1rem; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 2.5rem 0; text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 4rem; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">Vintage <span>Club</span></a>
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" class="nav-btn">Agendar</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="badge">💈 Tradição &middot; Cortes Modernos &middot; Desde 2018</div>
+      <h1>Seu visual nas mãos de quem <span>entende</span></h1>
+      <p>Corte impecável, toalha quente, navalha afiada e uma cerveja gelada esperando por você. Sem fila e sem complicação.</p>
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" class="hero-btn">
+        ✂️ Agendar Horário no WhatsApp
+      </a>
+    </section>
+
+    <section class="services">
+      <div class="section-title">
+        <h2>Serviços & Combos</h2>
+        <p>Escolha o atendimento ideal para o seu dia</p>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Corte Tradicional / Fade</h3>
+            <p>Lavagem especial, finalização com pomada premium e alinhamento do contorno.</p>
+          </div>
+          <div class="menu-item-price">R$ 50</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Barba Terapia Completa</h3>
+            <p>Toalha quente com óleos essenciais, massagem facial e hidratação profunda.</p>
+          </div>
+          <div class="menu-item-price">R$ 45</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Combo VIP (Cabelo + Barba)</h3>
+            <p>A experiência completa com direito a cerveja cortesia da casa.</p>
+          </div>
+          <div class="menu-item-price">R$ 85</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Vintage Club Barbearia. Rua das Flores, 120 &middot; Centro.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
