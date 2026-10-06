@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa Lume | Restaurante de brasa e vinho</title>
+    <meta
+      name="description"
+      content="Casa Lume: restaurante acolhedor de brasa, vinho e ingredientes sazonais em uma atmosfera sem pressa."
+    />
+    <meta name="theme-color" content="#f4efe6" />
+    <link rel="preload" href="assets/hero-brasa.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#inicio" aria-label="Casa Lume">
+        <span>Casa Lume</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" data-nav>
+        <a href="#cardapio">Cardapio</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#ambiente">Ambiente</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="header-cta" href="#reservas">Reservar mesa</a>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <img class="hero-image" src="assets/hero-brasa.png" alt="Carne preparada na brasa ao lado do fogo" />
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content reveal">
+          <h1>Comida de brasa, vinho bom e tempo sem pressa</h1>
+          <p>
+            Na Casa Lume, o fogo e o cuidado guiam a noite. Ingredientes locais, tecnicas simples e uma mesa feita para ficar.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#reservas">Reservar mesa</a>
+            <a class="button button-ghost" href="#cardapio">Ver cardapio</a>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#cardapio" aria-label="Ir para o cardapio">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="menu-section" id="cardapio">
+        <div class="section-top reveal">
+          <div>
+            <span class="section-kicker">Da estacao para a mesa</span>
+            <h2>Destaques do cardapio</h2>
+            <p>Ingredientes frescos, parcerias com produtores locais e o sabor da estacao.</p>
+          </div>
+          <a class="text-link" href="#reservas">Ver cardapio completo</a>
+        </div>
+
+        <div class="dish-grid">
+          <article class="dish-card reveal">
+            <img src="assets/menu-sazonal.png" alt="Peixe grelhado com ervas e limao" />
+            <div>
+              <h3>Peixe na brasa</h3>
+              <p>manteiga de ervas, brotos frescos e limao tostado</p>
+              <strong>R$ 72</strong>
+            </div>
+          </article>
+          <article class="dish-card reveal">
+            <img src="assets/menu-sazonal.png" alt="Massa fresca com cogumelos" />
+            <div>
+              <h3>Fettuccine de cogumelos</h3>
+              <p>massa fresca, cogumelos dourados e queijo curado</p>
+              <strong>R$ 58</strong>
+            </div>
+          </article>
+          <article class="dish-card reveal">
+            <img src="assets/hero-brasa.png" alt="Corte de carne na brasa com limao tostado" />
+            <div>
+              <h3>Corte do fogo</h3>
+              <p>carne selada, alecrim, sal grosso e legumes da casa</p>
+              <strong>R$ 86</strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="ambience-section" id="ambiente">
+        <div class="ambience-copy reveal">
+          <span class="section-kicker">Ambiente</span>
+          <h2>Luz baixa, conversa boa e brasa no centro.</h2>
+          <p>
+            Um espaco acolhedor no coracao do bairro, com cozinha aberta, vinho em taca e musica que deixa a noite acontecer devagar.
+          </p>
+          <a class="button button-outline" href="#contato">Conhecer o ambiente</a>
+        </div>
+        <img src="assets/ambiente.png" alt="Sala de jantar aconchegante da Casa Lume" />
+      </section>
+
+      <section class="reserve-band" id="reservas">
+        <div class="reserve-copy reveal">
+          <h2>Vamos reservar sua mesa?</h2>
+          <p>Garanta seu lugar e aproveite a experiencia Casa Lume.</p>
+        </div>
+        <div class="reserve-details reveal">
+          <article>
+            <span class="icon-calendar" aria-hidden="true"></span>
+            <div>
+              <strong>Reservas</strong>
+              <p>Terca a domingo<br />das 18h as 23h30</p>
+            </div>
+          </article>
+          <article>
+            <span class="icon-chat" aria-hidden="true"></span>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5511987654321">(11) 98765-4321</a>
+            </div>
+          </article>
+        </div>
+        <a class="button button-light" href="https://wa.me/5511987654321">Reservar mesa</a>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contato">
+      <div>
+        <strong>Horarios</strong>
+        <dl>
+          <div><dt>Terca a quinta</dt><dd>18h as 23h</dd></div>
+          <div><dt>Sexta e sabado</dt><dd>18h a 0h</dd></div>
+          <div><dt>Domingo</dt><dd>12h as 16h</dd></div>
+          <div><dt>Segunda</dt><dd>Fechado</dd></div>
+        </dl>
+      </div>
+      <div>
+        <strong>Endereco</strong>
+        <address>
+          Rua Girassol, 456<br />
+          Vila Madalena<br />
+          Sao Paulo - SP, 05433-000
+        </address>
+        <a class="footer-link" href="https://maps.google.com/?q=Rua+Girassol+456+Vila+Madalena+Sao+Paulo">Ver no mapa</a>
+      </div>
+      <div>
+        <strong>Siga a casa</strong>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">f</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="legal">
+      <span>&copy; 2026 Casa Lume. Todos os direitos reservados.</span>
+      <nav>
+        <a href="#">Privacidade</a>
+        <a href="#">Termos de Uso</a>
+      </nav>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

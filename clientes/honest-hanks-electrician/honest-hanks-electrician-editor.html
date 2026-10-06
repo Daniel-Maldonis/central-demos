@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honest Hank's Electrician | 5.0★ Tampa Electrician | Upfront Honest Pricing</title>
+  <meta name="description" content="Tampa's trusted 5.0★ licensed electricians (170+ reviews). Upfront transparent pricing for electrical panel replacements, EV chargers, generators, and repairs. Call (813) 853-2369.">
+  <style>
+    :root {
+      --primary: #1E3A8A;
+      --primary-dark: #0F172A;
+      --accent: #F59E0B;
+      --accent-hover: #D97706;
+      --accent-soft: #FEF3C7;
+      --blue: #2563EB;
+      --blue-soft: #EFF6FF;
+      --ink: #0F172A;
+      --slate: #334155;
+      --muted: #64748B;
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --line: #E2E8F0;
+      --green: #10B981;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    /* Top Motto Bar */
+    .top-strip {
+      background: var(--primary-dark);
+      color: #94A3B8;
+      font-size: 13px;
+      padding: 8px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-strip .tagline {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #F8FAFC;
+      font-weight: 600;
+    }
+    .badge-quote {
+      background: var(--accent);
+      color: #000;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+    .top-strip a { color: #38BDF8; text-decoration: none; font-weight: 700; }
+
+    /* Header */
+    header {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .brand-logo-mark {
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    }
+    .brand-title h1 {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--primary-dark);
+    }
+    .brand-title span {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+      display: block;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--slate);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .phone-block {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      text-decoration: none;
+    }
+    .phone-block span { font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; }
+    .phone-block strong { font-size: 17px; font-weight: 800; color: var(--primary); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .btn-gold {
+      background: var(--accent);
+      color: #000;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    }
+    .btn-gold:hover { background: var(--accent-hover); color: #fff; transform: translateY(-1px); }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 55%, #172554 100%);
+      color: #FFFFFF;
+      padding: 64px 20px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: -150px;
+      right: -150px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245,158,11,0.12) 0%, rgba(245,158,11,0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #FDE68A;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-size: clamp(32px, 4.4vw, 52px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+      color: #F8FAFC;
+    }
+    .hero-title em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .hero-sub {
+      font-size: 17px;
+      color: #CBD5E1;
+      margin-bottom: 28px;
+      max-width: 580px;
+      line-height: 1.6;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 24px;
+      margin-top: 28px;
+    }
+    .stat-number { font-size: 26px; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 4px; }
+    .stat-label { font-size: 12px; color: #94A3B8; font-weight: 500; }
+
+    /* Form Card */
+    .lead-box {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 32px 26px;
+      color: var(--ink);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .lead-box h3 { font-size: 20px; font-weight: 800; color: var(--primary-dark); }
+    .lead-box p { font-size: 13px; color: var(--muted); margin: 4px 0 18px; }
+    .form-group { margin-bottom: 14px; }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--slate);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+    .form-control {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--ink);
+      background: #F8FAFC;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--blue);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--accent);
+      color: #000;
+      font-weight: 800;
+      font-size: 15px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 6px;
+    }
+    .submit-btn:hover { background: var(--accent-hover); color: #fff; }
+    .motto-banner {
+      background: #FEF3C7;
+      border: 1px dashed #F59E0B;
+      color: #92400E;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    /* Trust Proof Section */
+    .proof-bar {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--line);
+      padding: 24px 20px;
+    }
+    .proof-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--slate);
+    }
+    .proof-icon { color: var(--green); font-size: 18px; }
+
+    /* Services Section */
+    .section { padding: 80px 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .sec-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+    .sec-tag {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--blue);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .sec-title {
+      font-size: clamp(26px, 3.2vw, 38px);
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .sec-desc { color: var(--muted); font-size: 16px; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .serv-card {
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 30px;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .serv-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 16px 30px rgba(245, 158, 11, 0.1);
+    }
+    .serv-icon {
+      width: 54px;
+      height: 54px;
+      background: var(--blue-soft);
+      color: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .serv-card h3 { font-size: 19px; font-weight: 800; color: var(--primary-dark); margin-bottom: 10px; }
+    .serv-card p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
+    .serv-list { list-style: none; font-size: 13px; color: var(--slate); margin-bottom: 20px; }
+    .serv-list li { padding: 4px 0; display: flex; align-items: center; gap: 8px; }
+    .serv-list li::before { content: "✓"; color: var(--green); font-weight: 800; }
+    .serv-link { font-size: 14px; font-weight: 700; color: var(--blue); text-decoration: none; }
+    .serv-link:hover { text-decoration: underline; }
+
+    /* Interactive Cost Estimator */
+    .calc-container {
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 40px;
+      margin: 60px auto 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+    .calc-title { text-align: center; font-size: 22px; font-weight: 800; color: var(--primary-dark); }
+    .calc-sub { text-align: center; color: var(--muted); font-size: 14px; margin: 6px 0 28px; }
+    .calc-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+    .calc-item {
+      border: 2px solid var(--line);
+      border-radius: 10px;
+      padding: 16px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .calc-item:hover, .calc-item.active {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+    .calc-item-title { font-weight: 800; font-size: 15px; color: var(--primary-dark); }
+    .calc-item-desc { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .calc-output {
+      background: var(--primary-dark);
+      color: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .calc-out-label { font-size: 12px; color: #94A3B8; text-transform: uppercase; font-weight: 700; }
+    .calc-out-val { font-size: 34px; font-weight: 800; color: var(--accent); margin: 4px 0; }
+    .calc-out-note { font-size: 12px; color: #CBD5E1; }
+
+    /* The "Hank the Dog" Brand Box */
+    .hank-brand-box {
+      background: linear-gradient(135deg, #1E3A8A 0%, #0F172A 100%);
+      color: #FFFFFF;
+      border-radius: 16px;
+      padding: 44px 36px;
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 34px;
+      align-items: center;
+    }
+    .dog-badge-large {
+      width: 100px;
+      height: 100px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 54px;
+      box-shadow: 0 0 30px rgba(245, 158, 11, 0.4);
+      margin: 0 auto;
+    }
+    .hank-text h3 { font-size: 26px; font-weight: 800; margin-bottom: 12px; color: #F8FAFC; }
+    .hank-text p { font-size: 15px; color: #CBD5E1; line-height: 1.6; margin-bottom: 18px; }
+    .motto-highlight { font-size: 16px; font-weight: 800; color: var(--accent); }
+
+    /* Reviews */
+    .reviews-section { background: #F1F5F9; padding: 80px 20px; }
+    .rev-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .rev-card { background: #fff; border-radius: 12px; padding: 26px; border: 1px solid var(--line); }
+    .rev-stars { color: var(--accent); font-size: 16px; margin-bottom: 10px; }
+    .rev-text { font-size: 14px; color: var(--slate); line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+    .rev-author { display: flex; align-items: center; gap: 10px; }
+    .rev-avatar {
+      width: 36px;
+      height: 36px;
+      background: var(--blue-soft);
+      color: var(--primary);
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .rev-name h5 { font-size: 14px; font-weight: 700; color: var(--primary-dark); }
+    .rev-name span { font-size: 11px; color: var(--muted); }
+
+    /* Footer */
+    footer {
+      background: var(--primary-dark);
+      color: #94A3B8;
+      padding: 60px 20px 30px;
+      font-size: 13px;
+    }
+    .foot-grid {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 30px;
+    }
+    .foot-col h4 { color: #FFFFFF; font-size: 15px; font-weight: 700; margin-bottom: 14px; }
+    .foot-col ul { list-style: none; }
+    .foot-col ul li { margin-bottom: 8px; }
+    .foot-col ul a { color: #94A3B8; text-decoration: none; }
+    .foot-col ul a:hover { color: var(--accent); }
+    .foot-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+    }
+
+    /* Mobile Sticky Bar */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #FFFFFF;
+      border-top: 1px solid var(--line);
+      padding: 10px 16px;
+      z-index: 9999;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+    }
+    .mobile-bar-inner { display: flex; gap: 10px; }
+    .mob-btn {
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .mob-call { background: var(--primary); color: #fff; }
+    .mob-wa { background: #25D366; color: #fff; }
+
+    /* Floating WhatsApp */
+    .floating-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      z-index: 998;
+    }
+
+    @media (max-width: 900px) {
+      .hero-container { grid-template-columns: 1fr; }
+      .hank-brand-box { grid-template-columns: 1fr; text-align: center; }
+      .foot-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 40px 16px 60px; }
+      .foot-grid { grid-template-columns: 1fr; }
+      .mobile-bar { display: block; }
+      .floating-wa { display: none; }
+      body { padding-bottom: 60px; }
+      .header-actions .btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Strip -->
+  <div class="top-strip">
+    <div class="tagline">
+      <span class="badge-quote">UPFRONT PRICING</span>
+      <span>"What We Quote is What You Pay" · Done Right The First Time</span>
+    </div>
+    <div>
+      <span>Tampa Bay Dispatch: <a href="tel:+18138532369">(813) 853-2369</a></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="brand">
+        <div class="brand-logo-mark">🐕⚡</div>
+        <div class="brand-title">
+          <h1>Honest Hank's</h1>
+          <span>Electrician · Tampa, FL</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#panels">Panel Upgrades</a></li>
+        <li><a href="#ev">EV Chargers</a></li>
+        <li><a href="#calculator">Pricing Guide</a></li>
+        <li><a href="#reviews">5.0★ Reviews</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="tel:+18138532369" class="phone-block">
+          <span>Call Dispatch</span>
+          <strong>(813) 853-2369</strong>
+        </a>
+        <a href="#contact" class="btn btn-gold">Get Free Estimate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div>
+        <div class="hero-badge">
+          <span>★★★★★ 173 Five-Star Google Reviews</span>
+        </div>
+        <h2 class="hero-title">
+          Tampa's Most Trusted Electrician with <em>Upfront Honest Quotes</em>
+        </h2>
+        <p class="hero-sub">
+          Safety-first, code-compliant electrical work across Tampa, South Tampa, and St. Petersburg. No hidden surprises, no pushy upsells — just clean, reliable craftsmanship backed by our namesake, Hank.
+        </p>
+
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="tel:+18138532369" class="btn btn-gold" style="font-size:16px; padding:14px 28px;">
+            📞 Call (813) 853-2369
+          </a>
+          <a href="#calculator" class="btn" style="background:rgba(255,255,255,0.1); color:#fff; border:1px solid rgba(255,255,255,0.3);">
+            📊 View Project Pricing
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="stat-number">5.0 ★</div>
+            <div class="stat-label">173 Verified Reviews</div>
+          </div>
+          <div>
+            <div class="stat-number">$0</div>
+            <div class="stat-label">Hidden Surprises Guarantee</div>
+          </div>
+          <div>
+            <div class="stat-number">&lt; 1 Hr</div>
+            <div class="stat-label">Emergency Response Time</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Lead Form -->
+      <div class="lead-box" id="contact">
+        <h3>Request Your Free Estimate</h3>
+        <p>Get a fast, transparent quote from our licensed Tampa electricians</p>
+        <form onsubmit="event.preventDefault(); alert('Thank you! Hank\'s electrical team will call you back at ' + document.getElementById('hPhone').value);">
+          <div class="form-group">
+            <label>Service Category</label>
+            <select class="form-control">
+              <option>Electrical Panel Replacement / Upgrade</option>
+              <option>Level 2 Tesla / EV Charger Setup</option>
+              <option>Standby Generator Hookup</option>
+              <option>Lighting & Ceiling Fan Installation</option>
+              <option>Emergency Electrical Troubleshooting</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" class="form-control" placeholder="e.g. Robert Davis" required>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="hPhone" class="form-control" placeholder="(813) 000-0000" required>
+          </div>
+          <div class="form-group">
+            <label>Your Address or Neighborhood</label>
+            <input type="text" class="form-control" placeholder="South Tampa, Brandon, St. Pete...">
+          </div>
+          <button type="submit" class="submit-btn">⚡ Send Estimate Request</button>
+          <div class="motto-banner">
+            🛡️ "What we quote is what you pay" — Zero unexpected fees!
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof Strip -->
+  <div class="proof-bar">
+    <div class="proof-container">
+      <div class="proof-item"><span class="proof-icon">✓</span> 100% Upfront Honest Pricing</div>
+      <div class="proof-item"><span class="proof-icon">✓</span> Licensed & Fully Insured</div>
+      <div class="proof-item"><span class="proof-icon">✓</span> Free On-Site Assessments</div>
+      <div class="proof-item"><span class="proof-icon">✓</span> Code Compliance Guarantee</div>
+      <div class="proof-item"><span class="proof-icon">✓</span> Same-Day Tampa Bay Service</div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-tag">Reliable Electrical Work</span>
+        <h2 class="sec-title">Comprehensive Tampa Bay Electrical Services</h2>
+        <p class="sec-desc">Every home and business deserves an electrical system that is code-compliant, safe, and ready for modern appliances.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Panel Replacements -->
+        <div class="serv-card" id="panels">
+          <div class="serv-icon">🛡️</div>
+          <h3>Electrical Panel Replacements</h3>
+          <p>Outdated fuse boxes or dangerous panels (Challenger, Zinsco, FPE) put your family at fire risk. We install modern Square D & Eaton 200A panels.</p>
+          <ul class="serv-list">
+            <li>100A to 200A service upgrades</li>
+            <li>Arc-fault (AFCI) & GFCI breaker compliance</li>
+            <li>City inspection & TECO permitting handled</li>
+            <li>Whole-house surge protective devices (SPD)</li>
+          </ul>
+          <a href="tel:+18138532369" class="serv-link">Get Panel Replacement Quote →</a>
+        </div>
+
+        <!-- EV Chargers -->
+        <div class="serv-card" id="ev">
+          <div class="serv-icon">🚗</div>
+          <h3>Tesla & EV Charger Installations</h3>
+          <p>Charge overnight at maximum speed with a professional Level 2 (240V) wall connector installed right where you park your vehicle.</p>
+          <ul class="serv-list">
+            <li>Tesla Wall Connector & Universal J1772 chargers</li>
+            <li>Heavy-duty 50-Amp & 60-Amp dedicated breakers</li>
+            <li>Panel load calculations to ensure safe charging</li>
+            <li>Permitted installations for manufacturer warranties</li>
+          </ul>
+          <a href="tel:+18138532369" class="serv-link">Install My EV Charger →</a>
+        </div>
+
+        <!-- Generator Hookups -->
+        <div class="serv-card">
+          <div class="serv-icon">🌪️</div>
+          <h3>Generator Hookups & Interlocks</h3>
+          <p>Protect your Tampa home against tropical storm power outages. We wire manual generator transfer switches and exterior inlet boxes.</p>
+          <ul class="serv-list">
+            <li>30-Amp & 50-Amp generator power inlets</li>
+            <li>Safe interlock kits preventing utility backfeeding</li>
+            <li>Critical load wiring (refrigerator, AC, lights)</li>
+            <li>Quick-connect storm setups for portable generators</li>
+          </ul>
+          <a href="tel:+18138532369" class="serv-link">Prepare for Hurricane Season →</a>
+        </div>
+
+        <!-- Lighting Upgrades -->
+        <div class="serv-card">
+          <div class="serv-icon">💡</div>
+          <h3>Lighting & Ceiling Fan Upgrades</h3>
+          <p>Transform your interior and exterior with clean LED recessed lighting, chandelier hangs, smart dimmers, and wobble-free ceiling fans.</p>
+          <ul class="serv-list">
+            <li>Ultra-slim canless LED recessed lights</li>
+            <li>Ceiling fan installations on high/vaulted ceilings</li>
+            <li>Under-cabinet and architectural accent lighting</li>
+            <li>Outdoor security & landscape lighting</li>
+          </ul>
+          <a href="tel:+18138532369" class="serv-link">Upgrade Your Lighting →</a>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="serv-card">
+          <div class="serv-icon">🔍</div>
+          <h3>Troubleshooting & Code Inspections</h3>
+          <p>Flickering lights, dead outlets, or tripping breakers? Our master troubleshooters locate the exact root cause without guesswork.</p>
+          <ul class="serv-list">
+            <li>Comprehensive 4-point electrical inspections</li>
+            <li>Grounded outlet conversions & GFCI testing</li>
+            <li>Dead circuit & short circuit tracing</li>
+            <li>Safety assessments for real estate closings</li>
+          </ul>
+          <a href="tel:+18138532369" class="serv-link">Schedule Troubleshooting →</a>
+        </div>
+
+        <!-- Commercial Upgrades -->
+        <div class="serv-card">
+          <div class="serv-icon">🏢</div>
+          <h3>Commercial Electrical Services</h3>
+          <p>Keep your business running without costly downtime. Dedicated circuits, retail lighting build-outs, and commercial code corrections.</p>
+          <ul class="serv-list">
+            <li>Tenant build-outs and office electrical remodeling</li>
+            <li>Commercial breaker panels and subpanels</li>
+            <li>Emergency exit sign and battery backup maintenance</li>
+            <li>Preventative commercial electrical maintenance</li>
+          </ul>
+          <a href="tel:+18138532369" class="serv-link">Request Commercial Quote →</a>
+        </div>
+      </div>
+
+      <!-- Cost Calculator -->
+      <div class="calc-container" id="calculator">
+        <h3 class="calc-title">Tampa Bay Upfront Project Estimator</h3>
+        <p class="calc-sub">Transparent ballpark pricing ranges for common electrical jobs across Hillsborough & Pinellas</p>
+
+        <div class="calc-options">
+          <div class="calc-item active" onclick="setHankCalc('panel', 1750, 3400, 'Main 200A Electrical Panel Replacement', this)">
+            <div class="calc-item-title">⚡ 200A Panel Upgrade</div>
+            <div class="calc-item-desc">Square D/Eaton + Permitting</div>
+          </div>
+          <div class="calc-item" onclick="setHankCalc('ev', 550, 1200, 'Tesla / Level 2 EV Charger Installation', this)">
+            <div class="calc-item-title">🚗 EV Wall Connector</div>
+            <div class="calc-item-desc">240V 50A/60A Dedicated Line</div>
+          </div>
+          <div class="calc-item" onclick="setHankCalc('gen', 750, 1800, 'Hurricane Generator Inlet & Interlock', this)">
+            <div class="calc-item-title">🌪️ Storm Generator Hookup</div>
+            <div class="calc-item-desc">50A Inlet Box + Interlock Kit</div>
+          </div>
+          <div class="calc-item" onclick="setHankCalc('light', 350, 850, 'LED Recessed Lighting Package', this)">
+            <div class="calc-item-title">💡 Canless LED Lighting</div>
+            <div class="calc-item-desc">Dimmable living room/kitchen pack</div>
+          </div>
+        </div>
+
+        <div class="calc-output">
+          <div class="calc-out-label" id="hCalcLabel">Estimated Range for: Main 200A Electrical Panel Replacement</div>
+          <div class="calc-out-val" id="hCalcVal">$1,750 – $3,400</div>
+          <div class="calc-out-note">"What we quote is what you pay." Final quotes include licensed technician labor, premium parts, and city permit signoff.</div>
+        </div>
+      </div>
+
+      <!-- Hank the Dog Story Box -->
+      <div class="hank-brand-box">
+        <div>
+          <div class="dog-badge-large">🐕⚡</div>
+        </div>
+        <div class="hank-text">
+          <h3>Built on Trust, Backed by Hank</h3>
+          <p>
+            Our company was named after Hank — a loyal companion who symbolizes protection, unwavering dependability, and honesty. We believe dealing with an electrician shouldn't feel like a high-pressure sales pitch.
+          </p>
+          <p>
+            When our licensed technicians arrive at your Tampa home, we treat your property with spotless care, explain your options in plain English, and provide a binding upfront price before turning a single screw.
+          </p>
+          <div class="motto-highlight">
+            ★ "What We Quote is What You Pay — Done Right the First Time"
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-tag">Customer Trust</span>
+        <h2 class="sec-title">Over 170 Five-Star Ratings in Tampa Bay</h2>
+        <p class="sec-desc">Here is what local homeowners and property managers say about our honest service and clean work.</p>
+      </div>
+
+      <div class="rev-grid">
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">
+            "Honest Hank's is truly a breath of fresh air! They replaced our 40-year-old panel in South Tampa and installed a Tesla charger. The quote was completely accurate down to the dollar, and the technicians left the garage cleaner than they found it."
+          </p>
+          <div class="rev-author">
+            <div class="rev-avatar">JB</div>
+            <div class="rev-name">
+              <h5>Jan Biggart</h5>
+              <span>Homeowner · South Tampa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">
+            "We had a generator inlet installed right before the storm season. Mike and the crew explained the whole interlock process clearly and answered all my questions. Top-notch work and incredible communication!"
+          </p>
+          <div class="rev-author">
+            <div class="rev-avatar">JD</div>
+            <div class="rev-name">
+              <h5>Jay Dreesen</h5>
+              <span>Verified Customer · Tampa, FL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">
+            "Had several tripping breakers that other electricians couldn't pinpoint. Honest Hank's diagnosed the overloaded neutral in 30 minutes, fixed it on the spot, and charged a very fair rate. Highly recommend them to everyone!"
+          </p>
+          <div class="rev-author">
+            <div class="rev-avatar">TR</div>
+            <div class="rev-name">
+              <h5>Tarrish Rajbansie</h5>
+              <span>Property Owner · Tampa Bay</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+          <span style="font-size:22px;">🐕⚡</span>
+          <strong style="color:#FFFFFF; font-size:17px;">Honest Hank's Electrician</strong>
+        </div>
+        <p style="margin-bottom:14px; line-height:1.6;">
+          Tampa's safety-first electrical services contractor. Dedicated to upfront pricing, code-compliant installations, and transparent customer care.
+        </p>
+        <p style="color:var(--accent); font-weight:700;">"What We Quote is What You Pay"</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Electrical Services</h4>
+        <ul>
+          <li><a href="#panels">Panel Replacements</a></li>
+          <li><a href="#ev">Tesla / EV Chargers</a></li>
+          <li><a href="#services">Generator Inlets</a></li>
+          <li><a href="#services">Lighting & Ceiling Fans</a></li>
+          <li><a href="#services">Troubleshooting Repairs</a></li>
+          <li><a href="#services">Commercial Electrical</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Areas Served</h4>
+        <ul>
+          <li>Tampa & South Tampa</li>
+          <li>St. Petersburg & Pinellas</li>
+          <li>Brandon & Riverview</li>
+          <li>Clearwater & Largo</li>
+          <li>Dunedin & Oldsmar</li>
+          <li>Carrollwood & Westshore</li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Contact Office</h4>
+        <ul>
+          <li>📍 4302 W Wisconsin Ave, Tampa, FL 33616</li>
+          <li>📞 <a href="tel:+18138532369">(813) 853-2369</a></li>
+          <li>✉️ <a href="mailto:estimates@honesthanks.com">estimates@honesthanks.com</a></li>
+          <li>⏰ Mon–Fri: 8:00am – 6:00pm</li>
+          <li>⏰ Sat: 9:00am – 3:00pm</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div>
+        © 2026 Honest Hank's Electrician. All rights reserved. Licensed & Insured.
+      </div>
+      <div>
+        <span>Proudly Serving Homes and Businesses Across Tampa Bay</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/18138532369?text=Hi%20Honest%20Hank's%20Electrician!%20I%20saw%20your%20website%20and%20would%20like%20to%20request%20an%20estimate." target="_blank" rel="noopener" class="floating-wa" aria-label="WhatsApp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    <span>Fast Estimate</span>
+  </a>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-bar">
+    <div class="mobile-bar-inner">
+      <a href="tel:+18138532369" class="mob-btn mob-call">
+        <span>📞 Call (813) 853-2369</span>
+      </a>
+      <a href="https://wa.me/18138532369?text=Hi%20Honest%20Hank's%20Electrician!%20I%20need%20electrical%20service." target="_blank" rel="noopener" class="mob-btn mob-wa">
+        <span>💬 WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function setHankCalc(key, min, max, title, elem) {
+      document.querySelectorAll('.calc-item').forEach(function(i){ i.classList.remove('active'); });
+      elem.classList.add('active');
+      document.getElementById('hCalcLabel').textContent = 'Estimated Range for: ' + title;
+      document.getElementById('hCalcVal').textContent = '$' + min.toLocaleString() + ' – $' + max.toLocaleString();
+    }
+  </script>
+<!-- PROSPECTOR-EDITOR-START -->
+<style id="pe-style">
+#pe-bar{position:fixed;top:0;left:0;right:0;z-index:99999;background:#111;color:#fff;font:14px/1 -apple-system,Segoe UI,Roboto,sans-serif;display:flex;align-items:center;gap:16px;padding:10px 16px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+#pe-bar button{background:#22c55e;color:#fff;border:0;border-radius:8px;padding:8px 16px;font-weight:600;cursor:pointer}
+#pe-bar button:hover{background:#16a34a}
+body{margin-top:44px !important}
+.pe-hover{outline:2px dashed #22c55e !important;outline-offset:2px;cursor:pointer}
+[contenteditable="true"]:focus{outline:2px solid #3b82f6 !important;outline-offset:2px}
+</style>
+<div id="pe-bar">
+  <strong>Modo edição</strong>
+  <span>Clique em textos para editar · clique em imagens para trocar</span>
+  <button id="pe-export" type="button">Exportar página</button>
+</div>
+<input type="file" id="pe-file" accept="image/*" style="display:none">
+<script id="pe-script">
+(function(){
+  var TEXT='h1,h2,h3,h4,h5,h6,p,li,a,span,button,td,th,figcaption,blockquote,strong,em';
+  document.querySelectorAll(TEXT).forEach(function(el){
+    if(el.closest('#pe-bar'))return;
+    if(el.children.length===0||el.childElementCount<=1){
+      el.addEventListener('click',function(e){
+        if(el.tagName==='A'||el.tagName==='BUTTON')e.preventDefault();
+        el.setAttribute('contenteditable','true');el.focus();
+      });
+      el.addEventListener('mouseenter',function(){el.classList.add('pe-hover')});
+      el.addEventListener('mouseleave',function(){el.classList.remove('pe-hover')});
+      el.addEventListener('blur',function(){el.removeAttribute('contenteditable')});
+    }
+  });
+  var fileInput=document.getElementById('pe-file'),currentImg=null;
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();currentImg=img;fileInput.click()});
+    img.addEventListener('mouseenter',function(){img.classList.add('pe-hover')});
+    img.addEventListener('mouseleave',function(){img.classList.remove('pe-hover')});
+  });
+  fileInput.addEventListener('change',function(){
+    var f=fileInput.files[0];if(!f||!currentImg)return;
+    var r=new FileReader();
+    r.onload=function(){currentImg.src=r.result;if(currentImg.srcset)currentImg.removeAttribute('srcset')};
+    r.readAsDataURL(f);fileInput.value='';
+  });
+  document.getElementById('pe-export').addEventListener('click',function(){
+    var doc=document.documentElement.cloneNode(true);
+    ['#pe-bar','#pe-style','#pe-script','#pe-file'].forEach(function(s){var n=doc.querySelector(s);if(n)n.remove()});
+    doc.querySelectorAll('[contenteditable]').forEach(function(n){n.removeAttribute('contenteditable')});
+    doc.querySelectorAll('.pe-hover').forEach(function(n){n.classList.remove('pe-hover')});
+    var html='<!DOCTYPE html>\n'+doc.outerHTML;
+    var blob=new Blob([html],{type:'text/html'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='index.html';a.click();
+  });
+})();
+</script>
+<!-- PROSPECTOR-EDITOR-END -->
+</body>
+</html>

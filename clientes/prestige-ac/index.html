@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prestige Air Conditioning &amp; Heating | Scottsdale &amp; Glendale, AZ</title>
+<meta name="description" content="Prestige Air Conditioning & Heating delivers elite AC repair, Trane system installation, and rapid cooling dispatch across Scottsdale, Glendale, and Phoenix. ROC #356473.">
+<style>
+  :root {
+    --navy-black: #080D1A;
+    --navy-surface: #0F172A;
+    --navy-card: #1E293B;
+    --gold: #D4AF37;
+    --gold-light: #F3E5AB;
+    --gold-dark: #AA820A;
+    --ice-blue: #38BDF8;
+    --text-white: #FFFFFF;
+    --text-muted: #94A3B8;
+    --text-dark: #0F172A;
+    --bg-light: #F8FAFC;
+    --border: #E2E8F0;
+    --success: #10B981;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  /* Utility Top Bar */
+  .utility-bar {
+    background: #040810;
+    color: #94A3B8;
+    font-size: 13px;
+    padding: 8px 24px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .utility-bar .badges {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .utility-bar .gold-tag {
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .utility-bar .quick-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .utility-bar a { color: #FFFFFF; font-weight: 600; }
+  .utility-bar a:hover { color: var(--gold); }
+
+  /* Header */
+  header {
+    background: rgba(8, 13, 26, 0.98);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .header-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-lion-img {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--gold);
+  }
+  .logo-titles h1 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .logo-titles h1 span { color: var(--gold); }
+  .logo-titles p {
+    font-size: 11px;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+  }
+  nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+  nav a {
+    color: #E2E8F0;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--gold); }
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn-dispatch {
+    background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%);
+    color: #080D1A;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .btn-dispatch:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(180deg, #080D1A 0%, #0F172A 100%);
+    color: #FFFFFF;
+    padding: 76px 24px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .badge-lion {
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--gold);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .badge-tag {
+    background: rgba(255, 255, 255, 0.08);
+    color: #E2E8F0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .hero-text h1 {
+    font-size: clamp(32px, 4.2vw, 50px);
+    font-weight: 900;
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+  }
+  .hero-text h1 span.gold { color: var(--gold); }
+  .hero-text p.sub {
+    font-size: 17px;
+    color: #94A3B8;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 580px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 34px;
+  }
+  .btn-call-hero {
+    background: var(--gold);
+    color: #080D1A;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 16px 28px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+    transition: all 0.2s;
+  }
+  .btn-call-hero:hover {
+    background: #E5C158;
+    transform: translateY(-2px);
+  }
+  .btn-est-hero {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+  }
+  .btn-est-hero:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #FFFFFF;
+  }
+
+  .trust-strip {
+    display: flex;
+    gap: 26px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .trust-strip .item strong {
+    font-size: 20px;
+    color: #FFFFFF;
+    display: block;
+  }
+  .trust-strip .item span {
+    font-size: 12px;
+    color: #94A3B8;
+  }
+
+  /* Calculator Card */
+  .calc-card {
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    color: var(--text-dark);
+  }
+  .calc-header {
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .calc-header h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--navy-black);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .calc-header p {
+    font-size: 13px;
+    color: #64748B;
+  }
+  .calc-form .form-group {
+    margin-bottom: 16px;
+  }
+  .calc-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 6px;
+  }
+  .calc-form select,
+  .calc-form input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #F8FAFC;
+    color: var(--text-dark);
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .calc-form select:focus,
+  .calc-form input:focus {
+    border-color: var(--gold);
+    background: #FFFFFF;
+  }
+  .calc-result-box {
+    background: #FEF9C3;
+    border: 1px solid #FDE047;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .calc-result-box .label {
+    font-size: 13px;
+    color: #854D0E;
+    font-weight: 700;
+  }
+  .calc-result-box .price {
+    font-size: 22px;
+    font-weight: 900;
+    color: #713F12;
+  }
+  .btn-submit-estimate {
+    width: 100%;
+    background: var(--navy-black);
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-submit-estimate:hover {
+    background: #1E293B;
+  }
+
+  /* Services Grid */
+  .section {
+    padding: 80px 24px;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .section-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 50px;
+  }
+  .section-tag {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold-dark);
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  .section-head h2 {
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 800;
+    color: var(--navy-black);
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .section-head p {
+    font-size: 16px;
+    color: #64748B;
+  }
+  .grid-services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .service-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .service-card:hover {
+    border-color: #CBD5E1;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.06);
+  }
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #FEF08A;
+    color: #854D0E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .service-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--navy-black);
+    margin-bottom: 12px;
+  }
+  .service-card p {
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .service-features {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+  .service-features li {
+    font-size: 13px;
+    color: #334155;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .service-features li::before {
+    content: "✓";
+    color: var(--success);
+    font-weight: 800;
+  }
+  .service-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gold-dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Trane Authorized Partner Banner */
+  .brand-partner-strip {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 30px;
+  }
+  .partner-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .partner-logo-img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+  }
+  .partner-text h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--navy-black);
+  }
+  .partner-text p {
+    font-size: 14px;
+    color: #64748B;
+  }
+
+  /* Why Choose Prestige */
+  .why-box {
+    background: #080D1A;
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 60px 48px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .why-box h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    line-height: 1.25;
+  }
+  .why-box p {
+    color: #94A3B8;
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  .points-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .point-item strong {
+    font-size: 16px;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .point-item p {
+    font-size: 13px;
+    color: #94A3B8;
+    margin: 0;
+  }
+  .areas-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 30px;
+  }
+  .areas-box h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--gold);
+  }
+  .city-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .city-tag {
+    background: rgba(255, 255, 255, 0.08);
+    color: #E2E8F0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* Reviews */
+  .reviews-section {
+    background: #F1F5F9;
+    padding: 80px 24px;
+  }
+  .reviews-grid {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .review-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 26px;
+    border: 1px solid var(--border);
+  }
+  .stars {
+    color: #F59E0B;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .review-text {
+    font-size: 14px;
+    color: #334155;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .reviewer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    font-size: 13px;
+  }
+  .reviewer strong { color: var(--navy-black); }
+  .reviewer span { color: #64748B; font-size: 11px; }
+
+  /* Footer */
+  footer {
+    background: #040810;
+    color: #94A3B8;
+    padding: 60px 24px 100px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+  }
+  .footer-col h4 {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { font-size: 13px; margin-bottom: 10px; }
+  .footer-col ul li a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 1240px;
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #64748B;
+  }
+
+  /* Mobile Sticky Call Bar */
+  .mobile-call-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #080D1A;
+    border-top: 2px solid var(--gold);
+    padding: 12px 16px;
+    z-index: 1000;
+  }
+  .mobile-call-bar .bar-inner {
+    display: flex;
+    gap: 12px;
+  }
+  .mobile-call-bar a.call-btn {
+    flex: 1;
+    background: var(--gold);
+    color: #080D1A;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .mobile-call-bar a.est-btn {
+    flex: 1;
+    background: #1E293B;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  @media (max-width: 992px) {
+    .hero-container { grid-template-columns: 1fr; }
+    .grid-services { grid-template-columns: 1fr; }
+    .why-box { grid-template-columns: 1fr; }
+    .brand-partner-strip { flex-direction: column; text-align: center; }
+    .partner-left { flex-direction: column; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    nav { display: none; }
+  }
+  @media (max-width: 768px) {
+    .mobile-call-bar { display: block; }
+    .utility-bar .badges { display: none; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .points-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Info Bar -->
+<div class="utility-bar">
+  <div class="badges">
+    <span class="gold-tag">🦁 Arizona Licensed ROC #356473</span>
+    <span>•</span>
+    <span>5.0 ★ Google &amp; Angi Verified</span>
+    <span>•</span>
+    <span>Scottsdale &amp; Glendale Rapid Dispatch</span>
+  </div>
+  <div class="quick-links">
+    <span>Mon - Sun: 24/7 Emergency AC Repairs</span>
+    <a href="tel:+16025806704">📞 (602) 580-6704</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <div class="logo-box">
+      <!-- Authentic Prestige Lion Logo -->
+      <img src="https://prestigecoolairaz.com/assets/PrestigeLion-BT7ktCAi.jpg" alt="Prestige Air Conditioning Logo" class="logo-lion-img" onerror="this.style.display='none';">
+      <div class="logo-titles">
+        <h1>PRESTIGE <span>AIR</span></h1>
+        <p>Conditioning &amp; Heating LLC &bull; ROC #356473</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#services">AC Services</a>
+      <a href="#calculator">Instant Ballpark Quote</a>
+      <a href="#trane-partner">Trane Systems</a>
+      <a href="#why-us">Why Prestige</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+16025806704" class="btn-dispatch">
+        <span>⚡ Call (602) 580-6704</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <div class="hero-badges">
+        <span class="badge-lion">★ 5.0 Google Rated &bull; Under 1-Hour Arrival</span>
+        <span class="badge-tag">ROC #356473 &bull; Trane Specialist</span>
+      </div>
+      <h1>Scottsdale’s Elite <span class="gold">Air Conditioning</span> &amp; Heating Experts.</h1>
+      <p class="sub">
+        When triple-digit Arizona summer heat strikes, Prestige delivers honest diagnostics, zero pushy upselling, and industry-leading Trane AC installations across Scottsdale, Glendale, and Peoria.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+16025806704" class="btn-call-hero">
+          <span>Immediate Dispatch: (602) 580-6704</span>
+        </a>
+        <a href="#calculator" class="btn-est-hero">
+          <span>Calculate AC Price &darr;</span>
+        </a>
+      </div>
+      <div class="trust-strip">
+        <div class="item">
+          <strong>Under 60 Min</strong>
+          <span>Average Emergency Response</span>
+        </div>
+        <div class="item">
+          <strong>10-Year</strong>
+          <span>Parts &amp; Labor Warranty</span>
+        </div>
+        <div class="item">
+          <strong>Zero</strong>
+          <span>Commission Pressure</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Ballpark Cost Calculator -->
+    <div class="calc-card" id="calculator">
+      <div class="calc-header">
+        <h3>⚡ Instant AC Estimate Calculator</h3>
+        <p>Ballpark pricing for Scottsdale &amp; Glendale cooling projects.</p>
+      </div>
+      <form class="calc-form" onsubmit="event.preventDefault(); alert('Thank you! Your estimate request has been logged. Travis or a master tech will call you shortly at ' + document.getElementById('userContact').value);">
+        <div class="form-group">
+          <label for="serviceType">Select Required Service</label>
+          <select id="serviceType" onchange="calcEstimate()">
+            <option value="emergency" data-base="185">Emergency Diagnostic &amp; Capacitor/Contactor Repair</option>
+            <option value="replacement" data-base="7900" selected>Complete 16 SEER2 Trane System Replacement</option>
+            <option value="heatpump" data-base="8800">Ultra-High Efficiency Heat Pump (IRA Rebate Eligible)</option>
+            <option value="maintenance" data-base="99">Comprehensive 21-Point Summer AC Tune-Up</option>
+            <option value="minisplit" data-base="3200">Ductless Mini-Split Installation (Garage / Casita)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="homeTonnage">Home Size / System Capacity</label>
+          <select id="homeTonnage" onchange="calcEstimate()">
+            <option value="3" data-mult="1.0">Up to 1,800 sq ft (3-Ton)</option>
+            <option value="4" data-mult="1.18" selected>1,800 – 2,600 sq ft (4-Ton)</option>
+            <option value="5" data-mult="1.35">2,600 – 3,500+ sq ft (5-Ton)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="userContact">Your Phone or Email</label>
+          <input type="text" id="userContact" placeholder="(602) 000-0000 or email" required>
+        </div>
+        <div class="calc-result-box">
+          <span class="label">Estimated Price Range:</span>
+          <span class="price" id="calcPriceDisplay">$8,800 – $11,200</span>
+        </div>
+        <button type="submit" class="btn-submit-estimate">
+          Lock In Free In-Home Estimate &bull; Fast Dispatch
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Trane Authorized Partner Highlight -->
+<section class="section" id="trane-partner" style="padding-bottom: 20px;">
+  <div class="brand-partner-strip">
+    <div class="partner-left">
+      <!-- Authentic Trane Partner Logo -->
+      <img src="https://prestigecoolairaz.com/trane-its-hard-to-stop-a-trane.png" alt="Trane Authorized Partner" class="partner-logo-img" onerror="this.style.display='none';">
+      <div class="partner-text">
+        <h3>Authorized Trane Heating &amp; Air Conditioning Partner</h3>
+        <p>Built to withstand brutal 120°F Arizona desert roof temperatures. Unmatched durability, whisper-quiet operation, and 10-year registered limited warranty.</p>
+      </div>
+    </div>
+    <div>
+      <a href="tel:+16025806704" class="btn-dispatch">Inquire About Trane</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section class="section" id="services">
+  <div class="section-head">
+    <span class="section-tag">Scottsdale &amp; Glendale AC Services</span>
+    <h2>Precision Cooling When You Need It Most</h2>
+    <p>We believe in honest troubleshooting before replacement. If a $150 part solves your problem, that is what we recommend.</p>
+  </div>
+  <div class="grid-services">
+    <div class="service-card">
+      <div>
+        <div class="service-icon">⚡</div>
+        <h3>Rapid Emergency AC Repair</h3>
+        <p>AC running but blowing warm? Outside fan not spinning? Frozen coils? We arrive fast with fully equipped mobile diagnostic vans.</p>
+        <ul class="service-features">
+          <li>Compressor, fan motor &amp; contactor testing</li>
+          <li>EPA certified refrigerant leak diagnostics</li>
+          <li>Clear flat-rate repair estimate before work begins</li>
+        </ul>
+      </div>
+      <a href="tel:+16025806704" class="service-link">Call For Emergency Repair &rarr;</a>
+    </div>
+
+    <div class="service-card">
+      <div>
+        <div class="service-icon">❄️</div>
+        <h3>High-Efficiency Trane Installations</h3>
+        <p>Upgrade to a modern 16–20 SEER2 system engineered specifically for the extreme temperature swings of the Sonoran desert.</p>
+        <ul class="service-features">
+          <li>Custom sheet metal plenum fabrication</li>
+          <li>Digital programmable smart thermostat setup</li>
+          <li>Assistance with APS &amp; SRP electric utility rebates</li>
+        </ul>
+      </div>
+      <a href="tel:+16025806704" class="service-link">Get New System Pricing &rarr;</a>
+    </div>
+
+    <div class="service-card">
+      <div>
+        <div class="service-icon">🛠️</div>
+        <h3>Seasonal Preventative Maintenance</h3>
+        <p>Clean coils, tight electrical connections, and calibrated airflow safeguard your system against costly mid-summer breakdowns.</p>
+        <ul class="service-features">
+          <li>Capacitor microfarad rating check</li>
+          <li>Condensate drain line flush &amp; clearing</li>
+          <li>Static pressure and ductwork inspection</li>
+        </ul>
+      </div>
+      <a href="tel:+16025806704" class="service-link">Schedule AC Tune-Up &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Why Choose Prestige -->
+  <div class="why-box" id="why-us">
+    <div>
+      <h2>Why Homeowners Across the Valley Choose Prestige</h2>
+      <p>
+        Large corporate HVAC chains train their technicians to be salesmen with quotas. At Prestige, you work directly with experienced master technicians who respect your hard-earned money.
+      </p>
+      <div class="points-grid">
+        <div class="point-item">
+          <strong>No Commission Up-Selling</strong>
+          <p>We diagnose what is actually wrong, not what pays the highest sales commission.</p>
+        </div>
+        <div class="point-item">
+          <strong>ROC #356473 Licensed</strong>
+          <p>Fully compliant with Arizona Registrar of Contractors building and safety codes.</p>
+        </div>
+        <div class="point-item">
+          <strong>Rapid Arrival</strong>
+          <p>Local technician routing across Scottsdale, Glendale, Peoria, and Phoenix.</p>
+        </div>
+        <div class="point-item">
+          <strong>Upfront Flat Rates</strong>
+          <p>No hidden travel fees or unexpected weekend surcharges.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="areas-box">
+      <h3>📍 Valley-Wide Service Coverage</h3>
+      <p style="color:#94A3B8; font-size:13px; margin-bottom:14px;">Prompt response times throughout Maricopa County:</p>
+      <div class="city-tags">
+        <span class="city-tag">Scottsdale</span>
+        <span class="city-tag">Glendale</span>
+        <span class="city-tag">Peoria</span>
+        <span class="city-tag">Phoenix</span>
+        <span class="city-tag">Paradise Valley</span>
+        <span class="city-tag">Surprise</span>
+        <span class="city-tag">Sun City</span>
+        <span class="city-tag">Cave Creek</span>
+        <span class="city-tag">Arrowhead Ranch</span>
+        <span class="city-tag">North Phoenix</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews-section" id="reviews">
+  <div class="section-head">
+    <span class="section-tag">Verified 5.0 Star Reviews</span>
+    <h2>What Scottsdale &amp; Glendale Clients Say</h2>
+    <p>Real feedback from homeowners who experienced our rapid response and honest pricing.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Travis from Prestige arrived in under 45 minutes on a brutally hot day. Another company told me I needed a whole new $12,000 system. Travis tested the unit and found a bad $180 capacitor. AC has been running ice cold ever since!"</p>
+      <div class="reviewer">
+        <strong>Brian K.</strong>
+        <span>Scottsdale Homeowner &bull; Emergency Repair</span>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Installed a new Trane 5-ton system on our roof. Clean, punctual, respectful of our home, and passed city inspection on the very first try. The gold standard for HVAC contractors in Arizona."</p>
+      <div class="reviewer">
+        <strong>Melissa R.</strong>
+        <span>Glendale &bull; Trane System Replacement</span>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Super responsive and fair pricing. They clearly take pride in their craft and won't try to take advantage of you when your AC goes down. Highly recommended to everyone in the Valley."</p>
+      <div class="reviewer">
+        <strong>Jason D.</strong>
+        <span>Peoria / Scottsdale &bull; Seasonal Tune-Up</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="logo-box" style="margin-bottom: 16px;">
+        <img src="https://prestigecoolairaz.com/assets/PrestigeLion-BT7ktCAi.jpg" alt="Prestige Air Conditioning" style="height: 40px; width: 40px; border-radius: 50%; object-fit: cover; border: 1px solid var(--gold);">
+        <div class="logo-titles">
+          <h1>PRESTIGE <span>AIR</span></h1>
+          <p>Conditioning &amp; Heating LLC</p>
+        </div>
+      </div>
+      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+        State Certified Residential &amp; Commercial HVAC Contractor serving Scottsdale, Glendale, Peoria, and Greater Phoenix.
+      </p>
+      <p style="font-size: 12px; color: var(--gold); font-weight: 700;">
+        License ROC #356473 &bull; Bonded &amp; Insured &bull; Trane Specialist
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#services">Emergency AC Repair</a></li>
+        <li><a href="#services">Trane System Replacements</a></li>
+        <li><a href="#services">Heat Pump Conversions</a></li>
+        <li><a href="#services">Ductless Mini-Splits</a></li>
+        <li><a href="#services">Annual Maintenance</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Coverage Areas</h4>
+      <ul>
+        <li><a href="#why-us">Scottsdale &amp; Paradise Valley</a></li>
+        <li><a href="#why-us">Glendale &amp; Arrowhead</a></li>
+        <li><a href="#why-us">Peoria &amp; Surprise</a></li>
+        <li><a href="#why-us">North Phoenix &amp; Cave Creek</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Information</h4>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Phone:</strong> <a href="tel:+16025806704" style="color:var(--gold); font-weight:700;">(602) 580-6704</a></p>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Direct Email:</strong> <a href="mailto:Prestige.ac.service@gmail.com">Prestige.ac.service@gmail.com</a></p>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Hours:</strong> Mon – Sun: 24/7 Rapid Response</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Prestige Air Conditioning &amp; Heating LLC. All rights reserved. ROC #356473.</div>
+    <div>Scottsdale &amp; Glendale Premier Cooling Specialists</div>
+  </div>
+</footer>
+
+<!-- Mobile Call Bar -->
+<div class="mobile-call-bar">
+  <div class="bar-inner">
+    <a href="tel:+16025806704" class="call-btn">
+      <span>⚡ Call (602) 580-6704</span>
+    </a>
+    <a href="#calculator" class="est-btn">
+      <span>Get Estimate</span>
+    </a>
+  </div>
+</div>
+
+<script>
+function calcEstimate() {
+  const s = document.getElementById('serviceType');
+  const t = document.getElementById('homeTonnage');
+  const base = parseInt(s.selectedOptions[0].getAttribute('data-base'), 10);
+  const mult = parseFloat(t.selectedOptions[0].getAttribute('data-mult'));
+
+  let low, high;
+  if (base < 1000) {
+    low = base;
+    high = Math.round(base * 1.5);
+  } else {
+    low = Math.round(base * mult);
+    high = Math.round(low * 1.28);
+  }
+
+  document.getElementById('calcPriceDisplay').innerText = 
+    '$' + low.toLocaleString() + ' – $' + high.toLocaleString();
+}
+</script>
+
+</body>
+</html>

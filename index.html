@@ -10,7 +10,7 @@
   <style>
     :root {
       --bg: #090d16;
-      --card-bg: rgba(20, 27, 45, 0.7);
+      --card-bg: rgba(20, 27, 45, 0.75);
       --card-border: rgba(255, 255, 255, 0.08);
       --accent: #3b82f6;
       --accent-glow: rgba(59, 130, 246, 0.25);
@@ -21,11 +21,7 @@
       --success: #10b981;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -38,12 +34,8 @@
       padding: 2.5rem 1.5rem;
     }
 
-    .container {
-      max-width: 1240px;
-      margin: 0 auto;
-    }
+    .container { max-width: 1280px; margin: 0 auto; }
 
-    /* Header */
     header {
       margin-bottom: 2.5rem;
       border-bottom: 1px solid var(--card-border);
@@ -56,38 +48,26 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-    }
+    .brand { display: flex; align-items: center; gap: 0.85rem; }
 
     .brand-logo {
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border-radius: 12px;
       background: linear-gradient(135deg, #3b82f6, #6366f1);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       box-shadow: 0 4px 20px var(--accent-glow);
     }
 
-    .brand-title h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .brand-title p {
-      font-size: 0.875rem;
-      color: var(--text-muted);
-    }
+    .brand-title h1 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; }
+    .brand-title p { font-size: 0.875rem; color: var(--text-muted); }
 
     .badge-status {
       display: inline-flex;
@@ -95,9 +75,9 @@
       gap: 0.5rem;
       background: rgba(16, 185, 129, 0.12);
       color: #34d399;
-      padding: 0.45rem 0.9rem;
+      padding: 0.45rem 0.95rem;
       border-radius: 9999px;
-      font-size: 0.825rem;
+      font-size: 0.85rem;
       font-weight: 600;
       border: 1px solid rgba(16, 185, 129, 0.25);
     }
@@ -110,7 +90,28 @@
       box-shadow: 0 0 10px #10b981;
     }
 
-    /* Controls Bar */
+    .stats-bar {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .stat-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .stat-item strong {
+      color: var(--text-main);
+      font-size: 1rem;
+      margin-right: 0.25rem;
+    }
+
     .controls {
       display: flex;
       justify-content: space-between;
@@ -123,7 +124,7 @@
     .search-box {
       flex: 1;
       min-width: 280px;
-      max-width: 420px;
+      max-width: 440px;
       position: relative;
     }
 
@@ -153,11 +154,7 @@
       pointer-events: none;
     }
 
-    .filter-tags {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
+    .filter-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 
     .filter-btn {
       background: var(--card-bg);
@@ -177,10 +174,9 @@
       border-color: var(--accent);
     }
 
-    /* Grid of Demos */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
       gap: 1.75rem;
     }
 
@@ -201,45 +197,33 @@
       box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
     }
 
-    .card-preview {
-      height: 200px;
-      background: #111827;
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid var(--card-border);
+    .card-top {
+      padding: 1.25rem 1.5rem 0.75rem;
       display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .card-preview-thumb {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-      transition: transform 0.4s ease;
-    }
-
-    .demo-card:hover .card-preview-thumb {
-      transform: scale(1.03);
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
     }
 
     .card-badge {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      background: rgba(9, 13, 22, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(8px);
-      padding: 0.35rem 0.75rem;
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      padding: 0.3rem 0.75rem;
       border-radius: 8px;
       font-size: 0.75rem;
       font-weight: 600;
       color: #93c5fd;
     }
 
+    .badge-mcp {
+      background: rgba(168, 85, 247, 0.15);
+      border-color: rgba(168, 85, 247, 0.3);
+      color: #c084fc;
+    }
+
     .card-body {
-      padding: 1.5rem;
+      padding: 0.5rem 1.5rem 1.5rem;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -270,20 +254,27 @@
       color: var(--text-muted);
     }
 
+    .card-meta code {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      color: #cbd5e1;
+    }
+
     .card-actions {
-      display: flex;
-      gap: 0.75rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
     }
 
     .btn {
-      flex: 1;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1rem;
+      gap: 0.4rem;
+      padding: 0.7rem 0.85rem;
       border-radius: 10px;
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       font-weight: 600;
       cursor: pointer;
       text-decoration: none;
@@ -291,39 +282,26 @@
       border: none;
     }
 
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: #2563eb; }
 
-    .btn-primary:hover {
-      background: #2563eb;
-      box-shadow: 0 4px 14px var(--accent-glow);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid var(--card-border);
-      color: var(--text-main);
-    }
-
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
+    .btn-outline { background: transparent; border: 1px solid var(--card-border); color: var(--text-main); }
+    .btn-outline:hover { background: rgba(255, 255, 255, 0.06); }
 
     .btn-copy {
       background: rgba(16, 185, 129, 0.12);
       border: 1px solid rgba(16, 185, 129, 0.3);
       color: #34d399;
     }
+    .btn-copy:hover { background: #10b981; color: #fff; }
 
-    .btn-copy:hover {
-      background: #10b981;
-      color: #fff;
+    .btn-proposta {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fbbf24;
     }
+    .btn-proposta:hover { background: #d97706; color: #fff; }
 
-    /* Toast Notification */
     .toast {
       position: fixed;
       bottom: 2rem;
@@ -343,13 +321,8 @@
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       z-index: 1000;
     }
+    .toast.show { transform: translateY(0); opacity: 1; }
 
-    .toast.show {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    /* Modal for Device Simulation */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -361,10 +334,7 @@
       z-index: 999;
       padding: 1rem;
     }
-
-    .modal-overlay.active {
-      display: flex;
-    }
+    .modal-overlay.active { display: flex; }
 
     .phone-frame {
       width: 380px;
@@ -390,12 +360,7 @@
       font-size: 0.8rem;
     }
 
-    .phone-iframe {
-      flex: 1;
-      width: 100%;
-      border: none;
-      background: #fff;
-    }
+    .phone-iframe { flex: 1; width: 100%; border: none; background: #fff; }
 
     .close-modal {
       position: absolute;
@@ -415,7 +380,6 @@
 <body>
 
   <div class="container">
-    <!-- Header -->
     <header>
       <div class="header-top">
         <div class="brand">
@@ -430,82 +394,33 @@
           Ambiente Ativo na Vercel
         </div>
       </div>
+
+      <div class="stats-bar">
+        <div class="stat-item"><strong id="totalCount">22</strong> Total de Demos</div>
+        <div class="stat-item"><strong id="mcpCount">14</strong> Leads MCP (Exterior)</div>
+        <div class="stat-item"><strong>100%</strong> Compatível Vercel / GitHub</div>
+      </div>
     </header>
 
-    <!-- Controls -->
     <div class="controls">
       <div class="search-box">
         <svg class="search-icon" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
         </svg>
-        <input type="text" id="searchInput" class="search-input" placeholder="Buscar por cliente ou nicho...">
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar por cliente, especialidade ou nicho...">
       </div>
 
       <div class="filter-tags">
-        <button class="filter-btn active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="Saúde">Saúde & Odonto</button>
-        <button class="filter-btn" data-filter="Beleza">Beleza & Estética</button>
-        <button class="filter-btn" data-filter="Serviços">Serviços</button>
+        <button class="filter-btn active" data-filter="all">Todos (22)</button>
+        <button class="filter-btn" data-filter="MCP">Leads MCP (14)</button>
+        <button class="filter-btn" data-filter="Saúde">Saúde & Fitness (4)</button>
+        <button class="filter-btn" data-filter="Serviços">Serviços & Negócios (4)</button>
       </div>
     </div>
 
-    <!-- Grid of Client Demos -->
-    <div class="grid" id="demosGrid">
-      
-      <!-- Card 1: Clínica Sorriso -->
-      <article class="demo-card" data-category="Saúde" data-slug="clinica-sorriso-exemplo">
-        <div class="card-preview">
-          <div class="card-badge">Saúde & Odonto</div>
-          <div style="text-align: center; color: var(--text-muted); font-size: 0.9rem;">
-            🦷 <strong>Clínica Sorriso &middot; Odontologia</strong>
-          </div>
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Clínica Sorriso</h2>
-          <p class="card-desc">Redesign de alta conversão focado em agendamento de consultas via WhatsApp e avaliações do Google.</p>
-          
-          <div class="card-meta">
-            <span>Status: <strong>Pronto para envio</strong></span>
-            <span>Rota: <code>/clientes/clinica-sorriso-exemplo</code></span>
-          </div>
-
-          <div class="card-actions">
-            <a href="./clientes/clinica-sorriso-exemplo/" target="_blank" class="btn btn-primary">Abrir</a>
-            <button class="btn btn-outline" onclick="openPhoneModal('./clientes/clinica-sorriso-exemplo/')">Ver Mobile</button>
-            <button class="btn btn-copy" onclick="copyClientLink('clientes/clinica-sorriso-exemplo/')">Copiar Link</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 2: Barbearia Vintage -->
-      <article class="demo-card" data-category="Beleza" data-slug="barbearia-vintage-exemplo">
-        <div class="card-preview">
-          <div class="card-badge">Beleza & Estética</div>
-          <div style="text-align: center; color: var(--text-muted); font-size: 0.9rem;">
-            💈 <strong>Barbearia Vintage Club</strong>
-          </div>
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Barbearia Vintage</h2>
-          <p class="card-desc">Página moderna com cardápio de serviços, horários e botão direto para o agendador no WhatsApp.</p>
-          
-          <div class="card-meta">
-            <span>Status: <strong>Pronto para envio</strong></span>
-            <span>Rota: <code>/clientes/barbearia-vintage-exemplo</code></span>
-          </div>
-
-          <div class="card-actions">
-            <a href="./clientes/barbearia-vintage-exemplo/" target="_blank" class="btn btn-primary">Abrir</a>
-            <button class="btn btn-outline" onclick="openPhoneModal('./clientes/barbearia-vintage-exemplo/')">Ver Mobile</button>
-            <button class="btn btn-copy" onclick="copyClientLink('clientes/barbearia-vintage-exemplo/')">Copiar Link</button>
-          </div>
-        </div>
-      </article>
-
-    </div>
+    <div class="grid" id="demosGrid"></div>
   </div>
 
-  <!-- Toast -->
   <div id="toast" class="toast">
     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
@@ -513,7 +428,6 @@
     <span id="toastMsg">Link exclusivo copiado! Pronto para enviar.</span>
   </div>
 
-  <!-- Mobile Simulator Modal -->
   <div id="modalOverlay" class="modal-overlay" onclick="closePhoneModal(event)">
     <button class="close-modal" onclick="closePhoneModal(event)">&times;</button>
     <div class="phone-frame" onclick="event.stopPropagation()">
@@ -526,7 +440,70 @@
   </div>
 
   <script>
-    // Copiar link completo para enviar ao cliente
+    const projects = [
+      // Leads MCP Exterior
+      { name: "Aguila Electrical", slug: "aguila-electrical", category: "MCP", niche: "Elétrica (EUA)", desc: "Redesign premium para empresa de eletricidade residencial e comercial.", hasProposta: true },
+      { name: "Associated Piping Services", slug: "associated-piping-services", category: "MCP", niche: "Encanamento (EUA)", desc: "Landing page focada em serviços emergenciais e reparos hidráulicos.", hasProposta: true },
+      { name: "Comfort One A/C", slug: "comfort-one-ac", category: "MCP", niche: "Climatização HVAC (EUA)", desc: "Página de conversão para manutenção e instalação de ar condicionado.", hasProposta: true },
+      { name: "Desert Comfort Mechanical", slug: "desert-comfort-mechanical", category: "MCP", niche: "Climatização HVAC (EUA)", desc: "Design focado em agendamento rápido de revisão e troca de filtros.", hasProposta: true },
+      { name: "Greenway Plumbing", slug: "greenway-plumbing", category: "MCP", niche: "Encanamento (EUA)", desc: "Redesign moderno com avaliações reais e chamada para cotação rápida.", hasProposta: true },
+      { name: "Honest Hank's Electrician", slug: "honest-hanks-electrician", category: "MCP", niche: "Elétrica (EUA)", desc: "Página com forte prova social e foco em atendimento residencial seguro.", hasProposta: true },
+      { name: "Jeff's KBB Plumbing", slug: "jeffs-kbb-plumbing", category: "MCP", niche: "Encanamento (EUA)", desc: "Landing page profissional com destaque para serviços especializados.", hasProposta: false },
+      { name: "Lightning Bay Electric", slug: "lightning-bay-electric", category: "MCP", niche: "Elétrica (EUA)", desc: "Visual moderno para serviços elétricos de alta confiabilidade.", hasProposta: true },
+      { name: "Meridian A/C", slug: "meridian-ac", category: "MCP", niche: "Climatização HVAC (EUA)", desc: "Landing page focada em conforto térmico e atendimento 24/7.", hasProposta: true },
+      { name: "Prestige A/C", slug: "prestige-ac", category: "MCP", niche: "Climatização HVAC (EUA)", desc: "Site elegante para climatização premium residencial e predial.", hasProposta: true },
+      { name: "Reali Electric", slug: "reali-electric", category: "MCP", niche: "Elétrica (EUA)", desc: "Redesign de alto padrão com destaque para certificações e segurança.", hasProposta: true },
+      { name: "Roofer Orlando", slug: "roofer-orlando", category: "MCP", niche: "Telhados & Roofing (EUA)", desc: "Página focada em orçamentos para reformas e inspeções de telhados.", hasProposta: false },
+      { name: "Smooth Sailing Electric", slug: "smooth-sailing-electric", category: "MCP", niche: "Elétrica (EUA)", desc: "Página de conversão rápida com avaliações e garantias de serviço.", hasProposta: true },
+      { name: "Western Sky Mechanical", slug: "western-sky-mechanical", category: "MCP", niche: "Climatização HVAC (EUA)", desc: "Design técnico e confiável para sistemas de climatização industrial.", hasProposta: true },
+      
+      // Projetos de Saúde & Fitness
+      { name: "Clínica Sorriso", slug: "clinica-sorriso-exemplo", category: "Saúde", niche: "Odontologia", desc: "Design focado em agendamento de implantes e alinhadores via WhatsApp.", hasProposta: false },
+      { name: "Consultório de Nutrição", slug: "nutricionista", category: "Saúde", niche: "Nutrição Clínica", desc: "Landing page humanizada com planos nutricionais e acompanhamento.", hasProposta: false },
+      { name: "Personal Trainer Elite", slug: "personal-trainer", category: "Saúde", niche: "Fitness & Performance", desc: "Site esportivo moderno com foco em consultoria personalizada.", hasProposta: false },
+      { name: "Psicologia Clínica", slug: "psicologia-clinica", category: "Saúde", niche: "Saúde Mental", desc: "Página acolhedora e ética para agendamento de sessões online e presenciais.", hasProposta: false },
+
+      // Serviços & Negócios Locais
+      { name: "Barbearia Vintage Club", slug: "barbearia-vintage-exemplo", category: "Serviços", niche: "Beleza & Estética", desc: "Design clássico com tabela de serviços, preços e agendamento rápido.", hasProposta: false },
+      { name: "Metalcore Usinagem", slug: "metalcore-usinagem", category: "Serviços", niche: "Indústria & Usinagem", desc: "Site institucional completo com páginas de serviços, projetos e contato.", hasProposta: false },
+      { name: "Restaurante Casa Lume", slug: "restaurante-casa-lume", category: "Serviços", niche: "Gastronomia", desc: "Experiência visual sofisticada com cardápio e reservas de mesa.", hasProposta: false },
+      { name: "Projeto Elevare", slug: "projeto-elevare", category: "Serviços", niche: "Arquitetura & Engenharia", desc: "Apresentação moderna de projetos arquitetônicos e portfólio de obras.", hasProposta: false }
+    ];
+
+    const grid = document.getElementById('demosGrid');
+
+    function renderCards(list) {
+      grid.innerHTML = '';
+      list.forEach(item => {
+        const isMcp = item.category === 'MCP';
+        const card = document.createElement('article');
+        card.className = 'demo-card';
+        card.innerHTML = `
+          <div class="card-top">
+            <span class="card-badge ${isMcp ? 'badge-mcp' : ''}">${item.niche}</span>
+            ${item.hasProposta ? '<span class="card-badge" style="background:rgba(245,158,11,0.15); border-color:rgba(245,158,11,0.3); color:#fbbf24;">Antes / Depois</span>' : ''}
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">${item.name}</h2>
+            <p class="card-desc">${item.desc}</p>
+            <div class="card-meta">
+              <span>Status: <strong>Pronto</strong></span>
+              <code>/clientes/${item.slug}</code>
+            </div>
+            <div class="card-actions">
+              <a href="./clientes/${item.slug}/" target="_blank" class="btn btn-primary">Abrir Site</a>
+              <button class="btn btn-outline" onclick="openPhoneModal('./clientes/${item.slug}/')">Mobile</button>
+              <button class="btn btn-copy" onclick="copyClientLink('clientes/${item.slug}/')">Copiar Link</button>
+              ${item.hasProposta ? `<a href="./clientes/${item.slug}/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta</a>` : `<button class="btn btn-outline" onclick="copyClientLink('clientes/${item.slug}/')">Link Direto</button>`}
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    renderCards(projects);
+
     function copyClientLink(subpath) {
       const fullUrl = new URL(subpath, window.location.href).href;
       navigator.clipboard.writeText(fullUrl).then(() => {
@@ -545,7 +522,6 @@
       }, 3500);
     }
 
-    // Modal Mobile
     function openPhoneModal(url) {
       const modal = document.getElementById('modalOverlay');
       const iframe = document.getElementById('phoneIframe');
@@ -562,39 +538,32 @@
       modal.classList.remove('active');
     }
 
-    // Filtros e busca
     const searchInput = document.getElementById('searchInput');
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.demo-card');
 
-    searchInput.addEventListener('input', filterCards);
+    searchInput.addEventListener('input', applyFilters);
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        filterCards();
+        applyFilters();
       });
     });
 
-    function filterCards() {
+    function applyFilters() {
       const query = searchInput.value.toLowerCase().trim();
       const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
 
-      cards.forEach(card => {
-        const title = card.querySelector('.card-title').textContent.toLowerCase();
-        const desc = card.querySelector('.card-desc').textContent.toLowerCase();
-        const category = card.getAttribute('data-category');
-
-        const matchesSearch = title.includes(query) || desc.includes(query);
-        const matchesFilter = (activeFilter === 'all') || (category === activeFilter);
-
-        if (matchesSearch && matchesFilter) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
+      const filtered = projects.filter(item => {
+        const matchesQuery = item.name.toLowerCase().includes(query) || 
+                             item.desc.toLowerCase().includes(query) || 
+                             item.niche.toLowerCase().includes(query);
+        const matchesCat = (activeFilter === 'all') || (item.category === activeFilter);
+        return matchesQuery && matchesCat;
       });
+
+      renderCards(filtered);
     }
   </script>
 </body>

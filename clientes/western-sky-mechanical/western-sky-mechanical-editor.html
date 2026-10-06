@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Western Sky Mechanical | Phoenix &amp; Scottsdale Licensed HVAC</title>
+<meta name="description" content="Western Sky Mechanical provides 5.0-star residential and commercial HVAC services in Phoenix and Scottsdale, AZ. Licensed ROC #366148. Emergency AC repair &amp; replacement.">
+<style>
+  :root {
+    --sky-dark: #0F172A;
+    --sky-blue: #0284C7;
+    --sky-cyan: #38BDF8;
+    --sun-amber: #F59E0B;
+    --text-white: #FFFFFF;
+    --text-muted: #94A3B8;
+    --text-dark: #0F172A;
+    --bg-light: #F8FAFC;
+    --border: #E2E8F0;
+    --success: #10B981;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  /* Utility Top Bar */
+  .top-strip {
+    background: #090E17;
+    color: #94A3B8;
+    font-size: 13px;
+    padding: 8px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-strip .badges {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .top-strip .badge-gold {
+    color: var(--sun-amber);
+    font-weight: 700;
+  }
+  .top-strip .quick-contact {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .top-strip a { color: #FFFFFF; font-weight: 600; }
+  .top-strip a:hover { color: var(--sky-cyan); }
+
+  /* Header */
+  header {
+    background: rgba(15, 23, 42, 0.98);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .header-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand-logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+  }
+  .brand-fallback {
+    font-size: 20px;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+  }
+  .brand-fallback span { color: var(--sky-cyan); }
+  nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+  nav a {
+    color: #E2E8F0;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--sky-cyan); }
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn-dispatch {
+    background: linear-gradient(135deg, var(--sky-blue) 0%, var(--sky-cyan) 100%);
+    color: #0F172A;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .btn-dispatch:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+    color: #FFFFFF;
+    padding: 76px 24px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .badge-tag {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--sky-cyan);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .badge-pill {
+    background: rgba(255, 255, 255, 0.08);
+    color: #E2E8F0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .hero-text h1 {
+    font-size: clamp(32px, 4.2vw, 50px);
+    font-weight: 900;
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+  }
+  .hero-text h1 span.cyan { color: var(--sky-cyan); }
+  .hero-text p.sub {
+    font-size: 17px;
+    color: #94A3B8;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 580px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 34px;
+  }
+  .btn-hero-primary {
+    background: var(--sky-cyan);
+    color: #0F172A;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 16px 28px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
+    transition: all 0.2s;
+  }
+  .btn-hero-primary:hover {
+    background: #0284C7;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+  }
+  .btn-hero-secondary {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+  }
+  .btn-hero-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #FFFFFF;
+  }
+  .trust-strip {
+    display: flex;
+    gap: 26px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .trust-strip .item strong {
+    font-size: 20px;
+    color: #FFFFFF;
+    display: block;
+  }
+  .trust-strip .item span {
+    font-size: 12px;
+    color: #94A3B8;
+  }
+
+  /* Diagnostic & Estimator Card */
+  .calc-card {
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    color: var(--text-dark);
+  }
+  .calc-header {
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .calc-header h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--sky-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .calc-header p {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .calc-form .form-group {
+    margin-bottom: 16px;
+  }
+  .calc-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 6px;
+  }
+  .calc-form select,
+  .calc-form input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #F8FAFC;
+    color: var(--text-dark);
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .calc-form select:focus,
+  .calc-form input:focus {
+    border-color: var(--sky-blue);
+    background: #FFFFFF;
+  }
+  .calc-result-box {
+    background: #F0F9FF;
+    border: 1px solid #BAE6FD;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .calc-result-box .label {
+    font-size: 13px;
+    color: #0369A1;
+    font-weight: 700;
+  }
+  .calc-result-box .price {
+    font-size: 22px;
+    font-weight: 900;
+    color: #0C4A6E;
+  }
+  .btn-submit-estimate {
+    width: 100%;
+    background: var(--sky-dark);
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-submit-estimate:hover {
+    background: #1E293B;
+  }
+
+  /* Gallery Section */
+  .section {
+    padding: 80px 24px;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .section-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 50px;
+  }
+  .section-tag {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--sky-blue);
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  .section-head h2 {
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 800;
+    color: var(--sky-dark);
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .section-head p {
+    font-size: 16px;
+    color: var(--text-muted);
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .gallery-img-wrap {
+    height: 220px;
+    overflow: hidden;
+    background: #0F172A;
+  }
+  .gallery-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery-info {
+    padding: 22px;
+  }
+  .gallery-info span {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--sky-blue);
+  }
+  .gallery-info h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--sky-dark);
+    margin: 6px 0 8px;
+  }
+  .gallery-info p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Services Grid */
+  .grid-services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .service-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .service-card:hover {
+    border-color: #CBD5E1;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.06);
+  }
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #E0F2FE;
+    color: #0369A1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .service-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--sky-dark);
+    margin-bottom: 12px;
+  }
+  .service-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .service-features {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+  .service-features li {
+    font-size: 13px;
+    color: #334155;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .service-features li::before {
+    content: "✓";
+    color: var(--success);
+    font-weight: 800;
+  }
+  .service-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--sky-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Why Choose Banner */
+  .why-box {
+    background: var(--sky-dark);
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 60px 48px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .why-box h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    line-height: 1.25;
+  }
+  .why-box p {
+    color: #94A3B8;
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  .points-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .point-item strong {
+    font-size: 16px;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .point-item p {
+    font-size: 13px;
+    color: #94A3B8;
+    margin: 0;
+  }
+  .areas-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 30px;
+  }
+  .areas-box h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--sky-cyan);
+  }
+  .city-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .city-tag {
+    background: rgba(255, 255, 255, 0.08);
+    color: #E2E8F0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* Reviews */
+  .reviews-section {
+    background: #F1F5F9;
+    padding: 80px 24px;
+  }
+  .reviews-grid {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .review-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 26px;
+    border: 1px solid var(--border);
+  }
+  .stars {
+    color: #F59E0B;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .review-text {
+    font-size: 14px;
+    color: #334155;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .reviewer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    font-size: 13px;
+  }
+  .reviewer strong { color: var(--sky-dark); }
+  .reviewer span { color: var(--text-muted); font-size: 11px; }
+
+  /* Footer */
+  footer {
+    background: #090E17;
+    color: #94A3B8;
+    padding: 60px 24px 100px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+  }
+  .footer-col h4 {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { font-size: 13px; margin-bottom: 10px; }
+  .footer-col ul li a:hover { color: var(--sky-cyan); }
+  .footer-bottom {
+    max-width: 1240px;
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #64748B;
+  }
+
+  /* Mobile Call Bar */
+  .mobile-call-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0F172A;
+    border-top: 2px solid var(--sky-cyan);
+    padding: 12px 16px;
+    z-index: 1000;
+  }
+  .mobile-call-bar .bar-inner {
+    display: flex;
+    gap: 12px;
+  }
+  .mobile-call-bar a.call-btn {
+    flex: 1;
+    background: var(--sky-cyan);
+    color: #0F172A;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .mobile-call-bar a.est-btn {
+    flex: 1;
+    background: #1E293B;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  @media (max-width: 992px) {
+    .hero-container { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .grid-services { grid-template-columns: 1fr; }
+    .why-box { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    nav { display: none; }
+  }
+  @media (max-width: 768px) {
+    .mobile-call-bar { display: block; }
+    .top-strip .badges { display: none; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .points-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Info Bar -->
+<div class="top-strip">
+  <div class="badges">
+    <span class="badge-gold">★ 5.0 Google Rated &bull; ROC #366148</span>
+    <span>•</span>
+    <span>BBB Accredited Business</span>
+    <span>•</span>
+    <span>Phoenix &amp; Scottsdale Metro Dispatch</span>
+  </div>
+  <div class="quick-contact">
+    <span>Mon - Sat: 7:00 AM - 7:00 PM</span>
+    <a href="tel:+16027675341">📞 (602) 767-5341</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <div class="brand-logo-box">
+      <!-- Authentic Western Sky Logo -->
+      <img src="https://irp.cdn-website.com/eb01d622/dms3rep/multi/opt/WesternSkyLOGO_Trans-eee6fc7d-1920w.png" alt="Western Sky Mechanical Logo" class="brand-logo-img" onerror="this.style.display='none'; document.getElementById('brandFallback').style.display='block';">
+      <div id="brandFallback" class="brand-fallback" style="display:none;">WESTERN <span>SKY</span> HVAC</div>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#projects">Installed Systems</a>
+      <a href="#calculator">Price Calculator</a>
+      <a href="#why-us">Why Western Sky</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+16027675341" class="btn-dispatch">
+        <span>⚡ Call (602) 767-5341</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section with Diagnostic Calculator -->
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <div class="hero-badges">
+        <span class="badge-tag">Top-Rated HVAC Contractor Phoenix &amp; Scottsdale</span>
+        <span class="badge-pill">ROC #366148 &bull; Bonded &amp; Insured</span>
+      </div>
+      <h1>Dependable Cooling For Severe <span class="cyan">Arizona Heat</span>.</h1>
+      <p class="sub">
+        Expert residential and commercial air conditioning repairs, complete split system replacements, and precision ductwork engineered to survive 115°F+ desert conditions with flawless reliability.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+16027675341" class="btn-hero-primary">
+          <span>Schedule Service: (602) 767-5341</span>
+        </a>
+        <a href="#calculator" class="btn-hero-secondary">
+          <span>Calculate Price &darr;</span>
+        </a>
+      </div>
+      <div class="trust-strip">
+        <div class="item">
+          <strong>5.0 ★</strong>
+          <span>Google Verified</span>
+        </div>
+        <div class="item">
+          <strong>BBB</strong>
+          <span>Accredited Contractor</span>
+        </div>
+        <div class="item">
+          <strong>ROC #366148</strong>
+          <span>State Licensed</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Calculator Card -->
+    <div class="calc-card" id="calculator">
+      <div class="calc-header">
+        <h3>⚡ Quick AC Ballpark Estimator</h3>
+        <p>Instant pricing guidance for Phoenix &amp; Scottsdale property owners.</p>
+      </div>
+      <form class="calc-form" onsubmit="event.preventDefault(); alert('Thank you! Estimate logged for ' + document.getElementById('userPhone').value + '. Our dispatcher will call you shortly.');">
+        <div class="form-group">
+          <label for="projectSelect">Cooling Service Needed</label>
+          <select id="projectSelect" onchange="runCalc()">
+            <option value="replace" data-base="7600" selected>Full AC System Replacement (15.2+ SEER2)</option>
+            <option value="heatpump" data-base="8400">High-Efficiency Inverter Heat Pump</option>
+            <option value="diagnostic" data-base="150">Emergency Diagnostic &amp; Troubleshooting</option>
+            <option value="ducts" data-base="2400">Airflow Balancing &amp; Ductwork Optimization</option>
+            <option value="minisplit" data-base="3100">Ductless Mini-Split Installation</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sizeSelect">Property Square Footage</label>
+          <select id="sizeSelect" onchange="runCalc()">
+            <option value="1" data-mult="1.0">Up to 1,600 sq ft (3-Ton)</option>
+            <option value="2" data-mult="1.18" selected>1,600 – 2,500 sq ft (4-Ton)</option>
+            <option value="3" data-mult="1.35">2,500 – 3,600+ sq ft (5-Ton)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="userPhone">Phone or Email for Written Estimate</label>
+          <input type="text" id="userPhone" placeholder="(602) 000-0000 or email" required>
+        </div>
+        <div class="calc-result-box">
+          <span class="label">Estimated Price Range:</span>
+          <span class="price" id="calcDisplayVal">$8,900 – $11,400</span>
+        </div>
+        <button type="submit" class="btn-submit-estimate">
+          Lock In Free In-Home Diagnostic &bull; Fast Dispatch
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Authentic Work Gallery -->
+<section class="section" id="projects">
+  <div class="section-head">
+    <span class="section-tag">Authentic Work Portfolio</span>
+    <h2>Real Phoenix &amp; Scottsdale Projects</h2>
+    <p>We install top-tier equipment built to handle high static pressure and scorching attic temperatures.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-card">
+      <div class="gallery-img-wrap">
+        <img src="https://irp.cdn-website.com/eb01d622/dms3rep/multi/opt/ac-repair---installation-in-phoenix-1920w.jpg" alt="AC Installation in Phoenix" loading="lazy">
+      </div>
+      <div class="gallery-info">
+        <span>Phoenix &bull; Split System</span>
+        <h3>High-Efficiency AC Replacement</h3>
+        <p>Complete condenser and coil upgrade with insulated copper line set and vibration dampening pads.</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <div class="gallery-img-wrap">
+        <img src="https://irp.cdn-website.com/eb01d622/dms3rep/multi/opt/emergency-ac-repair-phoenix-1920w.jpg" alt="Emergency AC Repair Phoenix" loading="lazy">
+      </div>
+      <div class="gallery-info">
+        <span>Scottsdale &bull; Emergency Repair</span>
+        <h3>Rapid Rooftop AC Diagnostic</h3>
+        <p>Troubleshooting electrical controls and compressor windings to restore cooling within hours.</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <div class="gallery-img-wrap">
+        <img src="https://irp.cdn-website.com/eb01d622/dms3rep/multi/opt/ductwork-and-hvac-systems-in-phoenix-az-1920w.jpg" alt="Custom Ductwork in Phoenix" loading="lazy">
+      </div>
+      <div class="gallery-info">
+        <span>Valley-Wide &bull; Airflow Balance</span>
+        <h3>Precision Ductwork &amp; Plenums</h3>
+        <p>Eliminating hot spots and improving airflow efficiency with custom-sealed galvanized ducting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Services -->
+<section class="section" id="services" style="padding-top: 0;">
+  <div class="section-head">
+    <span class="section-tag">Our Capabilities</span>
+    <h2>Complete Commercial &amp; Residential HVAC</h2>
+    <p>Experienced technicians equipped with modern diagnostic tools to keep your power bills low and your home cool.</p>
+  </div>
+  <div class="grid-services">
+    <div class="service-card">
+      <div>
+        <div class="service-icon">❄️</div>
+        <h3>Rapid AC Repair &amp; Triage</h3>
+        <p>AC making grinding noises, cycling constantly, or not blowing cold air? We diagnose and fix the root problem quickly.</p>
+        <ul class="service-features">
+          <li>Condenser fan and motor replacements</li>
+          <li>Contactor and capacitor testing</li>
+          <li>Refrigerant charge inspection</li>
+        </ul>
+      </div>
+      <a href="tel:+16027675341" class="service-link">Schedule AC Repair &rarr;</a>
+    </div>
+
+    <div class="service-card">
+      <div>
+        <div class="service-icon">⚡</div>
+        <h3>Turnkey System Replacements</h3>
+        <p>Replace an inefficient, failing system with a modern 15.2+ SEER2 unit engineered for the Sonoran desert climate.</p>
+        <ul class="service-features">
+          <li>Full permit acquisition and code inspection</li>
+          <li>Manufacturer warranty registration</li>
+          <li>Digital thermostat integration</li>
+        </ul>
+      </div>
+      <a href="tel:+16027675341" class="service-link">Get New System Pricing &rarr;</a>
+    </div>
+
+    <div class="service-card">
+      <div>
+        <div class="service-icon">🛠️</div>
+        <h3>Duct Design &amp; Airflow Balance</h3>
+        <p>Uneven temperatures in different bedrooms? Leaky ducts can waste up to 30% of your cooling energy into the attic.</p>
+        <ul class="service-features">
+          <li>R-8 high-insulation flex ducting</li>
+          <li>Static pressure testing &amp; balancing</li>
+          <li>Return air volume optimization</li>
+        </ul>
+      </div>
+      <a href="tel:+16027675341" class="service-link">Optimize Airflow &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Why Choose Western Sky -->
+  <div class="why-box" id="why-us">
+    <div>
+      <h2>Why Homeowners Count on Western Sky Mechanical</h2>
+      <p>
+        We treat every customer with upfront honesty and respect. No hidden diagnostic fees, no high-pressure sales pitches, just master technicians solving cooling challenges.
+      </p>
+      <div class="points-grid">
+        <div class="point-item">
+          <strong>ROC #366148 Licensed</strong>
+          <p>State certified, fully bonded, and insured for complete homeowner peace of mind.</p>
+        </div>
+        <div class="point-item">
+          <strong>BBB Accredited</strong>
+          <p>Recognized for ethical business practices and transparent customer service.</p>
+        </div>
+        <div class="point-item">
+          <strong>No Pressure Quotes</strong>
+          <p>Clear, line-item written estimates before any work begins.</p>
+        </div>
+        <div class="point-item">
+          <strong>Master Craftsmanship</strong>
+          <p>Tight electrical connections, clean brazing, and thorough post-install testing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="areas-box">
+      <h3>📍 Valley-Wide Service Coverage</h3>
+      <p style="color:#94A3B8; font-size:13px; margin-bottom:14px;">Prompt response times throughout Maricopa County:</p>
+      <div class="city-tags">
+        <span class="city-tag">Phoenix</span>
+        <span class="city-tag">Scottsdale</span>
+        <span class="city-tag">Paradise Valley</span>
+        <span class="city-tag">Glendale</span>
+        <span class="city-tag">Peoria</span>
+        <span class="city-tag">Tempe</span>
+        <span class="city-tag">Mesa</span>
+        <span class="city-tag">Chandler</span>
+        <span class="city-tag">Gilbert</span>
+        <span class="city-tag">Cave Creek</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews-section" id="reviews">
+  <div class="section-head">
+    <span class="section-tag">Verified 5.0 Star Reviews</span>
+    <h2>What Valley Homeowners Say</h2>
+    <p>Real feedback from local residents who trust Western Sky Mechanical for their heating and cooling.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Western Sky Mechanical replaced our 15-year-old rooftop AC unit. They were prompt, explained the SEER2 efficiency differences clearly, and finished in one day. Our electric bill is noticeably lower!"</p>
+      <div class="reviewer">
+        <strong>Kenneth T.</strong>
+        <span>Phoenix &bull; System Replacement</span>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Our AC quit on a Friday afternoon when it was 112 outside. Western Sky came out, diagnosed a faulty motor, replaced it from their truck inventory, and saved our weekend. Highly recommend!"</p>
+      <div class="reviewer">
+        <strong>Brenda M.</strong>
+        <span>Scottsdale &bull; Emergency Repair</span>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Honest and professional contractor. They redid our attic ductwork and balanced the airflow so our master bedroom finally stays cold. Great crew and fair pricing."</p>
+      <div class="reviewer">
+        <strong>Derek P.</strong>
+        <span>Glendale &bull; Ductwork Balancing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div style="margin-bottom: 16px;">
+        <img src="https://irp.cdn-website.com/eb01d622/dms3rep/multi/opt/WesternSkyLOGO_Trans-eee6fc7d-1920w.png" alt="Western Sky Mechanical" style="height: 42px; width: auto; object-fit: contain;">
+      </div>
+      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+        State Certified Residential &amp; Commercial HVAC Contractor serving Phoenix, Scottsdale, and the surrounding Valley.
+      </p>
+      <p style="font-size: 12px; color: var(--sky-cyan); font-weight: 700;">
+        License ROC #366148 &bull; Bonded &amp; Insured &bull; BBB Accredited
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#services">Emergency AC Repair</a></li>
+        <li><a href="#services">High-Efficiency AC Installs</a></li>
+        <li><a href="#services">Heat Pump Conversions</a></li>
+        <li><a href="#services">Ductwork Optimization</a></li>
+        <li><a href="#services">Commercial HVAC</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Service Coverage</h4>
+      <ul>
+        <li><a href="#why-us">Phoenix</a></li>
+        <li><a href="#why-us">Scottsdale</a></li>
+        <li><a href="#why-us">Paradise Valley</a></li>
+        <li><a href="#why-us">Glendale &amp; Peoria</a></li>
+        <li><a href="#why-us">Tempe &amp; Mesa</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Information</h4>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Phone:</strong> <a href="tel:+16027675341" style="color:var(--sky-cyan); font-weight:700;">(602) 767-5341</a></p>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Email:</strong> <a href="mailto:Westernskymechanicalaz@gmail.com">Westernskymechanicalaz@gmail.com</a></p>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Hours:</strong> Mon – Sat: 7:00 AM – 7:00 PM</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Western Sky Mechanical LLC. All rights reserved. ROC #366148.</div>
+    <div>Phoenix &amp; Scottsdale Premier HVAC Contractor</div>
+  </div>
+</footer>
+
+<!-- Mobile Call Bar -->
+<div class="mobile-call-bar">
+  <div class="bar-inner">
+    <a href="tel:+16027675341" class="call-btn">
+      <span>⚡ Call (602) 767-5341</span>
+    </a>
+    <a href="#calculator" class="est-btn">
+      <span>Get Estimate</span>
+    </a>
+  </div>
+</div>
+
+<script>
+function runCalc() {
+  const p = document.getElementById('projectSelect');
+  const s = document.getElementById('sizeSelect');
+  const base = parseInt(p.selectedOptions[0].getAttribute('data-base'), 10);
+  const mult = parseFloat(s.selectedOptions[0].getAttribute('data-mult'));
+
+  let low, high;
+  if (base < 1000) {
+    low = base;
+    high = Math.round(base * 1.5);
+  } else {
+    low = Math.round(base * mult);
+    high = Math.round(low * 1.28);
+  }
+
+  document.getElementById('calcDisplayVal').innerText = 
+    '$' + low.toLocaleString() + ' – $' + high.toLocaleString();
+}
+</script>
+
+<!-- PROSPECTOR-EDITOR-START -->
+<style id="pe-style">
+#pe-bar{position:fixed;top:0;left:0;right:0;z-index:99999;background:#111;color:#fff;font:14px/1 -apple-system,Segoe UI,Roboto,sans-serif;display:flex;align-items:center;gap:16px;padding:10px 16px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+#pe-bar button{background:#22c55e;color:#fff;border:0;border-radius:8px;padding:8px 16px;font-weight:600;cursor:pointer}
+#pe-bar button:hover{background:#16a34a}
+body{margin-top:44px !important}
+.pe-hover{outline:2px dashed #22c55e !important;outline-offset:2px;cursor:pointer}
+[contenteditable="true"]:focus{outline:2px solid #3b82f6 !important;outline-offset:2px}
+</style>
+<div id="pe-bar">
+  <strong>Modo edição</strong>
+  <span>Clique em textos para editar · clique em imagens para trocar</span>
+  <button id="pe-export" type="button">Exportar página</button>
+</div>
+<input type="file" id="pe-file" accept="image/*" style="display:none">
+<script id="pe-script">
+(function(){
+  var TEXT='h1,h2,h3,h4,h5,h6,p,li,a,span,button,td,th,figcaption,blockquote,strong,em';
+  document.querySelectorAll(TEXT).forEach(function(el){
+    if(el.closest('#pe-bar'))return;
+    if(el.children.length===0||el.childElementCount<=1){
+      el.addEventListener('click',function(e){
+        if(el.tagName==='A'||el.tagName==='BUTTON')e.preventDefault();
+        el.setAttribute('contenteditable','true');el.focus();
+      });
+      el.addEventListener('mouseenter',function(){el.classList.add('pe-hover')});
+      el.addEventListener('mouseleave',function(){el.classList.remove('pe-hover')});
+      el.addEventListener('blur',function(){el.removeAttribute('contenteditable')});
+    }
+  });
+  var fileInput=document.getElementById('pe-file'),currentImg=null;
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();currentImg=img;fileInput.click()});
+    img.addEventListener('mouseenter',function(){img.classList.add('pe-hover')});
+    img.addEventListener('mouseleave',function(){img.classList.remove('pe-hover')});
+  });
+  fileInput.addEventListener('change',function(){
+    var f=fileInput.files[0];if(!f||!currentImg)return;
+    var r=new FileReader();
+    r.onload=function(){currentImg.src=r.result;if(currentImg.srcset)currentImg.removeAttribute('srcset')};
+    r.readAsDataURL(f);fileInput.value='';
+  });
+  document.getElementById('pe-export').addEventListener('click',function(){
+    var doc=document.documentElement.cloneNode(true);
+    ['#pe-bar','#pe-style','#pe-script','#pe-file'].forEach(function(s){var n=doc.querySelector(s);if(n)n.remove()});
+    doc.querySelectorAll('[contenteditable]').forEach(function(n){n.removeAttribute('contenteditable')});
+    doc.querySelectorAll('.pe-hover').forEach(function(n){n.classList.remove('pe-hover')});
+    var html='<!DOCTYPE html>\n'+doc.outerHTML;
+    var blob=new Blob([html],{type:'text/html'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='index.html';a.click();
+  });
+})();
+</script>
+<!-- PROSPECTOR-EDITOR-END -->
+</body>
+</html>
