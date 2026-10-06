@@ -4,21 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Central de Demonstrações | Daniel Maldonis</title>
+  <meta name="description" content="Central de sites de demonstração e redesigns de alta conversão para clientes e prospecção.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #090d16;
-      --card-bg: rgba(20, 27, 45, 0.75);
+      --card-bg: rgba(20, 27, 45, 0.78);
       --card-border: rgba(255, 255, 255, 0.08);
-      --accent: #3b82f6;
-      --accent-glow: rgba(59, 130, 246, 0.25);
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --accent-glow: rgba(37, 99, 235, 0.25);
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
-      --badge-bg: rgba(59, 130, 246, 0.15);
-      --badge-text: #60a5fa;
       --success: #10b981;
+      --amber: #f59e0b;
+      --purple: #a855f7;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -29,12 +31,12 @@
       color: var(--text-main);
       min-height: 100vh;
       background-image: 
-        radial-gradient(circle at 15% 10%, rgba(59, 130, 246, 0.12) 0%, transparent 40%),
-        radial-gradient(circle at 85% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 45%);
+        radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.14) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 45%);
       padding: 2.5rem 1.5rem;
     }
 
-    .container { max-width: 1280px; margin: 0 auto; }
+    .container { max-width: 1300px; margin: 0 auto; }
 
     header {
       margin-bottom: 2.5rem;
@@ -47,35 +49,35 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.25rem;
       margin-bottom: 1.25rem;
     }
 
-    .brand { display: flex; align-items: center; gap: 0.85rem; }
+    .brand { display: flex; align-items: center; gap: 0.9rem; }
 
     .brand-logo {
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #3b82f6, #6366f1);
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
       font-size: 1.3rem;
-      box-shadow: 0 4px 20px var(--accent-glow);
+      box-shadow: 0 6px 22px var(--accent-glow);
     }
 
-    .brand-title h1 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; }
+    .brand-title h1 { font-size: 1.65rem; font-weight: 800; letter-spacing: -0.02em; }
     .brand-title p { font-size: 0.875rem; color: var(--text-muted); }
 
     .badge-status {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.55rem;
       background: rgba(16, 185, 129, 0.12);
       color: #34d399;
-      padding: 0.45rem 0.95rem;
+      padding: 0.45rem 1rem;
       border-radius: 9999px;
       font-size: 0.85rem;
       font-weight: 600;
@@ -92,15 +94,15 @@
 
     .stats-bar {
       display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
       flex-wrap: wrap;
-      margin-top: 1rem;
+      margin-top: 1.25rem;
     }
 
     .stat-item {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--card-border);
-      padding: 0.6rem 1.2rem;
+      padding: 0.6rem 1.25rem;
       border-radius: 10px;
       font-size: 0.85rem;
       color: var(--text-muted);
@@ -108,7 +110,7 @@
 
     .stat-item strong {
       color: var(--text-main);
-      font-size: 1rem;
+      font-size: 1.05rem;
       margin-right: 0.25rem;
     }
 
@@ -117,14 +119,14 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.25rem;
       margin-bottom: 2rem;
     }
 
     .search-box {
       flex: 1;
-      min-width: 280px;
-      max-width: 440px;
+      min-width: 290px;
+      max-width: 460px;
       position: relative;
     }
 
@@ -133,7 +135,7 @@
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 12px;
-      padding: 0.75rem 1rem 0.75rem 2.75rem;
+      padding: 0.8rem 1rem 0.8rem 2.85rem;
       color: var(--text-main);
       font-size: 0.925rem;
       outline: none;
@@ -160,10 +162,10 @@
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       color: var(--text-muted);
-      padding: 0.5rem 0.95rem;
+      padding: 0.55rem 1rem;
       border-radius: 8px;
       font-size: 0.85rem;
-      font-weight: 500;
+      font-weight: 600;
       cursor: pointer;
       transition: all 0.2s;
     }
@@ -176,7 +178,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
       gap: 1.75rem;
     }
 
@@ -193,22 +195,22 @@
 
     .demo-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(59, 130, 246, 0.4);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+      border-color: rgba(37, 99, 235, 0.45);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
     }
 
     .card-top {
       padding: 1.25rem 1.5rem 0.75rem;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
       gap: 0.5rem;
     }
 
     .card-badge {
       display: inline-block;
-      background: rgba(59, 130, 246, 0.15);
-      border: 1px solid rgba(59, 130, 246, 0.3);
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(37, 99, 235, 0.3);
       padding: 0.3rem 0.75rem;
       border-radius: 8px;
       font-size: 0.75rem;
@@ -220,6 +222,16 @@
       background: rgba(168, 85, 247, 0.15);
       border-color: rgba(168, 85, 247, 0.3);
       color: #c084fc;
+    }
+
+    .badge-proposta {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: rgba(245, 158, 11, 0.3);
+      color: #fbbf24;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
     }
 
     .card-body {
@@ -238,7 +250,7 @@
     .card-desc {
       font-size: 0.875rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.55;
       margin-bottom: 1.25rem;
       flex: 1;
     }
@@ -256,14 +268,15 @@
 
     .card-meta code {
       background: rgba(255, 255, 255, 0.05);
-      padding: 0.2rem 0.5rem;
+      padding: 0.25rem 0.6rem;
       border-radius: 6px;
       color: #cbd5e1;
+      font-size: 0.8rem;
     }
 
     .card-actions {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.3fr 1fr;
       gap: 0.6rem;
     }
 
@@ -272,9 +285,9 @@
       align-items: center;
       justify-content: center;
       gap: 0.4rem;
-      padding: 0.7rem 0.85rem;
+      padding: 0.75rem 0.9rem;
       border-radius: 10px;
-      font-size: 0.85rem;
+      font-size: 0.875rem;
       font-weight: 600;
       cursor: pointer;
       text-decoration: none;
@@ -282,25 +295,37 @@
       border: none;
     }
 
-    .btn-primary { background: var(--accent); color: #fff; }
-    .btn-primary:hover { background: #2563eb; }
-
-    .btn-outline { background: transparent; border: 1px solid var(--card-border); color: var(--text-main); }
-    .btn-outline:hover { background: rgba(255, 255, 255, 0.06); }
+    .btn-ver-site {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-ver-site:hover {
+      background: var(--accent-hover);
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
 
     .btn-copy {
       background: rgba(16, 185, 129, 0.12);
       border: 1px solid rgba(16, 185, 129, 0.3);
       color: #34d399;
     }
-    .btn-copy:hover { background: #10b981; color: #fff; }
+    .btn-copy:hover {
+      background: #10b981;
+      color: #fff;
+    }
 
     .btn-proposta {
+      grid-column: span 2;
       background: rgba(245, 158, 11, 0.12);
       border: 1px solid rgba(245, 158, 11, 0.3);
       color: #fbbf24;
+      padding: 0.65rem;
+      font-size: 0.825rem;
     }
-    .btn-proposta:hover { background: #d97706; color: #fff; }
+    .btn-proposta:hover {
+      background: #d97706;
+      color: #fff;
+    }
 
     .toast {
       position: fixed;
@@ -322,59 +347,6 @@
       z-index: 1000;
     }
     .toast.show { transform: translateY(0); opacity: 1; }
-
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(8px);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-      padding: 1rem;
-    }
-    .modal-overlay.active { display: flex; }
-
-    .phone-frame {
-      width: 380px;
-      height: 720px;
-      max-height: 90vh;
-      background: #000;
-      border-radius: 40px;
-      border: 8px solid #27272a;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .phone-header {
-      background: #18181b;
-      padding: 0.75rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: var(--text-muted);
-      font-size: 0.8rem;
-    }
-
-    .phone-iframe { flex: 1; width: 100%; border: none; background: #fff; }
-
-    .close-modal {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      color: #fff;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      font-size: 1.25rem;
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
@@ -396,9 +368,10 @@
       </div>
 
       <div class="stats-bar">
-        <div class="stat-item"><strong id="totalCount">22</strong> Total de Demos</div>
-        <div class="stat-item"><strong id="mcpCount">14</strong> Leads MCP (Exterior)</div>
-        <div class="stat-item"><strong>100%</strong> Compatível Vercel / GitHub</div>
+        <div class="stat-item"><strong>22</strong> Sites Disponíveis</div>
+        <div class="stat-item"><strong>14</strong> Leads MCP (Exterior)</div>
+        <div class="stat-item"><strong>8</strong> Projetos Nacionais</div>
+        <div class="stat-item"><strong>100%</strong> Compatível Vercel</div>
       </div>
     </header>
 
@@ -407,107 +380,477 @@
         <svg class="search-icon" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
         </svg>
-        <input type="text" id="searchInput" class="search-input" placeholder="Buscar por cliente, especialidade ou nicho...">
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar por cliente, nicho ou pasta...">
       </div>
 
       <div class="filter-tags">
         <button class="filter-btn active" data-filter="all">Todos (22)</button>
-        <button class="filter-btn" data-filter="MCP">Leads MCP (14)</button>
-        <button class="filter-btn" data-filter="Saúde">Saúde & Fitness (4)</button>
+        <button class="filter-btn" data-filter="MCP">Leads MCP Exterior (14)</button>
+        <button class="filter-btn" data-filter="Saúde">Saúde & Bem-Estar (4)</button>
         <button class="filter-btn" data-filter="Serviços">Serviços & Negócios (4)</button>
       </div>
     </div>
 
-    <div class="grid" id="demosGrid"></div>
+    <!-- Grid de Sites -->
+    <div class="grid" id="demosGrid">
+      
+      <!-- 1. Aguila Electrical -->
+      <article class="demo-card" data-category="MCP" data-slug="aguila-electrical">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Elétrica (EUA)</span>
+          <span class="badge-proposta">Antes / Depois</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Aguila Electrical</h2>
+          <p class="card-desc">Redesign premium para empresa de serviços elétricos residenciais e comerciais com prova social e botões diretos de emergência.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/aguila-electrical/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/aguila-electrical/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/aguila-electrical/')">Copiar link</button>
+            <a href="./clientes/aguila-electrical/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta (Antes/Depois)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Associated Piping Services -->
+      <article class="demo-card" data-category="MCP" data-slug="associated-piping-services">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Encanamento (EUA)</span>
+          <span class="badge-proposta">Antes / Depois</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Associated Piping Services</h2>
+          <p class="card-desc">Landing page de alta conversão focada em reparos hidráulicos urgentes, encanamento e substituição de tubulações.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/associated-piping-services/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/associated-piping-services/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/associated-piping-services/')">Copiar link</button>
+            <a href="./clientes/associated-piping-services/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta (Antes/Depois)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Barbearia Vintage -->
+      <article class="demo-card" data-category="Serviços" data-slug="barbearia-vintage-exemplo">
+        <div class="card-top">
+          <span class="card-badge">Beleza & Estética</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Barbearia Vintage Club</h2>
+          <p class="card-desc">Página moderna com cardápio de serviços, valores de combos, horários de atendimento e agendamento rápido via WhatsApp.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/barbearia-vintage-exemplo/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/barbearia-vintage-exemplo/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/barbearia-vintage-exemplo/')">Copiar link</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Clínica Sorriso -->
+      <article class="demo-card" data-category="Saúde" data-slug="clinica-sorriso-exemplo">
+        <div class="card-top">
+          <span class="card-badge">Odontologia</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Clínica Sorriso</h2>
+          <p class="card-desc">Design acolhedor e humanizado com tratamentos em destaque (implantes, alinhadores), nota do Google e agendamento de consultas.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/clinica-sorriso-exemplo/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/clinica-sorriso-exemplo/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/clinica-sorriso-exemplo/')">Copiar link</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. Comfort One A/C -->
+      <article class="demo-card" data-category="MCP" data-slug="comfort-one-ac">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Climatização HVAC (EUA)</span>
+          <span class="badge-proposta">Antes / Depois</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Comfort One A/C</h2>
+          <p class="card-desc">Página de conversão rápida para instalação e manutenção preventiva de ar condicionado em regiões de calor extremo.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/comfort-one-ac/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/comfort-one-ac/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/comfort-one-ac/')">Copiar link</button>
+            <a href="./clientes/comfort-one-ac/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta (Antes/Depois)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6. Desert Comfort Mechanical -->
+      <article class="demo-card" data-category="MCP" data-slug="desert-comfort-mechanical">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Climatização HVAC (EUA)</span>
+          <span class="badge-proposta">Antes / Depois</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Desert Comfort Mechanical</h2>
+          <p class="card-desc">Redesign com foco em resposta de emergência, troca de compressores e planos de manutenção residencial com alta conversão.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/desert-comfort-mechanical/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/desert-comfort-mechanical/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/desert-comfort-mechanical/')">Copiar link</button>
+            <a href="./clientes/desert-comfort-mechanical/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta (Antes/Depois)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7. Greenway Plumbing -->
+      <article class="demo-card" data-category="MCP" data-slug="greenway-plumbing">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Encanamento (EUA)</span>
+          <span class="badge-proposta">Antes / Depois</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Greenway Plumbing</h2>
+          <p class="card-desc">Landing page estruturada com serviços de desentupimento, aquecedores e avaliações do Google em destaque.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/greenway-plumbing/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/greenway-plumbing/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/greenway-plumbing/')">Copiar link</button>
+            <a href="./clientes/greenway-plumbing/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta (Antes/Depois)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8. Honest Hank's Electrician -->
+      <article class="demo-card" data-category="MCP" data-slug="honest-hanks-electrician">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Elétrica (EUA)</span>
+          <span class="badge-proposta">Antes / Depois</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Honest Hank's Electrician</h2>
+          <p class="card-desc">Proposta visual com foco em confiabilidade, painéis elétricos, iluminação e depoimentos de moradores locais.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/honest-hanks-electrician/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/honest-hanks-electrician/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/honest-hanks-electrician/')">Copiar link</button>
+            <a href="./clientes/honest-hanks-electrician/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta (Antes/Depois)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 9. Jeff's KBB Plumbing -->
+      <article class="demo-card" data-category="MCP" data-slug="jeffs-kbb-plumbing">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Encanamento (EUA)</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Jeff's KBB Plumbing</h2>
+          <p class="card-desc">Site objetivo para serviços de encanamento de cozinhas e banheiros com botões de chamada direta e cotação rápida.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/jeffs-kbb-plumbing/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/jeffs-kbb-plumbing/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/jeffs-kbb-plumbing/')">Copiar link</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 10. Lightning Bay Electric -->
+      <article class="demo-card" data-category="MCP" data-slug="lightning-bay-electric">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Elétrica (EUA)</span>
+          <span class="badge-proposta">Antes / Depois</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Lightning Bay Electric</h2>
+          <p class="card-desc">Redesign corporativo e residencial para projetos elétricos, geradores e automação com padrão visual moderno.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/lightning-bay-electric/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/lightning-bay-electric/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/lightning-bay-electric/')">Copiar link</button>
+            <a href="./clientes/lightning-bay-electric/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta (Antes/Depois)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 11. Meridian A/C -->
+      <article class="demo-card" data-category="MCP" data-slug="meridian-ac">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Climatização HVAC (EUA)</span>
+          <span class="badge-proposta">Antes / Depois</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Meridian A/C</h2>
+          <p class="card-desc">Landing page para serviços térmicos, instalação de bombas de calor e reparos rápidos com foco no público residencial.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/meridian-ac/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/meridian-ac/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/meridian-ac/')">Copiar link</button>
+            <a href="./clientes/meridian-ac/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta (Antes/Depois)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 12. Metalcore Usinagem -->
+      <article class="demo-card" data-category="Serviços" data-slug="metalcore-usinagem">
+        <div class="card-top">
+          <span class="card-badge">Indústria & Usinagem</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Metalcore Usinagem</h2>
+          <p class="card-desc">Site institucional industrial completo com páginas de serviços CNC, projetos entregues, história e formulário de orçamento.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/metalcore-usinagem/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/metalcore-usinagem/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/metalcore-usinagem/')">Copiar link</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 13. Nutricionista -->
+      <article class="demo-card" data-category="Saúde" data-slug="nutricionista">
+        <div class="card-top">
+          <span class="card-badge">Nutrição Clínica</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Consultório de Nutrição</h2>
+          <p class="card-desc">Landing page acolhedora com apresentação de planos nutricionais, metodologia de atendimento e botão de WhatsApp.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/nutricionista/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/nutricionista/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/nutricionista/')">Copiar link</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 14. Personal Trainer -->
+      <article class="demo-card" data-category="Saúde" data-slug="personal-trainer">
+        <div class="card-top">
+          <span class="card-badge">Fitness & Treino</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Personal Trainer Elite</h2>
+          <p class="card-desc">Página esportiva com fotos de treinos, metodologia funcional, consultoria online e chamada direta para agendamento.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/personal-trainer/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/personal-trainer/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/personal-trainer/')">Copiar link</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 15. Prestige A/C -->
+      <article class="demo-card" data-category="MCP" data-slug="prestige-ac">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Climatização HVAC (EUA)</span>
+          <span class="badge-proposta">Antes / Depois</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Prestige A/C</h2>
+          <p class="card-desc">Design sofisticado para serviços de refrigeração e aquecimento residencial com foco em garantia e resposta técnica.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/prestige-ac/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/prestige-ac/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/prestige-ac/')">Copiar link</button>
+            <a href="./clientes/prestige-ac/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta (Antes/Depois)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 16. Projeto Elevare -->
+      <article class="demo-card" data-category="Serviços" data-slug="projeto-elevare">
+        <div class="card-top">
+          <span class="card-badge">Arquitetura & Engenharia</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Projeto Elevare</h2>
+          <p class="card-desc">Apresentação institucional completa para projetos técnicos, engenharia de precisão e soluções corporativas.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/projeto-elevare/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/projeto-elevare/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/projeto-elevare/')">Copiar link</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 17. Psicologia Clínica -->
+      <article class="demo-card" data-category="Saúde" data-slug="psicologia-clinica">
+        <div class="card-top">
+          <span class="card-badge">Saúde Mental</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Psicologia Clínica</h2>
+          <p class="card-desc">Página humanizada para terapia individual e online, abordagem ética, depoimentos e agendamento de sessões.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/psicologia-clinica/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/psicologia-clinica/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/psicologia-clinica/')">Copiar link</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 18. Reali Electric -->
+      <article class="demo-card" data-category="MCP" data-slug="reali-electric">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Elétrica (EUA)</span>
+          <span class="badge-proposta">Antes / Depois</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Reali Electric</h2>
+          <p class="card-desc">Redesign de alto padrão para empresa de serviços elétricos com destaque para conformidade técnica e atendimento rápido.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/reali-electric/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/reali-electric/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/reali-electric/')">Copiar link</button>
+            <a href="./clientes/reali-electric/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta (Antes/Depois)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 19. Restaurante Casa Lume -->
+      <article class="demo-card" data-category="Serviços" data-slug="restaurante-casa-lume">
+        <div class="card-top">
+          <span class="card-badge">Gastronomia</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Restaurante Casa Lume</h2>
+          <p class="card-desc">Experiência gastronômica com menu sazonal, fotos dos pratos na brasa, carta de vinhos e reserva direta de mesas.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/restaurante-casa-lume/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/restaurante-casa-lume/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/restaurante-casa-lume/')">Copiar link</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 20. Roofer Orlando -->
+      <article class="demo-card" data-category="MCP" data-slug="roofer-orlando">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Telhados & Roofing (EUA)</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Roofer Orlando</h2>
+          <p class="card-desc">Landing page para reparos de telhados após tempestades, inspeção gratuita e substituição completa de coberturas.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/roofer-orlando/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/roofer-orlando/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/roofer-orlando/')">Copiar link</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 21. Smooth Sailing Electric -->
+      <article class="demo-card" data-category="MCP" data-slug="smooth-sailing-electric">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Elétrica (EUA)</span>
+          <span class="badge-proposta">Antes / Depois</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Smooth Sailing Electric</h2>
+          <p class="card-desc">Design limpo e direto com prova social do Google Maps, garantias de serviço e botão direto de emergência.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/smooth-sailing-electric/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/smooth-sailing-electric/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/smooth-sailing-electric/')">Copiar link</button>
+            <a href="./clientes/smooth-sailing-electric/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta (Antes/Depois)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 22. Western Sky Mechanical -->
+      <article class="demo-card" data-category="MCP" data-slug="western-sky-mechanical">
+        <div class="card-top">
+          <span class="card-badge badge-mcp">Climatização HVAC (EUA)</span>
+          <span class="badge-proposta">Antes / Depois</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Western Sky Mechanical</h2>
+          <p class="card-desc">Página técnica e robusta para serviços mecânicos de HVAC e ventilação para empresas e residências.</p>
+          <div class="card-meta">
+            <span>Status: <strong>Pronto</strong></span>
+            <code>/clientes/western-sky-mechanical/</code>
+          </div>
+          <div class="card-actions">
+            <a href="./clientes/western-sky-mechanical/" target="_blank" class="btn btn-ver-site">Ver site</a>
+            <button class="btn btn-copy" onclick="copyClientLink('./clientes/western-sky-mechanical/')">Copiar link</button>
+            <a href="./clientes/western-sky-mechanical/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta (Antes/Depois)</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </div>
 
   <div id="toast" class="toast">
     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
     </svg>
-    <span id="toastMsg">Link exclusivo copiado! Pronto para enviar.</span>
-  </div>
-
-  <div id="modalOverlay" class="modal-overlay" onclick="closePhoneModal(event)">
-    <button class="close-modal" onclick="closePhoneModal(event)">&times;</button>
-    <div class="phone-frame" onclick="event.stopPropagation()">
-      <div class="phone-header">
-        <span>Simulação Mobile</span>
-        <span id="phoneUrl">/clientes/...</span>
-      </div>
-      <iframe id="phoneIframe" class="phone-iframe" src=""></iframe>
-    </div>
+    <span id="toastMsg">Link do site copiado com sucesso!</span>
   </div>
 
   <script>
-    const projects = [
-      // Leads MCP Exterior
-      { name: "Aguila Electrical", slug: "aguila-electrical", category: "MCP", niche: "Elétrica (EUA)", desc: "Redesign premium para empresa de eletricidade residencial e comercial.", hasProposta: true },
-      { name: "Associated Piping Services", slug: "associated-piping-services", category: "MCP", niche: "Encanamento (EUA)", desc: "Landing page focada em serviços emergenciais e reparos hidráulicos.", hasProposta: true },
-      { name: "Comfort One A/C", slug: "comfort-one-ac", category: "MCP", niche: "Climatização HVAC (EUA)", desc: "Página de conversão para manutenção e instalação de ar condicionado.", hasProposta: true },
-      { name: "Desert Comfort Mechanical", slug: "desert-comfort-mechanical", category: "MCP", niche: "Climatização HVAC (EUA)", desc: "Design focado em agendamento rápido de revisão e troca de filtros.", hasProposta: true },
-      { name: "Greenway Plumbing", slug: "greenway-plumbing", category: "MCP", niche: "Encanamento (EUA)", desc: "Redesign moderno com avaliações reais e chamada para cotação rápida.", hasProposta: true },
-      { name: "Honest Hank's Electrician", slug: "honest-hanks-electrician", category: "MCP", niche: "Elétrica (EUA)", desc: "Página com forte prova social e foco em atendimento residencial seguro.", hasProposta: true },
-      { name: "Jeff's KBB Plumbing", slug: "jeffs-kbb-plumbing", category: "MCP", niche: "Encanamento (EUA)", desc: "Landing page profissional com destaque para serviços especializados.", hasProposta: false },
-      { name: "Lightning Bay Electric", slug: "lightning-bay-electric", category: "MCP", niche: "Elétrica (EUA)", desc: "Visual moderno para serviços elétricos de alta confiabilidade.", hasProposta: true },
-      { name: "Meridian A/C", slug: "meridian-ac", category: "MCP", niche: "Climatização HVAC (EUA)", desc: "Landing page focada em conforto térmico e atendimento 24/7.", hasProposta: true },
-      { name: "Prestige A/C", slug: "prestige-ac", category: "MCP", niche: "Climatização HVAC (EUA)", desc: "Site elegante para climatização premium residencial e predial.", hasProposta: true },
-      { name: "Reali Electric", slug: "reali-electric", category: "MCP", niche: "Elétrica (EUA)", desc: "Redesign de alto padrão com destaque para certificações e segurança.", hasProposta: true },
-      { name: "Roofer Orlando", slug: "roofer-orlando", category: "MCP", niche: "Telhados & Roofing (EUA)", desc: "Página focada em orçamentos para reformas e inspeções de telhados.", hasProposta: false },
-      { name: "Smooth Sailing Electric", slug: "smooth-sailing-electric", category: "MCP", niche: "Elétrica (EUA)", desc: "Página de conversão rápida com avaliações e garantias de serviço.", hasProposta: true },
-      { name: "Western Sky Mechanical", slug: "western-sky-mechanical", category: "MCP", niche: "Climatização HVAC (EUA)", desc: "Design técnico e confiável para sistemas de climatização industrial.", hasProposta: true },
-      
-      // Projetos de Saúde & Fitness
-      { name: "Clínica Sorriso", slug: "clinica-sorriso-exemplo", category: "Saúde", niche: "Odontologia", desc: "Design focado em agendamento de implantes e alinhadores via WhatsApp.", hasProposta: false },
-      { name: "Consultório de Nutrição", slug: "nutricionista", category: "Saúde", niche: "Nutrição Clínica", desc: "Landing page humanizada com planos nutricionais e acompanhamento.", hasProposta: false },
-      { name: "Personal Trainer Elite", slug: "personal-trainer", category: "Saúde", niche: "Fitness & Performance", desc: "Site esportivo moderno com foco em consultoria personalizada.", hasProposta: false },
-      { name: "Psicologia Clínica", slug: "psicologia-clinica", category: "Saúde", niche: "Saúde Mental", desc: "Página acolhedora e ética para agendamento de sessões online e presenciais.", hasProposta: false },
-
-      // Serviços & Negócios Locais
-      { name: "Barbearia Vintage Club", slug: "barbearia-vintage-exemplo", category: "Serviços", niche: "Beleza & Estética", desc: "Design clássico com tabela de serviços, preços e agendamento rápido.", hasProposta: false },
-      { name: "Metalcore Usinagem", slug: "metalcore-usinagem", category: "Serviços", niche: "Indústria & Usinagem", desc: "Site institucional completo com páginas de serviços, projetos e contato.", hasProposta: false },
-      { name: "Restaurante Casa Lume", slug: "restaurante-casa-lume", category: "Serviços", niche: "Gastronomia", desc: "Experiência visual sofisticada com cardápio e reservas de mesa.", hasProposta: false },
-      { name: "Projeto Elevare", slug: "projeto-elevare", category: "Serviços", niche: "Arquitetura & Engenharia", desc: "Apresentação moderna de projetos arquitetônicos e portfólio de obras.", hasProposta: false }
-    ];
-
-    const grid = document.getElementById('demosGrid');
-
-    function renderCards(list) {
-      grid.innerHTML = '';
-      list.forEach(item => {
-        const isMcp = item.category === 'MCP';
-        const card = document.createElement('article');
-        card.className = 'demo-card';
-        card.innerHTML = `
-          <div class="card-top">
-            <span class="card-badge ${isMcp ? 'badge-mcp' : ''}">${item.niche}</span>
-            ${item.hasProposta ? '<span class="card-badge" style="background:rgba(245,158,11,0.15); border-color:rgba(245,158,11,0.3); color:#fbbf24;">Antes / Depois</span>' : ''}
-          </div>
-          <div class="card-body">
-            <h2 class="card-title">${item.name}</h2>
-            <p class="card-desc">${item.desc}</p>
-            <div class="card-meta">
-              <span>Status: <strong>Pronto</strong></span>
-              <code>/clientes/${item.slug}</code>
-            </div>
-            <div class="card-actions">
-              <a href="./clientes/${item.slug}/" target="_blank" class="btn btn-primary">Abrir Site</a>
-              <button class="btn btn-outline" onclick="openPhoneModal('./clientes/${item.slug}/')">Mobile</button>
-              <button class="btn btn-copy" onclick="copyClientLink('clientes/${item.slug}/')">Copiar Link</button>
-              ${item.hasProposta ? `<a href="./clientes/${item.slug}/proposta.html" target="_blank" class="btn btn-proposta">Ver Proposta</a>` : `<button class="btn btn-outline" onclick="copyClientLink('clientes/${item.slug}/')">Link Direto</button>`}
-            </div>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
-    }
-
-    renderCards(projects);
-
     function copyClientLink(subpath) {
       const fullUrl = new URL(subpath, window.location.href).href;
       navigator.clipboard.writeText(fullUrl).then(() => {
-        showToast('Link do cliente copiado: ' + fullUrl);
+        showToast('Link copiado: ' + fullUrl);
       }).catch(() => {
         showToast('Erro ao copiar link');
       });
@@ -522,24 +865,9 @@
       }, 3500);
     }
 
-    function openPhoneModal(url) {
-      const modal = document.getElementById('modalOverlay');
-      const iframe = document.getElementById('phoneIframe');
-      const label = document.getElementById('phoneUrl');
-      iframe.src = url;
-      label.textContent = url;
-      modal.classList.add('active');
-    }
-
-    function closePhoneModal(e) {
-      const modal = document.getElementById('modalOverlay');
-      const iframe = document.getElementById('phoneIframe');
-      iframe.src = '';
-      modal.classList.remove('active');
-    }
-
     const searchInput = document.getElementById('searchInput');
     const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.demo-card');
 
     searchInput.addEventListener('input', applyFilters);
 
@@ -555,15 +883,21 @@
       const query = searchInput.value.toLowerCase().trim();
       const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
 
-      const filtered = projects.filter(item => {
-        const matchesQuery = item.name.toLowerCase().includes(query) || 
-                             item.desc.toLowerCase().includes(query) || 
-                             item.niche.toLowerCase().includes(query);
-        const matchesCat = (activeFilter === 'all') || (item.category === activeFilter);
-        return matchesQuery && matchesCat;
-      });
+      cards.forEach(card => {
+        const title = card.querySelector('.card-title').textContent.toLowerCase();
+        const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+        const slug = card.getAttribute('data-slug').toLowerCase();
+        const category = card.getAttribute('data-category');
 
-      renderCards(filtered);
+        const matchesQuery = title.includes(query) || desc.includes(query) || slug.includes(query);
+        const matchesCat = (activeFilter === 'all') || (category === activeFilter);
+
+        if (matchesQuery && matchesCat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     }
   </script>
 </body>
