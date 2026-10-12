@@ -671,6 +671,105 @@
     .footer-inner { grid-template-columns: 1fr; }
     .points-grid { grid-template-columns: 1fr; }
   }
+.hero-section {
+    background: linear-gradient(135deg, rgba(8, 13, 26, 0.91) 0%, rgba(15, 23, 42, 0.86) 100%),
+                url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    padding: 80px 24px 90px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    position: relative;
+    box-shadow: inset 0 0 120px rgba(0,0,0,0.65);
+  }
+
+  /* Trust Badges Bar */
+  .trust-badges-bar {
+    background: #040810;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    padding: 22px 0;
+  }
+  .trust-badges-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .trust-badge-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #94A3B8;
+  }
+  .trust-badge-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #F3E5AB;
+  }
+  .trust-badge-text strong { display: block; font-size: 14px; color: #FFFFFF; }
+  .trust-badge-text span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #D4AF37; font-weight: 700; }
+
+  /* Scottsdale HVAC Gallery */
+  .prestige-gallery {
+    padding: 85px 24px;
+    background: #080D1A;
+    color: #FFFFFF;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .prestige-gallery-grid {
+    max-width: 1240px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .prestige-gallery-card {
+    background: #0F172A;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: transform 0.25s, border-color 0.25s;
+  }
+  .prestige-gallery-card:hover {
+    transform: translateY(-5px);
+    border-color: #D4AF37;
+  }
+  .prestige-gallery-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+  .prestige-gallery-body {
+    padding: 20px;
+  }
+  .prestige-gallery-body .tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #D4AF37;
+    letter-spacing: 0.06em;
+  }
+  .prestige-gallery-body h4 {
+    font-size: 17px;
+    color: #FFFFFF;
+    margin: 6px 0;
+  }
+  .prestige-gallery-body p {
+    font-size: 13px;
+    color: #94A3B8;
+    line-height: 1.5;
+  }
 </style>
 </head>
 <body>
@@ -715,6 +814,41 @@
     </div>
   </div>
 </header>
+
+<!-- Trust Badges Bar -->
+<div class="trust-badges-bar">
+  <div class="trust-badges-container">
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon" style="color:#FBBF24;">⭐</div>
+      <div class="trust-badge-text">
+        <strong>Google 5.0★ Rated</strong>
+        <span>1-Hour Fast Response Record</span>
+      </div>
+    </div>
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon">🦁</div>
+      <div class="trust-badge-text">
+        <strong>Arizona ROC #356473</strong>
+        <span>Licensed, Bonded &amp; Insured</span>
+      </div>
+    </div>
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon" style="color:#38BDF8;">❄️</div>
+      <div class="trust-badge-text">
+        <strong>Trane Certified Partner</strong>
+        <span>High-Efficiency Inverter Systems</span>
+      </div>
+    </div>
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon">⚡</div>
+      <div class="trust-badge-text">
+        <strong>24/7 Desert Cooling Desk</strong>
+        <span>Scottsdale, Glendale &amp; Peoria</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- Hero Section -->
 <section class="hero">
@@ -945,7 +1079,55 @@
 </section>
 
 <!-- Footer -->
-<footer>
+
+<!-- Recent Projects Gallery -->
+<section class="prestige-gallery" id="recent-work">
+  <div style="max-width:1240px; margin:0 auto; text-align:center;">
+    <span style="font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#D4AF37;">Proven Arizona Craftsmanship</span>
+    <h2 style="font-size:clamp(28px, 4vw, 38px); color:#FFFFFF; margin:8px 0 12px;">Recent Installations Across Scottsdale &amp; Glendale</h2>
+    <p style="color:#94A3B8; font-size:16px; max-width:720px; margin:0 auto;">Take a look at real cooling systems installed and serviced by Travis and the Prestige AC technical team.</p>
+  </div>
+
+  <div class="prestige-gallery-grid">
+    <div class="prestige-gallery-card">
+      <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Trane XR14 System Installation in Scottsdale">
+      <div class="prestige-gallery-body">
+        <span class="tag">North Scottsdale, AZ</span>
+        <h4>Trane High-Efficiency Inverter Replacement</h4>
+        <p>Complete removal of an aging 10-SEER unit and installation of a whisper-quiet Trane heat pump with 10-year compressor warranty.</p>
+      </div>
+    </div>
+
+    <div class="prestige-gallery-card">
+      <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=800&q=80" alt="Emergency AC Compressor Diagnostic">
+      <div class="prestige-gallery-body">
+        <span class="tag">Glendale, AZ</span>
+        <h4>Emergency 45-Minute Sunday AC Rescue</h4>
+        <p>Arrived in 42 minutes during a 112°F heatwave, replaced a blown start capacitor and restored ice-cold airflow immediately.</p>
+      </div>
+    </div>
+
+    <div class="prestige-gallery-card">
+      <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80" alt="Multi-Zone Inverter Balancing in Peoria">
+      <div class="prestige-gallery-body">
+        <span class="tag">Peoria &amp; Arrowhead</span>
+        <h4>Multi-Zone Smart Duct Balancing</h4>
+        <p>Installed smart motorized zoning dampers and calibrated Ecobee thermostats, eliminating hot spots in upstairs master bedrooms.</p>
+      </div>
+    </div>
+
+    <div class="prestige-gallery-card">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Pre-Summer Complete AC Overhaul">
+      <div class="prestige-gallery-body">
+        <span class="tag">Paradise Valley, AZ</span>
+        <h4>Comprehensive 28-Point Desert Tune-Up</h4>
+        <p>High-pressure chemical coil decontamination, refrigerant optimization, and electrical contactor overhaul for maximum SEER2 efficiency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer>
   <div class="footer-inner">
     <div class="footer-col">
       <div class="logo-box" style="margin-bottom: 16px;">

@@ -668,7 +668,107 @@
       .float-wa { display: none; }
       body { padding-bottom: 60px; }
     }
-  </style>
+  .hero {
+      background: linear-gradient(135deg, rgba(2, 12, 27, 0.92) 0%, rgba(10, 25, 47, 0.86) 100%),
+                  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: #FFFFFF;
+      padding: 75px 20px 90px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 0 120px rgba(0,0,0,0.65);
+    }
+
+    /* Trust Badges Bar */
+    .trust-badges-bar {
+      background: #020813;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 22px 0;
+    }
+    .trust-badges-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .trust-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #94a3b8;
+    }
+    .trust-badge-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(14, 165, 233, 0.1);
+      border: 1px solid rgba(14, 165, 233, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #38bdf8;
+    }
+    .trust-badge-text strong { display: block; font-size: 14px; color: #ffffff; }
+    .trust-badge-text span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #38bdf8; font-weight: 700; }
+
+    /* Marine & Dock Electrical Gallery */
+    .marine-gallery {
+      padding: 85px 20px;
+      background: #020c1b;
+      color: #ffffff;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .marine-gallery-grid {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .marine-gallery-card {
+      background: #0a192f;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .marine-gallery-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(14, 165, 233, 0.5);
+    }
+    .marine-gallery-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .marine-gallery-body {
+      padding: 20px;
+    }
+    .marine-gallery-body .tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #38bdf8;
+      letter-spacing: 0.06em;
+    }
+    .marine-gallery-body h4 {
+      font-size: 17px;
+      color: #ffffff;
+      margin: 6px 0;
+    }
+    .marine-gallery-body p {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+</style>
 </head>
 <body>
 
@@ -711,6 +811,41 @@
       </div>
     </div>
   </header>
+
+<!-- Trust Badges Bar -->
+<div class="trust-badges-bar">
+  <div class="trust-badges-container">
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon" style="color:#fbbf24;">⭐</div>
+      <div class="trust-badge-text">
+        <strong>Google 5.0★ Rated</strong>
+        <span>102+ Verified St. Pete Reviews</span>
+      </div>
+    </div>
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon">⚓</div>
+      <div class="trust-badge-text">
+        <strong>Marine &amp; Shore Specialist</strong>
+        <span>Docks, Marinas &amp; Boat Lifts</span>
+      </div>
+    </div>
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon">📜</div>
+      <div class="trust-badge-text">
+        <strong>Florida State License</strong>
+        <span>Certified Contractor #EC13013858</span>
+      </div>
+    </div>
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon">⚡</div>
+      <div class="trust-badge-text">
+        <strong>100% Server Uptime</strong>
+        <span>Ultra-Fast Direct Dispatch</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Hero Section -->
   <section class="hero">
@@ -1005,6 +1140,54 @@
       </div>
     </div>
   </section>
+
+  
+<!-- Marine & Residential Electrical Gallery -->
+<section class="marine-gallery" id="recent-work">
+  <div style="max-width:1200px; margin:0 auto; text-align:center;">
+    <span style="font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#38bdf8;">Saltwater-Grade Electrical Craftsmanship</span>
+    <h2 style="font-size:clamp(26px, 3.5vw, 36px); color:#ffffff; margin:8px 0 12px;">Recent Marine &amp; Home Electrical Installations</h2>
+    <p style="color:#94a3b8; font-size:15px; max-width:720px; margin:0 auto;">Built to withstand harsh Florida coastal humidity and saltwater corrosion. Take a look at our completed St. Petersburg and Tampa Bay projects.</p>
+  </div>
+
+  <div class="marine-gallery-grid">
+    <div class="marine-gallery-card">
+      <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Dock Shore Power Pedestal in St. Petersburg">
+      <div class="marine-gallery-body">
+        <span class="tag">Snell Isle / St. Pete</span>
+        <h4>Marine Shore Power Pedestal &amp; Lift Wiring</h4>
+        <p>Corrosion-resistant 50A marine pedestal, GFCI protected circuits, and high-amp motor controls for 16,000 lb boat lift.</p>
+      </div>
+    </div>
+
+    <div class="marine-gallery-card">
+      <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="200A Breaker Panel Upgrade">
+      <div class="marine-gallery-body">
+        <span class="tag">Old Northeast, St. Pete</span>
+        <h4>200A Whole-Home Panel Replacement</h4>
+        <p>Complete modernization of an outdated, dangerous Zinsco panel with a modern Square D QO system and whole-home surge protector.</p>
+      </div>
+    </div>
+
+    <div class="marine-gallery-card">
+      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Standby Generator Transfer Switch">
+      <div class="marine-gallery-body">
+        <span class="tag">Tierra Verde, FL</span>
+        <h4>Generac Standby Generator Transfer Switch</h4>
+        <p>Interlocked automatic transfer switch ensuring seamless power transition during tropical storms and coastal outages.</p>
+      </div>
+    </div>
+
+    <div class="marine-gallery-card">
+      <img src="https://images.unsplash.com/photo-1558441719-74a956894086?auto=format&fit=crop&w=800&q=80" alt="Pool & Spa Subpanel Bonding">
+      <div class="marine-gallery-body">
+        <span class="tag">Clearwater Beach, FL</span>
+        <h4>Equipotential Pool Bonding &amp; Subpanel</h4>
+        <p>NEC Article 680 compliant bonding grid, variable speed pool pump circuits, and color-changing underwater automation.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>

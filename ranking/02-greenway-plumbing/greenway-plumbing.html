@@ -1099,7 +1099,107 @@
       .btn-hero-primary, .btn-hero-phone { width: 100%; justify-content: center; }
       .form-row { grid-template-columns: 1fr; }
     }
-  </style>
+  .hero-section {
+      padding: 85px 0 95px;
+      position: relative;
+      background: linear-gradient(135deg, rgba(11, 31, 58, 0.91) 0%, rgba(6, 17, 34, 0.86) 100%),
+                  url('https://i0.wp.com/greenwayplumbing.com/wp-content/uploads/2025/07/qtq80-68eJzp.jpeg?ssl=1') center/cover no-repeat;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      box-shadow: inset 0 0 120px rgba(0,0,0,0.6);
+      color: #ffffff;
+    }
+    .hero-section .hero-title { color: #ffffff !important; }
+    .hero-section .hero-desc { color: #cbd5e1 !important; }
+    .hero-section .hero-point span { color: #e2e8f0 !important; }
+    .hero-section .hero-kicker { background: rgba(5, 150, 105, 0.25); color: #34d399; border: 1px solid rgba(5, 150, 105, 0.4); }
+
+    /* Trust Badges Bar */
+    .trust-badges-bar {
+      background: #061122;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 22px 0;
+    }
+    .trust-badges-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .trust-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #94a3b8;
+    }
+    .trust-badge-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .trust-badge-text strong { display: block; font-size: 14px; color: #ffffff; }
+    .trust-badge-text span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #34d399; font-weight: 700; }
+
+    /* Gallery Section */
+    .plumbing-gallery {
+      padding: 85px 0;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .plumbing-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .plumbing-gallery-card {
+      border-radius: 16px;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .plumbing-gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.1);
+    }
+    .plumbing-gallery-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .plumbing-gallery-body {
+      padding: 20px;
+    }
+    .plumbing-gallery-body .loc {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #059669;
+      letter-spacing: 0.06em;
+    }
+    .plumbing-gallery-body h4 {
+      font-size: 16px;
+      color: #0f172a;
+      margin: 6px 0;
+      font-family: var(--font-display);
+    }
+    .plumbing-gallery-body p {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.5;
+    }
+</style>
 </head>
 <body>
 
@@ -1146,6 +1246,41 @@
       </div>
     </div>
   </header>
+
+<!-- Trust Badges Bar -->
+<div class="trust-badges-bar">
+  <div class="trust-badges-container">
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon" style="color:#fbbf24;">⭐</div>
+      <div class="trust-badge-text">
+        <strong>Google 4.9★ Rated</strong>
+        <span>200+ Verified Orlando Reviews</span>
+      </div>
+    </div>
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon" style="color:#34d399;">📜</div>
+      <div class="trust-badge-text">
+        <strong>Florida State License</strong>
+        <span>Certified Contractor CFC 1428250</span>
+      </div>
+    </div>
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon" style="color:#60a5fa;">🛡️</div>
+      <div class="trust-badge-text">
+        <strong>BBB Accredited Business</strong>
+        <span>A+ Rated & Fully Insured</span>
+      </div>
+    </div>
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon" style="color:#f59e0b;">🏆</div>
+      <div class="trust-badge-text">
+        <strong>Porch & HomeAdvisor</strong>
+        <span>Top Rated Orlando Plumber</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Hero Section -->
   <section class="hero-section">

@@ -162,11 +162,104 @@
 
     /* Hero */
     .hero {
-      background: linear-gradient(135deg, #0A0F1D 0%, #111827 50%, #1E293B 100%);
+      background: linear-gradient(135deg, rgba(10, 15, 29, 0.91) 0%, rgba(17, 24, 39, 0.86) 100%),
+                  url('https://i.vimeocdn.com/video/1982588326-8f64e4c26a3a9b327a64d7a59f522632821eec5727091a5b293bbba9d9e0256c-d_1280x720?r=pad') center/cover no-repeat;
       color: #FFFFFF;
-      padding: 64px 20px 80px;
+      padding: 75px 20px 90px;
       position: relative;
       overflow: hidden;
+      box-shadow: inset 0 0 120px rgba(0,0,0,0.65);
+    }
+
+    /* Trust Badges Bar */
+    .trust-badges-bar {
+      background: #060913;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 22px 0;
+    }
+    .trust-badges-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .trust-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #94a3b8;
+    }
+    .trust-badge-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #fbbf24;
+    }
+    .trust-badge-text strong { display: block; font-size: 14px; color: #ffffff; }
+    .trust-badge-text span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #fbbf24; font-weight: 700; }
+
+    /* Commercial Electrical Gallery */
+    .electric-gallery {
+      padding: 85px 20px;
+      background: #0a0f1d;
+      color: #ffffff;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .electric-gallery-grid {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 26px;
+    }
+    .electric-gallery-card {
+      background: #111827;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .electric-gallery-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(245, 158, 11, 0.5);
+    }
+    .electric-gallery-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+    .electric-gallery-body {
+      padding: 22px;
+    }
+    .electric-gallery-body .tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #fbbf24;
+      letter-spacing: 0.06em;
+    }
+    .electric-gallery-body h4 {
+      font-size: 18px;
+      color: #ffffff;
+      margin: 8px 0;
+    }
+    .electric-gallery-body p {
+      font-size: 14px;
+      color: #94a3b8;
+      line-height: 1.6;
     }
     .hero-container {
       max-width: 1200px;
@@ -555,6 +648,41 @@
     </div>
   </header>
 
+<!-- Trust Badges Bar -->
+<div class="trust-badges-bar">
+  <div class="trust-badges-container">
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon">⭐</div>
+      <div class="trust-badge-text">
+        <strong>Google 4.9★ Rated</strong>
+        <span>400+ Verified Tampa Reviews</span>
+      </div>
+    </div>
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon">⚡</div>
+      <div class="trust-badge-text">
+        <strong>Florida State License</strong>
+        <span>Certified Contractor #EC13015442</span>
+      </div>
+    </div>
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon">🛡️</div>
+      <div class="trust-badge-text">
+        <strong>BBB Accredited Business</strong>
+        <span>A+ Rated &amp; Fully Bonded</span>
+      </div>
+    </div>
+    <div class="trust-badge-item">
+      <div class="trust-badge-icon">🏢</div>
+      <div class="trust-badge-text">
+        <strong>MBE Certified Enterprise</strong>
+        <span>Commercial &amp; Industrial Contractor</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-container">
@@ -845,6 +973,45 @@
   </section>
 
   <!-- Footer -->
+  
+<!-- Commercial & Industrial Electrical Gallery -->
+<section class="electric-gallery" id="recent-projects">
+  <div style="max-width:1200px; margin:0 auto; text-align:center;">
+    <span style="font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#fbbf24;">Proven Field Excellence</span>
+    <h2 style="font-size:clamp(28px, 4vw, 38px); color:#ffffff; margin:8px 0 12px;">Commercial &amp; High-Voltage Projects in Tampa Bay</h2>
+    <p style="color:#94a3b8; font-size:16px; max-width:720px; margin:0 auto;">From commercial warehouse distributions to standby Generac backup generators, take a look at our field installations.</p>
+  </div>
+
+  <div class="electric-gallery-grid">
+    <div class="electric-gallery-card">
+      <img src="https://img1.wsimg.com/isteam/getty/2247820955/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1920,m" alt="Commercial Industrial Switchgear & Three-Phase Panel">
+      <div class="electric-gallery-body">
+        <span class="tag">Downtown Tampa, FL</span>
+        <h4>400A Three-Phase Switchgear Upgrade</h4>
+        <p>Turnkey power distribution modernization for commercial facilities, ensuring OSHA and NEC code compliance.</p>
+      </div>
+    </div>
+
+    <div class="electric-gallery-card">
+      <img src="https://img1.wsimg.com/isteam/stock/7273/:/cr=t:0%25,l:9.88%25,w:80.23%25,h:100%25/rs=w:1920,m" alt="Industrial Standby Generator Installation">
+      <div class="electric-gallery-body">
+        <span class="tag">Ybor City &amp; Hillsborough</span>
+        <h4>Commercial Standby Generator Integration</h4>
+        <p>Automatic transfer switch (ATS) integration with commercial diesel generators, keeping critical businesses powered during hurricanes.</p>
+      </div>
+    </div>
+
+    <div class="electric-gallery-card">
+      <img src="https://i.vimeocdn.com/video/1982588326-8f64e4c26a3a9b327a64d7a59f522632821eec5727091a5b293bbba9d9e0256c-d_1280x720?r=pad" alt="Commercial Warehouse Lighting & EV Charging">
+      <div class="electric-gallery-body">
+        <span class="tag">Clearwater &amp; St. Petersburg</span>
+        <h4>EV Fleet Charging &amp; High-Bay Lighting</h4>
+        <p>Level 2 commercial multi-port EV charging stations and energy-efficient LED retrofits for industrial logistics centers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
   <footer>
     <div class="foot-grid">
       <div class="foot-col">
