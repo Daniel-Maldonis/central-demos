@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian Air Conditioning &amp; Heating | Scottsdale, AZ Master HVAC</title>
+<meta name="description" content="Meridian Air Conditioning & Heating delivers 5.0-star HVAC repair, high-efficiency heat pump installation, and emergency cooling in Scottsdale, AZ. ROC #320392.">
+<style>
+  :root {
+    --primary-navy: #0B192C;
+    --secondary-blue: #1E3E62;
+    --accent-orange: #FF6500;
+    --accent-orange-hover: #E05600;
+    --teal: #00ADB5;
+    --text-dark: #0F172A;
+    --text-muted: #64748B;
+    --bg-light: #F8FAFC;
+    --white: #FFFFFF;
+    --border: #E2E8F0;
+    --success: #10B981;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  /* Utility Top Bar */
+  .top-bar {
+    background: #060E18;
+    color: #94A3B8;
+    font-size: 13px;
+    padding: 8px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar .info-badges {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .top-bar .badge-accent {
+    color: var(--accent-orange);
+    font-weight: 700;
+  }
+  .top-bar .contact-quick {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .top-bar a { color: #FFFFFF; font-weight: 600; }
+  .top-bar a:hover { color: var(--accent-orange); }
+
+  /* Header */
+  header {
+    background: rgba(11, 25, 44, 0.98);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .header-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, var(--accent-orange) 0%, #D45000 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #FFFFFF;
+    font-weight: 900;
+  }
+  .brand-text h1 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .brand-text p {
+    font-size: 11px;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+  }
+  nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+  nav a {
+    color: #E2E8F0;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--accent-orange); }
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn-dispatch {
+    background: var(--accent-orange);
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-dispatch:hover {
+    background: var(--accent-orange-hover);
+    transform: translateY(-2px);
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(180deg, #0B192C 0%, #1E3E62 100%);
+    color: #FFFFFF;
+    padding: 76px 24px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .badge-rating {
+    background: rgba(255, 101, 0, 0.18);
+    color: #FF8533;
+    border: 1px solid rgba(255, 101, 0, 0.4);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .badge-license {
+    background: rgba(255, 255, 255, 0.08);
+    color: #E2E8F0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .hero-text h1 {
+    font-size: clamp(32px, 4.2vw, 50px);
+    font-weight: 900;
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+  }
+  .hero-text h1 span.highlight { color: var(--accent-orange); }
+  .hero-text p.sub {
+    font-size: 17px;
+    color: #94A3B8;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 580px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 34px;
+  }
+  .btn-hero-primary {
+    background: var(--accent-orange);
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 16px 28px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(255, 101, 0, 0.35);
+    transition: all 0.2s;
+  }
+  .btn-hero-primary:hover {
+    background: var(--accent-orange-hover);
+    transform: translateY(-2px);
+  }
+  .btn-hero-secondary {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+  }
+  .btn-hero-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #FFFFFF;
+  }
+  .trust-strip {
+    display: flex;
+    gap: 26px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .trust-item strong {
+    font-size: 20px;
+    color: #FFFFFF;
+    display: block;
+  }
+  .trust-item span {
+    font-size: 12px;
+    color: #94A3B8;
+  }
+
+  /* Federal Rebate & Heat Pump Calculator */
+  .calc-card {
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    color: var(--text-dark);
+  }
+  .calc-header {
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .calc-header h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary-navy);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .calc-header p {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .calc-form .form-group {
+    margin-bottom: 16px;
+  }
+  .calc-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 6px;
+  }
+  .calc-form select,
+  .calc-form input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #F8FAFC;
+    color: var(--text-dark);
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .calc-form select:focus,
+  .calc-form input:focus {
+    border-color: var(--accent-orange);
+    background: #FFFFFF;
+  }
+  .rebate-highlight {
+    background: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .rebate-highlight .label {
+    font-size: 13px;
+    color: #065F46;
+    font-weight: 700;
+  }
+  .rebate-highlight .val {
+    font-size: 22px;
+    font-weight: 900;
+    color: #047857;
+  }
+  .btn-submit-calc {
+    width: 100%;
+    background: var(--primary-navy);
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-submit-calc:hover {
+    background: #1E3E62;
+  }
+
+  /* Gallery Section */
+  .section {
+    padding: 80px 24px;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .section-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 50px;
+  }
+  .section-tag {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-orange);
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  .section-head h2 {
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 800;
+    color: var(--primary-navy);
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .section-head p {
+    font-size: 16px;
+    color: var(--text-muted);
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .gallery-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .gallery-img-wrap {
+    height: 220px;
+    overflow: hidden;
+    background: #0B192C;
+  }
+  .gallery-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery-info {
+    padding: 22px;
+  }
+  .gallery-info span {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--accent-orange);
+  }
+  .gallery-info h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--primary-navy);
+    margin: 6px 0 8px;
+  }
+  .gallery-info p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Services Grid */
+  .grid-services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .service-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .service-card:hover {
+    border-color: #CBD5E1;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.06);
+  }
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #FFE8D6;
+    color: #C04300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .service-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary-navy);
+    margin-bottom: 12px;
+  }
+  .service-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .service-features {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+  .service-features li {
+    font-size: 13px;
+    color: #334155;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .service-features li::before {
+    content: "✓";
+    color: var(--success);
+    font-weight: 800;
+  }
+  .service-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent-orange);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Why Choose Banner */
+  .why-box {
+    background: var(--primary-navy);
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 60px 48px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .why-box h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    line-height: 1.25;
+  }
+  .why-box p {
+    color: #94A3B8;
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  .points-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .point-item strong {
+    font-size: 16px;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .point-item p {
+    font-size: 13px;
+    color: #94A3B8;
+    margin: 0;
+  }
+  .areas-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 30px;
+  }
+  .areas-box h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--accent-orange);
+  }
+  .city-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .city-tag {
+    background: rgba(255, 255, 255, 0.08);
+    color: #E2E8F0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* Reviews */
+  .reviews-section {
+    background: #F1F5F9;
+    padding: 80px 24px;
+  }
+  .reviews-grid {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .review-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 26px;
+    border: 1px solid var(--border);
+  }
+  .stars {
+    color: #F59E0B;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .review-text {
+    font-size: 14px;
+    color: #334155;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .reviewer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    font-size: 13px;
+  }
+  .reviewer strong { color: var(--primary-navy); }
+  .reviewer span { color: var(--text-muted); font-size: 11px; }
+
+  /* Footer */
+  footer {
+    background: #060E18;
+    color: #94A3B8;
+    padding: 60px 24px 100px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+  }
+  .footer-col h4 {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { font-size: 13px; margin-bottom: 10px; }
+  .footer-col ul li a:hover { color: var(--accent-orange); }
+  .footer-bottom {
+    max-width: 1240px;
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #64748B;
+  }
+
+  /* Mobile Call Bar */
+  .mobile-call-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0B192C;
+    border-top: 2px solid var(--accent-orange);
+    padding: 12px 16px;
+    z-index: 1000;
+  }
+  .mobile-call-bar .bar-inner {
+    display: flex;
+    gap: 12px;
+  }
+  .mobile-call-bar a.call-btn {
+    flex: 1;
+    background: var(--accent-orange);
+    color: #FFFFFF;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .mobile-call-bar a.est-btn {
+    flex: 1;
+    background: #1E3E62;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  @media (max-width: 992px) {
+    .hero-container { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .grid-services { grid-template-columns: 1fr; }
+    .why-box { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    nav { display: none; }
+  }
+  @media (max-width: 768px) {
+    .mobile-call-bar { display: block; }
+    .top-bar .info-badges { display: none; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .points-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Strip -->
+<div class="top-bar">
+  <div class="info-badges">
+    <span class="badge-accent">★ 5.0 Google Verified (80+ Reviews)</span>
+    <span>•</span>
+    <span>Arizona Licensed ROC #320392</span>
+    <span>•</span>
+    <span>Scottsdale &amp; Paradise Valley Cooling Specialists</span>
+  </div>
+  <div class="contact-quick">
+    <span>Emergency Dispatch Available</span>
+    <a href="tel:+14805867139">📞 (480) 586-7139</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <div class="brand-group">
+      <div class="brand-icon">M</div>
+      <div class="brand-text">
+        <h1>MERIDIAN</h1>
+        <p>Air Conditioning &amp; Heating &bull; ROC #320392</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#projects">Recent Installs</a>
+      <a href="#calculator">Rebate Calculator</a>
+      <a href="#why-us">Why Meridian</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+14805867139" class="btn-dispatch">
+        <span>⚡ Call (480) 586-7139</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section with Rebate Calculator -->
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <div class="hero-badges">
+        <span class="badge-rating">★ 5.0 Rated by 80+ Local Homeowners</span>
+        <span class="badge-license">Master Techs Miguel &amp; Armando</span>
+      </div>
+      <h1>Scottsdale’s Master <span class="highlight">Heat Pump &amp; AC</span> Specialists.</h1>
+      <p class="sub">
+        Beat the Sonoran desert heat with whisper-quiet, ultra-high efficiency inverter cooling. Meridian delivers honest troubleshooting, clean installations, and helps you claim up to $2,000 in federal clean energy tax credits.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+14805867139" class="btn-hero-primary">
+          <span>Schedule Service: (480) 586-7139</span>
+        </a>
+        <a href="#calculator" class="btn-hero-secondary">
+          <span>Calculate Tax Credit &darr;</span>
+        </a>
+      </div>
+      <div class="trust-strip">
+        <div class="trust-item">
+          <strong>100%</strong>
+          <span>Clean Site Guarantee</span>
+        </div>
+        <div class="trust-item">
+          <strong>Up to $2,000</strong>
+          <span>Federal IRA Tax Credit</span>
+        </div>
+        <div class="trust-item">
+          <strong>ROC #320392</strong>
+          <span>Licensed &amp; Insured</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live IRA Tax Rebate & Price Calculator -->
+    <div class="calc-card" id="calculator">
+      <div class="calc-header">
+        <h3>⚡ Heat Pump &amp; AC Rebate Calculator</h3>
+        <p>Estimate your federal tax credits and new system pricing.</p>
+      </div>
+      <form class="calc-form" onsubmit="event.preventDefault(); alert('Estimate request logged! Miguel or Armando will contact you shortly at ' + document.getElementById('phoneLead').value);">
+        <div class="form-group">
+          <label for="systemSelect">Equipment Category</label>
+          <select id="systemSelect" onchange="runRebateCalc()">
+            <option value="heatpump" data-cost="8900" data-rebate="2000" selected>High-Efficiency Inverter Heat Pump (Up to 20 SEER2)</option>
+            <option value="ac" data-cost="7500" data-rebate="600">Standard Split AC Replacement (15 SEER2)</option>
+            <option value="minisplit" data-cost="3600" data-rebate="1200">Multi-Zone Ductless Mini-Split (Casita / Master Suite)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="homeTonnage">Home Size</label>
+          <select id="homeTonnage" onchange="runRebateCalc()">
+            <option value="3" data-mult="1.0">Under 1,800 sq ft (3 Ton)</option>
+            <option value="4" data-mult="1.18" selected>1,800 – 2,600 sq ft (4 Ton)</option>
+            <option value="5" data-mult="1.35">2,600 – 3,800 sq ft (5 Ton)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="phoneLead">Your Phone or Email</label>
+          <input type="text" id="phoneLead" placeholder="(480) 000-0000 or email" required>
+        </div>
+        <div class="rebate-highlight">
+          <div class="label">
+            <span>Potential Federal Tax Credit:</span>
+            <div style="font-size:11px; font-weight:normal; color:#065F46;">Inflation Reduction Act Section 25C</div>
+          </div>
+          <div class="val" id="rebateVal">-$2,000</div>
+        </div>
+        <button type="submit" class="btn-submit-calc">
+          Claim Tax Credit &amp; Get Written In-Home Quote
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Authentic Work Gallery -->
+<section class="section" id="projects">
+  <div class="section-head">
+    <span class="section-tag">Authentic Scottsdale Projects</span>
+    <h2>Clean Equipment. Master Execution.</h2>
+    <p>Every system we install features hurricane straps, clean electrical whips, and precision airflow balance.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-card">
+      <div class="gallery-img-wrap">
+        <img src="https://irp.cdn-website.com/2099fb86/dms3rep/multi/opt/close-up-heat-pump-outside-home-1920w.jpg" alt="Scottsdale Heat Pump Installation" loading="lazy">
+      </div>
+      <div class="gallery-info">
+        <span>Scottsdale &bull; Inverter Technology</span>
+        <h3>High-Efficiency Heat Pump</h3>
+        <p>Ultra-quiet variable speed heat pump outdoor unit, saving the client up to 35% on cooling bills.</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <div class="gallery-img-wrap">
+        <img src="https://irp.cdn-website.com/2099fb86/dms3rep/multi/opt/ac-with-greenery-STOCK-9a006fa3-1920w.png" alt="Residential AC Condenser" loading="lazy">
+      </div>
+      <div class="gallery-info">
+        <span>Paradise Valley &bull; Clean Architecture</span>
+        <h3>Zero-Vibration Pad Mount</h3>
+        <p>Engineered anti-vibration composite pad with reinforced copper line-set insulation.</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <div class="gallery-img-wrap">
+        <img src="https://irp.cdn-website.com/2099fb86/dms3rep/multi/opt/replair-1920w.jpeg" alt="Master HVAC Technician Diagnostics" loading="lazy">
+      </div>
+      <div class="gallery-info">
+        <span>Valley-Wide &bull; Emergency Diagnostics</span>
+        <h3>Digital Manifold Diagnostic</h3>
+        <p>Testing subcooling, delta-T temperature split, and compressor windings for optimal thermal transfer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section class="section" id="services" style="padding-top: 0;">
+  <div class="section-head">
+    <span class="section-tag">Core HVAC Services</span>
+    <h2>Complete Cooling &amp; Heating Solutions</h2>
+    <p>Dependable technical diagnosis without high-pressure corporate sales scripts.</p>
+  </div>
+  <div class="grid-services">
+    <div class="service-card">
+      <div>
+        <div class="service-icon">⚡</div>
+        <h3>Rapid AC Diagnostics &amp; Repair</h3>
+        <p>Is your unit freezing over, humming loudly, or failing to start during high heat? We diagnose and repair on the first trip.</p>
+        <ul class="service-features">
+          <li>Condenser fan and blower motor repairs</li>
+          <li>Dual run capacitor replacements</li>
+          <li>Contactor and safety switch testing</li>
+        </ul>
+      </div>
+      <a href="tel:+14805867139" class="service-link">Call For Service &rarr;</a>
+    </div>
+
+    <div class="service-card">
+      <div>
+        <div class="service-icon">❄️</div>
+        <h3>Heat Pump System Conversions</h3>
+        <p>Replace old gas/electric units with modern dual-fuel or all-electric heat pumps eligible for substantial federal rebates.</p>
+        <ul class="service-features">
+          <li>Up to $2,000 IRA tax credit support</li>
+          <li>SEER2 efficiency ratings from 15.2 to 20+</li>
+          <li>Clean sheet metal transitions</li>
+        </ul>
+      </div>
+      <a href="tel:+14805867139" class="service-link">Inquire About Heat Pumps &rarr;</a>
+    </div>
+
+    <div class="service-card">
+      <div>
+        <div class="service-icon">🛠️</div>
+        <h3>Ductless Mini-Split Installations</h3>
+        <p>Ideal for Arizona guest casitas, home gyms, detached garages, or rooms with hot spots that standard ductwork cannot cool.</p>
+        <ul class="service-features">
+          <li>Independent zone temperature control</li>
+          <li>Whisper-quiet decibel levels</li>
+          <li>Multi-head indoor configurations</li>
+        </ul>
+      </div>
+      <a href="tel:+14805867139" class="service-link">Book Mini-Split Quote &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Why Choose Meridian -->
+  <div class="why-box" id="why-us">
+    <div>
+      <h2>Why Scottsdale Neighbors Choose Meridian</h2>
+      <p>
+        When you call Meridian, you are speaking directly with licensed technicians who know your system inside and out. Miguel and Armando bring decades of field experience to every job.
+      </p>
+      <div class="points-grid">
+        <div class="point-item">
+          <strong>Owner-Operated Care</strong>
+          <p>We treat every home with meticulous attention, not like a production quota.</p>
+        </div>
+        <div class="point-item">
+          <strong>ROC #320392 Licensed</strong>
+          <p>Fully compliant with Arizona Registrar of Contractors building and safety standards.</p>
+        </div>
+        <div class="point-item">
+          <strong>Honest Assessments</strong>
+          <p>If your system can be reliably repaired, we will never pressure you into an unneeded replacement.</p>
+        </div>
+        <div class="point-item">
+          <strong>Top Tier Parts</strong>
+          <p>Heavy-duty USA-made capacitors, contactors, and high-SEER2 equipment.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="areas-box">
+      <h3>📍 Scottsdale &amp; East Valley Coverage</h3>
+      <p style="color:#94A3B8; font-size:13px; margin-bottom:14px;">Prompt response times throughout Maricopa County:</p>
+      <div class="city-tags">
+        <span class="city-tag">Scottsdale</span>
+        <span class="city-tag">Paradise Valley</span>
+        <span class="city-tag">Fountain Hills</span>
+        <span class="city-tag">North Scottsdale</span>
+        <span class="city-tag">Cave Creek</span>
+        <span class="city-tag">Tempe</span>
+        <span class="city-tag">Mesa</span>
+        <span class="city-tag">Chandler</span>
+        <span class="city-tag">Gilbert</span>
+        <span class="city-tag">Phoenix</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews-section" id="reviews">
+  <div class="section-head">
+    <span class="section-tag">Verified 5.0 Star Ratings</span>
+    <h2>What Scottsdale Homeowners Say</h2>
+    <p>Read real experiences from local families who trust Meridian for their cooling comfort.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Armando and Miguel are the absolute best HVAC professionals in Scottsdale. Honest, thorough, and fair. Replaced our old heat pump and walked us through the federal tax rebate process. 10/10 recommend!"</p>
+      <div class="reviewer">
+        <strong>Craig S.</strong>
+        <span>Scottsdale &bull; Heat Pump Upgrade</span>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Our AC stopped working in July during a 115-degree heat wave. Meridian was here in under two hours, found a blown capacitor, and had cold air blowing within 30 minutes. Real lifesavers!"</p>
+      <div class="reviewer">
+        <strong>Elena M.</strong>
+        <span>Paradise Valley &bull; Emergency Repair</span>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Super clean install on our casita mini-split. No mess left behind, explained the remote controls patiently, and the price was significantly better than the big corporate chains."</p>
+      <div class="reviewer">
+        <strong>Todd W.</strong>
+        <span>Fountain Hills &bull; Mini-Split Setup</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="brand-group" style="margin-bottom: 16px;">
+        <div class="brand-icon">M</div>
+        <div class="brand-text">
+          <h1>MERIDIAN</h1>
+          <p>Air Conditioning &amp; Heating</p>
+        </div>
+      </div>
+      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+        State Certified Residential &amp; Commercial HVAC Contractor serving Scottsdale, Paradise Valley, and the Greater Phoenix East Valley.
+      </p>
+      <p style="font-size: 12px; color: var(--accent-orange); font-weight: 700;">
+        License ROC #320392 &bull; Bonded &amp; Insured
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#services">Emergency AC Repair</a></li>
+        <li><a href="#services">Heat Pump Replacements</a></li>
+        <li><a href="#services">Ductless Mini-Splits</a></li>
+        <li><a href="#services">Airflow Balancing</a></li>
+        <li><a href="#services">Seasonal Tune-Ups</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Service Areas</h4>
+      <ul>
+        <li><a href="#why-us">Scottsdale</a></li>
+        <li><a href="#why-us">Paradise Valley</a></li>
+        <li><a href="#why-us">Fountain Hills</a></li>
+        <li><a href="#why-us">Cave Creek</a></li>
+        <li><a href="#why-us">Tempe &amp; Mesa</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Information</h4>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Phone:</strong> <a href="tel:+14805867139" style="color:var(--accent-orange); font-weight:700;">(480) 586-7139</a></p>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Email:</strong> <a href="mailto:meridianacandheat@gmail.com">meridianacandheat@gmail.com</a></p>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Techs:</strong> Miguel &amp; Armando</p>
+      <p style="font-size: 13px;"><strong>Emergency:</strong> Rapid Dispatch maricopa county</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Meridian Air Conditioning &amp; Heating LLC. All rights reserved. ROC #320392.</div>
+    <div>Scottsdale Premier Licensed HVAC Contractor</div>
+  </div>
+</footer>
+
+<!-- Mobile Call Bar -->
+<div class="mobile-call-bar">
+  <div class="bar-inner">
+    <a href="tel:+14805867139" class="call-btn">
+      <span>⚡ Call (480) 586-7139</span>
+    </a>
+    <a href="#calculator" class="est-btn">
+      <span>Get Rebate</span>
+    </a>
+  </div>
+</div>
+
+<script>
+function runRebateCalc() {
+  const sys = document.getElementById('systemSelect');
+  const rebate = sys.selectedOptions[0].getAttribute('data-rebate');
+  document.getElementById('rebateVal').innerText = '-$' + parseInt(rebate, 10).toLocaleString();
+}
+</script>
+
+</body>
+</html>

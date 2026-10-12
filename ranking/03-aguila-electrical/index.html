@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aguila Electrical Services Inc. | Commercial & Residential Electrical Contractors Tampa, FL</title>
+  <meta name="description" content="Tampa's trusted commercial & residential electrical contractors (FL Lic #EC13015442, BBB A+, MBE Certified). 400+ 4.9★ reviews. Commercial wiring, industrial standby generators, panel upgrades. Call (813) 515-6999.">
+  <style>
+    :root {
+      --dark: #0A0F1D;
+      --navy: #111827;
+      --navy-light: #1F2937;
+      --gold: #F59E0B;
+      --gold-bright: #FBBF24;
+      --gold-dark: #D97706;
+      --gold-soft: #FEF3C7;
+      --slate: #475569;
+      --muted: #94A3B8;
+      --line: #E2E8F0;
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --green: #10B981;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #0F172A;
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    /* Top Strip */
+    .top-strip {
+      background: var(--dark);
+      color: #94A3B8;
+      font-size: 13px;
+      padding: 8px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-strip .badges {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .badge-mbe {
+      background: rgba(245, 158, 11, 0.2);
+      color: var(--gold-bright);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 800;
+      font-size: 11px;
+    }
+    .top-strip a { color: var(--gold-bright); text-decoration: none; font-weight: 700; }
+
+    /* Header */
+    header {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #0F172A;
+    }
+    .brand-icon {
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(135deg, var(--dark) 0%, #1F2937 100%);
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--gold);
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+    }
+    .brand-info h1 {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+    }
+    .brand-info span {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--slate);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-dark); }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .phone-block {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      text-decoration: none;
+    }
+    .phone-block span { font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; }
+    .phone-block strong { font-size: 17px; font-weight: 800; color: var(--navy); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: #000;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    }
+    .btn-gold:hover { background: var(--gold-dark); color: #fff; transform: translateY(-1px); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0A0F1D 0%, #111827 50%, #1E293B 100%);
+      color: #FFFFFF;
+      padding: 64px 20px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold-bright);
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-size: clamp(32px, 4.4vw, 52px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+      color: #F8FAFC;
+    }
+    .hero-title em { font-style: normal; color: var(--gold-bright); }
+    .hero-sub {
+      font-size: 17px;
+      color: #CBD5E1;
+      margin-bottom: 28px;
+      max-width: 580px;
+      line-height: 1.6;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 24px;
+      margin-top: 28px;
+    }
+    .stat-num { font-size: 26px; font-weight: 800; color: var(--gold-bright); line-height: 1; margin-bottom: 4px; }
+    .stat-lbl { font-size: 12px; color: #94A3B8; font-weight: 500; }
+
+    /* Form */
+    .lead-box {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 32px 26px;
+      color: #0F172A;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+    .lead-box h3 { font-size: 20px; font-weight: 800; color: var(--navy); }
+    .lead-box p { font-size: 13px; color: var(--muted); margin: 4px 0 18px; }
+    .form-group { margin-bottom: 14px; }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--slate);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+    .form-control {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      color: #0F172A;
+      background: #F8FAFC;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--gold);
+      color: #000;
+      font-weight: 800;
+      font-size: 15px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 6px;
+    }
+    .submit-btn:hover { background: var(--gold-dark); color: #fff; }
+
+    /* Proof Strip */
+    .proof-bar {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--line);
+      padding: 24px 20px;
+    }
+    .proof-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--slate);
+    }
+    .proof-check { color: var(--green); font-size: 18px; }
+
+    /* Division Switcher */
+    .section { padding: 80px 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .sec-head {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+    .sec-tag {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold-dark);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .sec-title {
+      font-size: clamp(26px, 3.2vw, 38px);
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .sec-desc { color: var(--muted); font-size: 16px; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 30px;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      box-shadow: 0 16px 30px rgba(245, 158, 11, 0.1);
+    }
+    .card-icon {
+      width: 54px;
+      height: 54px;
+      background: var(--gold-soft);
+      color: var(--gold-dark);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .card h3 { font-size: 19px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+    .card p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
+    .card-list { list-style: none; font-size: 13px; color: var(--slate); margin-bottom: 20px; }
+    .card-list li { padding: 4px 0; display: flex; align-items: center; gap: 8px; }
+    .card-list li::before { content: "✓"; color: var(--green); font-weight: 800; }
+    .card-link { font-size: 14px; font-weight: 700; color: var(--gold-dark); text-decoration: none; }
+    .card-link:hover { text-decoration: underline; }
+
+    /* Interactive Estimator */
+    .calc-box-wrap {
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 40px;
+      margin: 60px auto 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+    .calc-box-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin: 24px 0;
+    }
+    .calc-btn {
+      border: 2px solid var(--line);
+      border-radius: 10px;
+      padding: 16px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .calc-btn:hover, .calc-btn.active {
+      border-color: var(--gold);
+      background: var(--gold-soft);
+    }
+    .calc-btn-title { font-weight: 800; font-size: 15px; color: var(--navy); }
+    .calc-btn-desc { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .calc-disp {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .calc-disp-lbl { font-size: 12px; color: #94A3B8; text-transform: uppercase; font-weight: 700; }
+    .calc-disp-val { font-size: 34px; font-weight: 800; color: var(--gold-bright); margin: 4px 0; }
+    .calc-disp-sub { font-size: 12px; color: #CBD5E1; }
+
+    /* MBE & Municipal Section */
+    .mbe-box {
+      background: linear-gradient(135deg, #111827 0%, #0A0F1D 100%);
+      color: #FFFFFF;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 16px;
+      padding: 44px 36px;
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 34px;
+      align-items: center;
+    }
+    .mbe-box h3 { font-size: 26px; font-weight: 800; margin-bottom: 12px; color: #F8FAFC; }
+    .mbe-box p { font-size: 15px; color: #CBD5E1; line-height: 1.6; margin-bottom: 18px; }
+
+    /* Reviews */
+    .reviews-bg { background: #F1F5F9; padding: 80px 20px; }
+    .rev-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .rev-card { background: #fff; border-radius: 12px; padding: 26px; border: 1px solid var(--line); }
+    .rev-stars { color: var(--gold); font-size: 16px; margin-bottom: 10px; }
+    .rev-text { font-size: 14px; color: var(--slate); line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+    .rev-author { display: flex; align-items: center; gap: 10px; }
+    .rev-initial {
+      width: 36px;
+      height: 36px;
+      background: var(--gold-soft);
+      color: var(--gold-dark);
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .rev-info h5 { font-size: 14px; font-weight: 700; color: var(--navy); }
+    .rev-info span { font-size: 11px; color: var(--muted); }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #94A3B8;
+      padding: 60px 20px 30px;
+      font-size: 13px;
+    }
+    .foot-grid {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 30px;
+    }
+    .foot-col h4 { color: #FFFFFF; font-size: 15px; font-weight: 700; margin-bottom: 14px; }
+    .foot-col ul { list-style: none; }
+    .foot-col ul li { margin-bottom: 8px; }
+    .foot-col ul a { color: #94A3B8; text-decoration: none; }
+    .foot-col ul a:hover { color: var(--gold-bright); }
+    .foot-bot {
+      max-width: 1200px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+    }
+
+    /* Mobile Bar */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #FFFFFF;
+      border-top: 1px solid var(--line);
+      padding: 10px 16px;
+      z-index: 9999;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+    }
+    .mobile-bar-inner { display: flex; gap: 10px; }
+    .mob-btn {
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .mob-call { background: var(--navy); color: var(--gold-bright); }
+    .mob-wa { background: #25D366; color: #fff; }
+
+    @media (max-width: 900px) {
+      .hero-container { grid-template-columns: 1fr; }
+      .mbe-box { grid-template-columns: 1fr; }
+      .foot-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 40px 16px 60px; }
+      .foot-grid { grid-template-columns: 1fr; }
+      .mobile-bar { display: block; }
+      body { padding-bottom: 60px; }
+      .header-actions .btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Strip -->
+  <div class="top-strip">
+    <div class="badges">
+      <span class="badge-mbe">FL LIC #EC13015442</span>
+      <span class="badge-mbe" style="background:rgba(16, 185, 129, 0.2); color:#6EE7B7; border-color:rgba(16, 185, 129, 0.4);">BBB ACCREDITED A+</span>
+      <span>⚡ Certified Minority Business Enterprise (MBE)</span>
+    </div>
+    <div>
+      <span>Direct Dispatch: <a href="tel:+18135156999">(813) 515-6999</a></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="brand">
+        <div class="brand-icon">🦅⚡</div>
+        <div class="brand-info">
+          <h1>Aguila Electrical</h1>
+          <span>Services Inc. · Tampa, FL</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#commercial">Commercial & Industrial</a></li>
+        <li><a href="#residential">Residential</a></li>
+        <li><a href="#generators">Generators</a></li>
+        <li><a href="#calculator">Estimator</a></li>
+        <li><a href="#reviews">400+ Reviews</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="tel:+18135156999" class="phone-block">
+          <span>Call Dispatch</span>
+          <strong>(813) 515-6999</strong>
+        </a>
+        <a href="#contact" class="btn btn-gold">Request Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div>
+        <div class="hero-badge">
+          <span>★★★★★ 400+ Google Reviews · BBB A+ Rating</span>
+        </div>
+        <h2 class="hero-title">
+          Premier Commercial, Industrial & <em>Residential Electricians</em>
+        </h2>
+        <p class="hero-sub">
+          Best service, reasonable rates. Trusted across Tampa Bay for commercial tenant build-outs, high-capacity standby generators, whole-property rewiring, and 24/7 industrial electrical maintenance.
+        </p>
+
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="tel:+18135156999" class="btn btn-gold" style="font-size:16px; padding:14px 28px;">
+            📞 Call (813) 515-6999
+          </a>
+          <a href="#calculator" class="btn" style="background:rgba(255,255,255,0.1); color:#fff; border:1px solid rgba(255,255,255,0.3);">
+            📊 Project Cost Estimator
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">400+</div>
+            <div class="stat-lbl">Verified 4.9★ Reviews</div>
+          </div>
+          <div>
+            <div class="stat-num">A+</div>
+            <div class="stat-lbl">BBB Accredited</div>
+          </div>
+          <div>
+            <div class="stat-num">MBE</div>
+            <div class="stat-lbl">City Certified Contractor</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lead Card -->
+      <div class="lead-box" id="contact">
+        <h3>Request a Commercial or Residential Quote</h3>
+        <p>Rapid response from licensed Florida master electricians</p>
+        <form onsubmit="event.preventDefault(); alert('Thank you! Aguila Electrical team will review your project and contact you at ' + document.getElementById('agPhone').value);">
+          <div class="form-group">
+            <label>Project Scope</label>
+            <select class="form-control">
+              <option>Commercial Tenant Build-Out / Rewiring</option>
+              <option>Standby Generator & Transfer Switch</option>
+              <option>200A / 400A Service Panel Upgrade</option>
+              <option>Industrial Power Distribution & Troubleshooting</option>
+              <option>Residential Wiring & EV Charging</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Contact Name / Business</label>
+            <input type="text" class="form-control" placeholder="e.g. Carlos Mendoza / Facility Manager" required>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="agPhone" class="form-control" placeholder="(813) 000-0000" required>
+          </div>
+          <div class="form-group">
+            <label>Job Site City / Address</label>
+            <input type="text" class="form-control" placeholder="Tampa, Ybor City, Brandon, St. Pete...">
+          </div>
+          <button type="submit" class="submit-btn">⚡ Submit Project for Review</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof Strip -->
+  <div class="proof-bar">
+    <div class="proof-container">
+      <div class="proof-item"><span class="proof-check">✓</span> FL State License #EC13015442</div>
+      <div class="proof-item"><span class="proof-check">✓</span> BBB A+ Accredited</div>
+      <div class="proof-item"><span class="proof-check">✓</span> Certified Minority Business Enterprise (MBE)</div>
+      <div class="proof-item"><span class="proof-check">✓</span> Commercial & Municipal Subcontracting</div>
+      <div class="proof-item"><span class="proof-check">✓</span> Standby Generator Specialists</div>
+    </div>
+  </div>
+
+  <!-- Services Grid -->
+  <section class="section" id="commercial">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">Comprehensive Solutions</span>
+        <h2 class="sec-title">Commercial, Industrial & Residential Power</h2>
+        <p class="sec-desc">From complex multi-tenant commercial wiring to residential panel replacements, Aguila Electrical delivers code-compliant power across Hillsborough and Pinellas.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Commercial -->
+        <div class="card">
+          <div class="card-icon">🏢</div>
+          <h3>Commercial Build-Outs & Wiring</h3>
+          <p>Complete power distribution for offices, retail stores, restaurants, and medical centers. Conduit bending, dedicated circuits, and code compliance.</p>
+          <ul class="card-list">
+            <li>Tenant improvement & commercial remodeling</li>
+            <li>3-phase 120/208V & 277/480V distribution</li>
+            <li>Commercial emergency lighting & exit signs</li>
+            <li>City inspection & municipal permit signoff</li>
+          </ul>
+          <a href="tel:+18135156999" class="card-link">Schedule Commercial Consultation →</a>
+        </div>
+
+        <!-- Generators -->
+        <div class="card" id="generators">
+          <div class="card-icon">⚡</div>
+          <h3>Standby & Industrial Generators</h3>
+          <p>Keep your commercial facility or home fully operational during Florida hurricane outages. Authorized Generac & whole-facility transfer systems.</p>
+          <ul class="card-list">
+            <li>Automatic transfer switch (ATS) installations</li>
+            <li>Commercial diesel & natural gas generator wiring</li>
+            <li>Load bank testing and maintenance</li>
+            <li>Emergency generator bypass tie-ins</li>
+          </ul>
+          <a href="tel:+18135156999" class="card-link">Get Generator System Quote →</a>
+        </div>
+
+        <!-- Panel Upgrades -->
+        <div class="card" id="residential">
+          <div class="card-icon">🛡️</div>
+          <h3>Panel Replacements & Upgrades</h3>
+          <p>Upgrade old 100A panels to heavy-duty 200A and 400A service. Safe breaker distribution for high-draw appliances and modern equipment.</p>
+          <ul class="card-list">
+            <li>100A, 200A & 400A main service upgrades</li>
+            <li>Outdated fuse box and Zinsco/FPE panel replacements</li>
+            <li>Surge protection device (SPD) installation</li>
+            <li>TECO & Duke Energy utility coordination</li>
+          </ul>
+          <a href="tel:+18135156999" class="card-link">Upgrade Service Panel →</a>
+        </div>
+
+        <!-- Industrial -->
+        <div class="card">
+          <div class="card-icon">🏭</div>
+          <h3>Industrial Equipment Hookups</h3>
+          <p>Machinery power drops, heavy motor control centers (MCC), transformers, and variable frequency drive (VFD) wiring for warehouses and plants.</p>
+          <ul class="card-list">
+            <li>Heavy machinery & motor control wiring</li>
+            <li>Dry-type step-down transformer hookups</li>
+            <li>High-bay LED warehouse illumination</li>
+            <li>Preventative industrial maintenance</li>
+          </ul>
+          <a href="tel:+18135156999" class="card-link">Request Industrial Tech →</a>
+        </div>
+
+        <!-- EV Charging -->
+        <div class="card">
+          <div class="card-icon">🚗</div>
+          <h3>EV Charger Stations (Fleet & Home)</h3>
+          <p>Commercial multi-vehicle EV charging stations for corporate parking lots, as well as high-output Level 2 residential garage chargers.</p>
+          <ul class="card-list">
+            <li>Commercial dual-port fleet charging stations</li>
+            <li>Tesla Wall Connector & Level 2 home wiring</li>
+            <li>Energy management & load shedding systems</li>
+            <li>Trenching and bollard electrical hookups</li>
+          </ul>
+          <a href="tel:+18135156999" class="card-link">Install EV Charging Stations →</a>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="card">
+          <div class="card-icon">🔍</div>
+          <h3>Troubleshooting & Diagnostics</h3>
+          <p>Thermal infrared imaging, ground fault locator, short-circuit diagnostics, and emergency repair for critical electrical failures.</p>
+          <ul class="card-list">
+            <li>Advanced thermal imaging circuit scans</li>
+            <li>Arc-fault and breaker trip diagnostics</li>
+            <li>Emergency power restoration dispatch</li>
+            <li>Commercial code violation corrections</li>
+          </ul>
+          <a href="tel:+18135156999" class="card-link">Dispatch Diagnostic Electrician →</a>
+        </div>
+      </div>
+
+      <!-- Estimator Tool -->
+      <div class="calc-box-wrap" id="calculator">
+        <h3 style="text-align:center; font-size:22px; font-weight:800; color:var(--navy);">Tampa Bay Project Cost Guide</h3>
+        <p style="text-align:center; color:var(--muted); font-size:14px; margin:6px 0 24px;">Ballpark project ranges for commercial and residential electrical projects</p>
+
+        <div class="calc-box-grid">
+          <div class="calc-btn active" onclick="setAguilaCalc(1850, 3800, '200A Service Panel Replacement & Permitting', this)">
+            <div class="calc-btn-title">⚡ 200A Panel Upgrade</div>
+            <div class="calc-btn-desc">Permits, Square D / Eaton + inspection</div>
+          </div>
+          <div class="calc-btn" onclick="setAguilaCalc(3500, 11500, 'Automatic Standby Generator & ATS Transfer Switch', this)">
+            <div class="calc-btn-title">🌪️ Whole-Property Generator</div>
+            <div class="calc-btn-desc">Whole-home / commercial ATS switch</div>
+          </div>
+          <div class="calc-btn" onclick="setAguilaCalc(2800, 9500, 'Commercial Tenant Electrical Build-Out', this)">
+            <div class="calc-btn-title">🏢 Commercial Build-Out</div>
+            <div class="calc-btn-desc">Office / retail power drops & lighting</div>
+          </div>
+          <div class="calc-btn" onclick="setAguilaCalc(600, 1400, 'Level 2 EV Dedicated 50A Circuit Run', this)">
+            <div class="calc-btn-title">🚗 EV Wall Connector</div>
+            <div class="calc-btn-desc">240V 50A/60A conduit run</div>
+          </div>
+        </div>
+
+        <div class="calc-disp">
+          <div class="calc-disp-lbl" id="agLabel">Estimated Range for: 200A Service Panel Replacement & Permitting</div>
+          <div class="calc-disp-val" id="agVal">$1,850 – $3,800</div>
+          <div class="calc-disp-sub">"Best Service, Reasonable Rates." Final binding quotes provided on-site with complete code compliance guarantees.</div>
+        </div>
+      </div>
+
+      <!-- MBE Certified Box -->
+      <div class="mbe-box">
+        <div>
+          <span style="background:rgba(245, 158, 11, 0.2); color:#FBBF24; padding:4px 10px; border-radius:4px; font-weight:800; font-size:12px;">CITY & LOCAL GOVERNMENT SUBCONTRACTING</span>
+          <h3 style="margin-top:12px;">Certified Minority Business Enterprise (MBE)</h3>
+          <p>
+            Aguila Electrical Services Inc. is officially recognized and certified as an MBE electrical contractor in Tampa Bay. We collaborate with general contractors, city agencies, and commercial developers on public and private projects requiring certified participation.
+          </p>
+          <div style="font-weight:700; color:var(--gold-bright);">
+            ★ Florida Certified Electrical Contractor #EC13015442 · BBB A+ Accredited
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); padding:24px; border-radius:12px; border:1px solid rgba(255,255,255,0.15);">
+          <h4 style="font-size:16px; margin-bottom:10px;">Why Developers & Owners Choose Us:</h4>
+          <ul style="list-style:none; font-size:13px; line-height:1.8;">
+            <li>✓ 400+ Google Reviews with 4.9★ Average</li>
+            <li>✓ Full commercial liability & worker's compensation</li>
+            <li>✓ Comprehensive industrial safety standards</li>
+            <li>✓ Responsive project management & rapid turnaround</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews-bg" id="reviews">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">Proven Track Record</span>
+        <h2 class="sec-title">Over 400 Verified 4.9★ Reviews</h2>
+        <p class="sec-desc">A reputation earned through technical excellence, punctuality, and fair, transparent pricing.</p>
+      </div>
+
+      <div class="rev-grid">
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">
+            "Aguila Electrical handled our commercial warehouse rewire and generator transfer setup in Tampa. Professional from start to finish. They showed up on time, passed inspections without delay, and gave us reasonable rates. Highly recommended!"
+          </p>
+          <div class="rev-author">
+            <div class="rev-initial">MR</div>
+            <div class="rev-info">
+              <h5>Marco R.</h5>
+              <span>Commercial Facility Manager · Tampa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">
+            "Replaced an old 150A panel with a 200A modern Square D box. Their electricians were knowledgeable, polite, and cleaned up every piece of wire. Passed the county inspection seamlessly. Best electricians in Tampa!"
+          </p>
+          <div class="rev-author">
+            <div class="rev-initial">JL</div>
+            <div class="rev-info">
+              <h5>Jennifer L.</h5>
+              <span>Homeowner · Carrollwood, FL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">
+            "We needed emergency electrical troubleshooting after a severe lightning storm damaged our service mast. Aguila Electrical dispatched a crew within two hours and had power safely restored that afternoon. Incredible service!"
+          </p>
+          <div class="rev-author">
+            <div class="rev-initial">DS</div>
+            <div class="rev-info">
+              <h5>Daniel S.</h5>
+              <span>Business Owner · Ybor City</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+          <span style="font-size:22px;">🦅⚡</span>
+          <strong style="color:#FFFFFF; font-size:17px;">Aguila Electrical Services Inc.</strong>
+        </div>
+        <p style="margin-bottom:14px; line-height:1.6;">
+          Commercial, industrial, and residential electrical contractors serving Tampa Bay. Certified Minority Business Enterprise (MBE).
+        </p>
+        <p style="color:var(--gold-bright); font-weight:700;">FL State License #EC13015442</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Electrical Divisions</h4>
+        <ul>
+          <li><a href="#commercial">Commercial Build-Outs</a></li>
+          <li><a href="#generators">Standby Generators</a></li>
+          <li><a href="#residential">200A/400A Panel Upgrades</a></li>
+          <li><a href="#commercial">Industrial Power Drops</a></li>
+          <li><a href="#commercial">EV Charging Stations</a></li>
+          <li><a href="#commercial">Emergency Troubleshooting</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Service Territory</h4>
+        <ul>
+          <li>Tampa & South Tampa</li>
+          <li>Ybor City & Westshore</li>
+          <li>Brandon & Riverview</li>
+          <li>Temple Terrace & Carrollwood</li>
+          <li>St. Petersburg & Clearwater</li>
+          <li>Plant City & Hillsborough Co.</li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Direct Office</h4>
+        <ul>
+          <li>📍 8928 N. Newport Ave, Tampa, FL 33604</li>
+          <li>📞 <a href="tel:+18135156999">(813) 515-6999</a> / (813) 368-9323</li>
+          <li>✉️ <a href="mailto:sales@aguilaelectrical.com">sales@aguilaelectrical.com</a></li>
+          <li>⏰ Mon–Fri: 7:30am – 5:30pm</li>
+          <li>🚨 24/7 Emergency Commercial Dispatch</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bot">
+      <div>
+        © 2026 Aguila Electrical Services Inc. All rights reserved. Licensed & Insured.
+      </div>
+      <div>
+        <span>Florida Certified Electrical Contractor #EC13015442 · BBB Accredited A+</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-bar">
+    <div class="mobile-bar-inner">
+      <a href="tel:+18135156999" class="mob-btn mob-call">
+        <span>📞 Call (813) 515-6999</span>
+      </a>
+      <a href="https://wa.me/18135156999?text=Hi%20Aguila%20Electrical!%20I%20need%20a%20commercial%20or%20residential%20quote." target="_blank" rel="noopener" class="mob-btn mob-wa">
+        <span>💬 WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function setAguilaCalc(min, max, title, elem) {
+      document.querySelectorAll('.calc-btn').forEach(function(b){ b.classList.remove('active'); });
+      elem.classList.add('active');
+      document.getElementById('agLabel').textContent = 'Estimated Range for: ' + title;
+      document.getElementById('agVal').textContent = '$' + min.toLocaleString() + ' – $' + max.toLocaleString();
+    }
+  </script>
+</body>
+</html>

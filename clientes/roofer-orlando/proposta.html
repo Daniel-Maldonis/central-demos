@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>A New Version of Your Website — Roofer Orlando (Sunny Roofing)</title>
+<style>
+  :root {
+    --bg: #0F172A;
+    --ink: #F8FAFC;
+    --muted: #94A3B8;
+    --acc: #EA580C;
+    --acc-hover: #C2410C;
+    --card: #1E293B;
+    --line: #334155;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .stage { width: min(1560px, 96vw); margin: 0 auto; }
+  header { padding: 56px 0 36px; text-align: center; }
+  .kicker {
+    font-size: 13px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--acc);
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .badge-lic {
+    background: rgba(234, 88, 12, 0.15);
+    color: #FB923C;
+    border: 1px solid rgba(234, 88, 12, 0.4);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+  h1 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: clamp(28px, 4.5vw, 44px);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #fff;
+  }
+  h1 em { font-style: normal; color: var(--acc); }
+  .sub {
+    color: var(--muted);
+    max-width: 720px;
+    margin: 16px auto 0;
+    font-size: 17px;
+  }
+  .autor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .autor b { color: #fff; }
+  .toggle {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 34px 0 18px;
+  }
+  .toggle button {
+    border: 1px solid var(--line);
+    background: var(--card);
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--muted);
+    transition: all 0.2s;
+  }
+  .toggle button:first-child { border-radius: 10px 0 0 10px; }
+  .toggle button:last-child { border-radius: 0 10px 10px 0; }
+  .toggle button.on {
+    background: var(--acc);
+    color: #fff;
+    border-color: var(--acc);
+  }
+  .frame {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,.3);
+  }
+  .frame-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: #0B1120;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .dots { display: flex; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot.r { background: #EF4444; }
+  .dot.y { background: #F59E0B; }
+  .dot.g { background: #10B981; }
+  .frame-body { height: 80vh; min-height: 580px; }
+  iframe { width: 100%; height: 100%; border: none; background: #fff; }
+  .side-by-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 80vh;
+    min-height: 580px;
+    border-top: 1px solid var(--line);
+  }
+  .side-box { display: flex; flex-direction: column; }
+  .side-box:first-child { border-right: 1px solid var(--line); }
+  .side-label {
+    padding: 10px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+  }
+  .side-label.old { background: #371B1B; color: #FCA5A5; }
+  .side-label.new { background: #143526; color: #86EFAC; }
+  .side-box iframe { flex: 1; }
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 44px 0 20px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .card h3 { font-size: 16px; margin-bottom: 10px; color: #fff; }
+  .card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+  .cta-box {
+    background: linear-gradient(135deg, #1E293B, #0F172A);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 44px 32px;
+    text-align: center;
+    margin: 32px 0 64px;
+  }
+  .cta-box h2 { font-size: 24px; color: #fff; margin-bottom: 12px; }
+  .cta-box p { color: var(--muted); max-width: 650px; margin: 0 auto 28px; }
+  .btn-primary {
+    display: inline-block;
+    background: var(--acc);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    margin-right: 12px;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--acc-hover); }
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid var(--line);
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.05); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">
+      <span>Exclusive Demonstration</span>
+      <span class="badge-lic">Florida Certified Roofing Contractor #CCC1333142</span>
+    </div>
+    <h1>A New High-Converting Concept for <em>Roofer Orlando</em></h1>
+    <p class="sub">
+      A modern, storm-ready demonstration engineered to showcase your 133+ five-star Google reputation, replace outdated Dutch residual code with clean Orlando authority, and convert hurricane roof replacements with an instant inspection form.
+    </p>
+    <div class="autor">
+      <span>Interactive Working Sample</span> &bull;
+      <span>Phone: <b>(407) 203-9545</b></span> &bull;
+      <span>Orlando &amp; Central Florida</span>
+    </div>
+
+    <div class="toggle">
+      <button class="on" onclick="setView('preview')">Live Interactive Redesign</button>
+      <button onclick="setView('compare')">Side-by-Side Comparison</button>
+    </div>
+  </div>
+</header>
+
+<main class="stage">
+  <div class="frame">
+    <div class="frame-head">
+      <div class="dots">
+        <div class="dot r"></div>
+        <div class="dot y"></div>
+        <div class="dot g"></div>
+      </div>
+      <span id="frame-title">Viewing: roofer-orlando.html (Redesign Concept)</span>
+      <a href="roofer-orlando.html" target="_blank" style="color:var(--acc); text-decoration:none; font-weight:600; font-size:12px;">Open Full Page &nearr;</a>
+    </div>
+
+    <div id="view-preview" class="frame-body">
+      <iframe src="roofer-orlando.html" title="Roofer Orlando Preview"></iframe>
+    </div>
+
+    <div id="view-compare" class="side-by-side" style="display:none;">
+      <div class="side-box">
+        <div class="side-label old">
+          <span>Current Website</span>
+          <span>Dutch code relics &bull; Dense text &bull; No instant quote</span>
+        </div>
+        <iframe src="https://drrooferorlando.com/" title="Current Website"></iframe>
+      </div>
+      <div class="side-box">
+        <div class="side-label new">
+          <span>New High-Converting Design</span>
+          <span>Storm Damage Focus &bull; Fast &bull; Instant Roof Quote</span>
+        </div>
+        <iframe src="roofer-orlando.html" title="Redesign"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="summary">
+      <div class="card">
+        <h3>🌪️ Hurricane &amp; Storm Damage Emergency CTA</h3>
+        <p>Orlando homeowners hit by Central Florida storms can request a rapid 24-48h tarping and drone inspection with a single tap, capturing high-ticket insurance claim replacements.</p>
+      </div>
+      <div class="card">
+        <h3>⭐ 133+ Five-Star Google Reputation Display</h3>
+        <p>Highlights your authentic 4.9-star track record, Florida State Certified license #CCC1333142, and verified lifetime workmanship warranties front and center.</p>
+      </div>
+      <div class="card">
+        <h3>📱 100% Mobile Clean &amp; In-Browser Editor</h3>
+        <p>Fully responsive, lightweight code with zero bloated plugins, plus a live visual editor that lets your team test adjustments without touching code.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h2>This concept is ready to launch — completely customized to your needs.</h2>
+      <p>
+        If you would like to test edits, preview text adjustments, or see it in action, launch our visual editor below or reply directly to our email.
+      </p>
+      <a href="roofer-orlando-editor.html" target="_blank" class="btn-primary">Launch Visual Editor ✏️</a>
+      <a href="roofer-orlando.html" target="_blank" class="btn-secondary">Experience Full Site 🚀</a>
+    </div>
+  </div>
+</main>
+
+<script>
+function setView(mode) {
+  const p = document.getElementById('view-preview');
+  const c = document.getElementById('view-compare');
+  const btns = document.querySelectorAll('.toggle button');
+  const title = document.getElementById('frame-title');
+  if (mode === 'preview') {
+    p.style.display = 'block';
+    c.style.display = 'none';
+    btns[0].classList.add('on');
+    btns[1].classList.remove('on');
+    title.innerText = 'Viewing: roofer-orlando.html (Redesign Concept)';
+  } else {
+    p.style.display = 'none';
+    c.style.display = 'grid';
+    btns[0].classList.remove('on');
+    btns[1].classList.add('on');
+    title.innerText = 'Viewing: Side-by-Side Comparison';
+  }
+}
+</script>
+
+</body>
+</html>

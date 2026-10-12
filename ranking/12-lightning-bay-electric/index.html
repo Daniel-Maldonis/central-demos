@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lightning Bay Electric | Tampa Bay Licensed Master Electricians</title>
+<meta name="description" content="Lightning Bay Electric provides licensed commercial & residential electrical services in Tampa, St. Petersburg, and Clearwater. State Certified EC13013571. 5.0 Star Rated.">
+<style>
+  :root {
+    --primary: #0F172A;
+    --primary-light: #1E293B;
+    --accent: #EAB308;
+    --accent-hover: #CA8A04;
+    --cyan: #06B6D4;
+    --text-dark: #0F172A;
+    --text-muted: #64748B;
+    --bg-light: #F8FAFC;
+    --white: #FFFFFF;
+    --border: #E2E8F0;
+    --success: #10B981;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  /* Motion & Animations */
+  @keyframes electricGlow {
+    0%, 100% {
+      box-shadow: 0 0 14px rgba(234, 179, 8, 0.4), 0 0 28px rgba(234, 179, 8, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 24px rgba(234, 179, 8, 0.8), 0 0 45px rgba(234, 179, 8, 0.35);
+    }
+  }
+  @keyframes subtlePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+  }
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .pulse-glow {
+    animation: electricGlow 2.4s infinite ease-in-out;
+  }
+  .subtle-pulse {
+    animation: subtlePulse 3s infinite ease-in-out;
+  }
+  .float-slow {
+    animation: floatSlow 4s infinite ease-in-out;
+  }
+
+  /* Scroll Reveal Motion */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Top Notice Bar */
+  .top-bar {
+    background: #090D16;
+    color: #94A3B8;
+    font-size: 13px;
+    padding: 8px 24px;
+    border-bottom: 1px solid #1E293B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar .highlights {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .top-bar .badge-lic {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .top-bar .contact-quick {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .top-bar a {
+    color: #F8FAFC;
+    font-weight: 600;
+  }
+  .top-bar a:hover { color: var(--accent); }
+
+  /* Header */
+  header {
+    background: rgba(15, 23, 42, 0.98);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .header-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .real-logo-img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+  }
+  .logo-bolt {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--accent) 0%, #F59E0B 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 900;
+    color: #0F172A;
+    box-shadow: 0 0 16px rgba(234, 179, 8, 0.4);
+  }
+  .logo-text h1 {
+    font-size: 19px;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  .logo-text p {
+    font-size: 11px;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+  nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+  nav a {
+    color: #E2E8F0;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--accent); }
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn-dispatch {
+    background: linear-gradient(135deg, var(--accent) 0%, #D97706 100%);
+    color: #0F172A;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.15s, box-shadow 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-dispatch:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+    color: #FFFFFF;
+    padding: 80px 24px 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(234, 179, 8, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .badge-gold {
+    background: rgba(234, 179, 8, 0.15);
+    color: #FACC15;
+    border: 1px solid rgba(234, 179, 8, 0.4);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .badge-pill {
+    background: rgba(255, 255, 255, 0.08);
+    color: #E2E8F0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .hero-text h1 {
+    font-size: clamp(34px, 4.5vw, 52px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .hero-text h1 span.gold {
+    color: var(--accent);
+  }
+  .hero-text p {
+    font-size: 17px;
+    color: #94A3B8;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 580px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 36px;
+  }
+  .btn-hero-call {
+    background: var(--accent);
+    color: #0F172A;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 16px 28px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s;
+  }
+  .btn-hero-call:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+  }
+  .btn-hero-estimate {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px 26px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+  }
+  .btn-hero-estimate:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #FFFFFF;
+  }
+  .trust-strip {
+    display: flex;
+    gap: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .trust-item strong {
+    font-size: 24px;
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 1.1;
+  }
+  .trust-item strong span.sym { color: var(--accent); font-size: 20px; }
+  .trust-item span.lbl {
+    font-size: 12px;
+    color: #94A3B8;
+    margin-top: 3px;
+  }
+
+  /* Hero Calculator Card */
+  .calc-card {
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    color: var(--text-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s;
+  }
+  .calc-header {
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .calc-header h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .calc-header p {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .calc-form .form-group {
+    margin-bottom: 16px;
+  }
+  .calc-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 6px;
+  }
+  .calc-form select,
+  .calc-form input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #F8FAFC;
+    color: var(--text-dark);
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+  .calc-form select:focus,
+  .calc-form input:focus {
+    border-color: var(--accent);
+    background: #FFFFFF;
+  }
+  .calc-result-box {
+    background: #FEF9C3;
+    border: 1px solid #FDE047;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .calc-result-box .label {
+    font-size: 13px;
+    color: #854D0E;
+    font-weight: 700;
+  }
+  .calc-result-box .price {
+    font-size: 22px;
+    font-weight: 900;
+    color: #713F12;
+    transition: all 0.3s ease;
+  }
+  .btn-submit-estimate {
+    width: 100%;
+    background: var(--primary);
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-submit-estimate:hover {
+    background: #1E293B;
+    transform: translateY(-1px);
+  }
+
+  /* Core Layout Sections */
+  .section {
+    padding: 80px 24px;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .section-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 50px;
+  }
+  .section-tag {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #B45309;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  .section-head h2 {
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .section-head p {
+    font-size: 16px;
+    color: var(--text-muted);
+  }
+
+  /* Gallery Grid (Real Photos) */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 30px;
+  }
+  .gallery-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 30px -8px rgba(0,0,0,0.12);
+  }
+  .gallery-img-wrap {
+    height: 220px;
+    overflow: hidden;
+    background: #0F172A;
+  }
+  .gallery-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .gallery-card:hover .gallery-img-wrap img {
+    transform: scale(1.05);
+  }
+  .gallery-info {
+    padding: 22px;
+  }
+  .gallery-loc {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #B45309;
+    letter-spacing: 0.08em;
+  }
+  .gallery-info h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 6px 0 8px;
+  }
+  .gallery-info p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Services Grid */
+  .grid-services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .service-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -6px rgba(0,0,0,0.08);
+    border-color: #CBD5E1;
+  }
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #FEF08A;
+    color: #854D0E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .service-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 12px;
+  }
+  .service-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .service-features {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+  .service-features li {
+    font-size: 13px;
+    color: #334155;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .service-features li::before {
+    content: "✓";
+    color: var(--success);
+    font-weight: 800;
+  }
+  .service-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: #B45309;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .service-link:hover { text-decoration: underline; }
+
+  /* Why Choose Us */
+  .why-box {
+    background: #0F172A;
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 60px 48px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .why-box h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    line-height: 1.25;
+  }
+  .why-box p {
+    color: #94A3B8;
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  .points-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .point-item strong {
+    font-size: 16px;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .point-item p {
+    font-size: 13px;
+    color: #94A3B8;
+    margin: 0;
+  }
+  .areas-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 30px;
+  }
+  .areas-box h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--accent);
+  }
+  .city-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .city-tag {
+    background: rgba(255, 255, 255, 0.08);
+    color: #E2E8F0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .city-tag:hover {
+    background: rgba(234, 179, 8, 0.2);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+  }
+
+  /* Reviews Section */
+  .reviews-section {
+    background: #F1F5F9;
+    padding: 80px 24px;
+  }
+  .reviews-grid {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .review-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 26px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);
+  }
+  .stars {
+    color: #F59E0B;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .review-text {
+    font-size: 14px;
+    color: #334155;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .reviewer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    font-size: 13px;
+  }
+  .reviewer strong { color: var(--primary); }
+  .reviewer span { color: var(--text-muted); font-size: 11px; }
+
+  /* Footer */
+  footer {
+    background: #090D16;
+    color: #94A3B8;
+    padding: 60px 24px 100px;
+    border-top: 1px solid #1E293B;
+  }
+  .footer-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+  }
+  .footer-col h4 {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .footer-col ul {
+    list-style: none;
+  }
+  .footer-col ul li {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a:hover { color: var(--accent); }
+  .footer-bottom {
+    max-width: 1240px;
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #64748B;
+  }
+
+  /* Mobile Sticky Call Bar */
+  .mobile-call-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0F172A;
+    border-top: 2px solid var(--accent);
+    padding: 12px 16px;
+    z-index: 1000;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.25);
+  }
+  .mobile-call-bar .bar-inner {
+    display: flex;
+    gap: 12px;
+  }
+  .mobile-call-bar a.call-btn {
+    flex: 1;
+    background: var(--accent);
+    color: #0F172A;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .mobile-call-bar a.est-btn {
+    flex: 1;
+    background: #1E293B;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* Responsive Queries */
+  @media (max-width: 992px) {
+    .hero-container { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .grid-services { grid-template-columns: 1fr; }
+    .why-box { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    nav { display: none; }
+  }
+  @media (max-width: 768px) {
+    .mobile-call-bar { display: block; }
+    .top-bar .highlights { display: none; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .points-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Utility Strip -->
+<div class="top-bar">
+  <div class="highlights">
+    <span class="badge-lic">⚡ Florida Certified Electrical Contractor #EC13013571</span>
+    <span>•</span>
+    <span>Family-Owned &amp; Operated</span>
+    <span>•</span>
+    <span>5.0 ★ Google Rating (79 Reviews)</span>
+  </div>
+  <div class="contact-quick">
+    <span>Mon - Fri: 8:00 AM - 5:00 PM</span>
+    <a href="tel:+18138972665">📞 (813) 897-2665</a>
+  </div>
+</div>
+
+<!-- Main Sticky Header -->
+<header>
+  <div class="header-inner">
+    <div class="logo-box">
+      <!-- Real Client Logo with Fallback -->
+      <img src="https://www.lightningbayelectric.com/assets/img/lightning-bay-electric-logo-tampa-fl.png" alt="Lightning Bay Electric" class="real-logo-img" onerror="this.style.display='none'; document.getElementById('boltFallback').style.display='flex';">
+      <div id="boltFallback" class="logo-bolt" style="display:none;">⚡</div>
+      <div class="logo-text">
+        <h1>LIGHTNING BAY</h1>
+        <p>Electric LLC &bull; Tampa Bay, FL</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#projects">Recent Projects</a>
+      <a href="#calculator">Price Estimator</a>
+      <a href="#why-us">Why Lightning Bay</a>
+      <a href="#reviews">Testimonials</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+18138972665" class="btn-dispatch pulse-glow">
+        <span>📞 (813) 897-2665</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section with Motion & Interactive Live Estimator -->
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <div class="hero-badges">
+        <span class="badge-gold subtle-pulse">★ 5.0 Google Verified (79 Reviews)</span>
+        <span class="badge-pill">Licensed &amp; Insured #EC13013571</span>
+        <span class="badge-pill">Tampa &bull; St. Pete &bull; Clearwater</span>
+      </div>
+      <h1>Precision Electrical Work For Your <span class="gold">Home &amp; Business</span>.</h1>
+      <p>
+        From whole-home standby generators and Level 2 EV charging stations to complete 200-Amp panel upgrades and commercial buildouts. Prompt scheduling, master craftsmanship, and honest pricing across Tampa Bay.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+18138972665" class="btn-hero-call pulse-glow">
+          <span>Schedule Service: (813) 897-2665</span>
+        </a>
+        <a href="#calculator" class="btn-hero-estimate">
+          <span>Calculate Price &darr;</span>
+        </a>
+      </div>
+      <!-- Trust Strip with Animated Numeric Counters -->
+      <div class="trust-strip">
+        <div class="trust-item">
+          <strong><span class="counter" data-target="100">0</span><span class="sym">%</span></strong>
+          <span class="lbl">Clean Site Guarantee</span>
+        </div>
+        <div class="trust-item">
+          <strong><span class="counter" data-target="79">0</span><span class="sym">+</span></strong>
+          <span class="lbl">5-Star Google Reviews</span>
+        </div>
+        <div class="trust-item">
+          <strong><span class="counter" data-target="2026">0</span></strong>
+          <span class="lbl">Florida NEC Code Ready</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Cost Calculator Card -->
+    <div class="calc-card float-slow" id="calculator">
+      <div class="calc-header">
+        <h3>⚡ Quick Project Estimator</h3>
+        <p>Instant ballpark estimate for Tampa Bay homeowners &amp; businesses.</p>
+      </div>
+      <form class="calc-form" id="estimateForm" onsubmit="event.preventDefault(); showConfirmation();">
+        <div class="form-group">
+          <label for="projectType">Select Electrical Service</label>
+          <select id="projectType" onchange="calculatePrice()">
+            <option value="panel" data-base="1850">200A Main Electrical Panel Upgrade</option>
+            <option value="ev" data-base="750">Level 2 EV Charger Installation (Tesla / Universal)</option>
+            <option value="generator" data-base="4200">Standby Generator Transfer Switch &amp; Inlet</option>
+            <option value="rewire" data-base="3500">Whole Home Rewire &amp; Code Modernization</option>
+            <option value="lighting" data-base="650">LED Recessed &amp; Landscape Lighting Package</option>
+            <option value="commercial" data-base="2200">Commercial Tenant Improvement / Subpanel</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="propertyType">Property Type</label>
+          <select id="propertyType" onchange="calculatePrice()">
+            <option value="residential">Single Family Home / Townhome</option>
+            <option value="historic">Historic Home (Pinellas / Old Tampa)</option>
+            <option value="commercial">Commercial / Retail Facility</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="leadPhone">Your Contact Phone / Email</label>
+          <input type="text" id="leadPhone" placeholder="(813) 000-0000 or email" required>
+        </div>
+        <div class="calc-result-box">
+          <span class="label">Estimated Price Range:</span>
+          <span class="price" id="calcPriceDisplay">$1,850 – $2,497</span>
+        </div>
+        <button type="submit" class="btn-submit-estimate">
+          <span>Lock In Free Quote &bull; Instant Dispatch</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Real Projects Gallery with Genuine Images -->
+<section class="section" id="projects">
+  <div class="section-head reveal">
+    <span class="section-tag">Authentic Portfolio</span>
+    <h2>Real Tampa Bay Installations</h2>
+    <p>We pride ourselves on razor-clean pipe bending, neat panel dressing, and flawless code compliance.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap">
+        <img src="https://www.lightningbayelectric.com/assets/img/gallery/200-amp-electrical-panel-meter-upgrade-square-d-tampa-fl.jpg" alt="200A Square D Panel Upgrade Tampa" loading="lazy">
+      </div>
+      <div class="gallery-info">
+        <span class="gallery-loc">Tampa, FL &bull; Residential</span>
+        <h3>200-Amp Square D Panel Upgrade</h3>
+        <p>Replaced an overloaded outdated electrical panel with a modern Square D QO center, complete with whole-home surge protection.</p>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap">
+        <img src="https://www.lightningbayelectric.com/assets/img/gallery/generac-standby-generator-transfer-switch-installation-tampa-fl.jpg" alt="Generac Standby Generator Installation St Petersburg" loading="lazy">
+      </div>
+      <div class="gallery-info">
+        <span class="gallery-loc">St. Petersburg, FL &bull; Hurricane Ready</span>
+        <h3>Generac Standby Generator Hookup</h3>
+        <p>Full automatic transfer switch (ATS) wiring and generator hookup to keep vital AC and power running during Gulf storms.</p>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap">
+        <img src="https://www.lightningbayelectric.com/assets/img/gallery/emporia-level-2-ev-charger-garage-installation-tampa-fl.jpg" alt="Emporia Level 2 EV Charger Installation" loading="lazy">
+      </div>
+      <div class="gallery-info">
+        <span class="gallery-loc">Clearwater, FL &bull; EV Charging</span>
+        <h3>Level 2 48A Fast EV Charger</h3>
+        <p>Dedicated 60-Amp circuit installation with clean conduit run directly to garage parking bay for high-speed overnight charging.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Services -->
+<section class="section" id="services">
+  <div class="section-head reveal">
+    <span class="section-tag">Tampa Bay Electrical Specialists</span>
+    <h2>Expert Electrical Services Done Right The First Time</h2>
+    <p>We solve difficult wiring challenges, eliminate safety hazards, and modernize residential and commercial power infrastructure.</p>
+  </div>
+  <div class="grid-services">
+    <div class="service-card reveal">
+      <div>
+        <div class="service-icon">⚡</div>
+        <h3>200-Amp Panel Upgrades</h3>
+        <p>Replace outdated, recalled (Federal Pacific, Zinsco), or overloaded electrical panels to handle modern HVAC, EV chargers, and appliances safely.</p>
+        <ul class="service-features">
+          <li>Whole-home surge protection included</li>
+          <li>Permitting and TECO/Duke Energy coordination</li>
+          <li>Completed in 1 business day</li>
+        </ul>
+      </div>
+      <a href="tel:+18138972665" class="service-link">Inquire About Panel Upgrades &rarr;</a>
+    </div>
+
+    <div class="service-card reveal">
+      <div>
+        <div class="service-icon">🔋</div>
+        <h3>EV Charger Installations</h3>
+        <p>Certified installation for Tesla Wall Connectors, ChargePoint, and all NEMA 14-50 240V Level 2 high-speed vehicle charging units.</p>
+        <ul class="service-features">
+          <li>Custom load calculations for your panel</li>
+          <li>Indoor garage or exterior weather-rated mount</li>
+          <li>Fast turnarounds across Hillsborough &amp; Pinellas</li>
+        </ul>
+      </div>
+      <a href="tel:+18138972665" class="service-link">Book EV Charger Setup &rarr;</a>
+    </div>
+
+    <div class="service-card reveal">
+      <div>
+        <div class="service-icon">🌪️</div>
+        <h3>Whole-Home Generators</h3>
+        <p>Be hurricane-ready before the storm hits. Manual transfer interlock kits, whole-home standby generator connections, and automatic switches.</p>
+        <ul class="service-features">
+          <li>Portable generator inlet boxes &amp; lockout kits</li>
+          <li>Automatic standby generator electrical hookups</li>
+          <li>Tested under full simulated load</li>
+        </ul>
+      </div>
+      <a href="tel:+18138972665" class="service-link">Prepare Your Generator &rarr;</a>
+    </div>
+
+    <div class="service-card reveal">
+      <div>
+        <div class="service-icon">💡</div>
+        <h3>Commercial Electrical &amp; Buildouts</h3>
+        <p>Powering Tampa Bay retail stores, medical offices, restaurants, and warehouses with code-compliant 3-phase power and lighting.</p>
+        <ul class="service-features">
+          <li>Dedicated circuits and machinery power drops</li>
+          <li>LED retrofit and smart lighting controls</li>
+          <li>Emergency exit lighting compliance</li>
+        </ul>
+      </div>
+      <a href="tel:+18138972665" class="service-link">Commercial Inquiries &rarr;</a>
+    </div>
+
+    <div class="service-card reveal">
+      <div>
+        <div class="service-icon">⚓</div>
+        <h3>Dock, Pier &amp; Marina Wiring</h3>
+        <p>Florida coastal wiring requires specialized marine-grade conduit, GFCI protection, boat lift motors, and underwater lighting expertise.</p>
+        <ul class="service-features">
+          <li>Corrosion-resistant marine grade enclosures</li>
+          <li>Boat lift motor power &amp; remote controls</li>
+          <li>Dock safety inspections &amp; lighting</li>
+        </ul>
+      </div>
+      <a href="tel:+18138972665" class="service-link">Dock Wiring Consultation &rarr;</a>
+    </div>
+
+    <div class="service-card reveal">
+      <div>
+        <div class="service-icon">🔍</div>
+        <h3>Safety Inspections &amp; Rewiring</h3>
+        <p>Comprehensive electrical diagnostics for older Pinellas and Tampa homes with cloth wiring, aluminum branch wiring, or ungrounded outlets.</p>
+        <ul class="service-features">
+          <li>Four-point insurance electrical certifications</li>
+          <li>GFCI &amp; AFCI safety updates</li>
+          <li>Accurate fault finding &amp; circuit tracing</li>
+        </ul>
+      </div>
+      <a href="tel:+18138972665" class="service-link">Schedule Inspection &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Why Choose Lightning Bay Box -->
+  <div class="why-box reveal" id="why-us">
+    <div>
+      <h2>Why Tampa Bay Homeowners Trust Lightning Bay Electric</h2>
+      <p>
+        Electrical work is too dangerous for guesswork. With Lightning Bay Electric, you get a state-licensed contractor who respects your time, your property, and your budget.
+      </p>
+      <div class="points-grid">
+        <div class="point-item">
+          <strong>Master Craftsmanship</strong>
+          <p>Strict adherence to Florida Building Code (NEC 2023) with lifetime workmanship backing.</p>
+        </div>
+        <div class="point-item">
+          <strong>Transparent Pricing</strong>
+          <p>Clear line-item proposals before any work begins. No hidden overtime fees.</p>
+        </div>
+        <div class="point-item">
+          <strong>Rapid Communication</strong>
+          <p>Direct contact with your electrician from estimate through permit final inspection.</p>
+        </div>
+        <div class="point-item">
+          <strong>Clean &amp; Courteous</strong>
+          <p>We wear shoe covers, lay protective drop cloths, and leave your home spotless.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="areas-box" id="service-areas">
+      <h3>📍 Serving Hillsborough &amp; Pinellas Counties</h3>
+      <p style="color:#94A3B8; font-size:13px; margin-bottom:14px;">Prompt response times throughout the entire Tampa Bay metropolitan area:</p>
+      <div class="city-tags">
+        <span class="city-tag">Tampa</span>
+        <span class="city-tag">St. Petersburg</span>
+        <span class="city-tag">Clearwater</span>
+        <span class="city-tag">Brandon</span>
+        <span class="city-tag">Riverview</span>
+        <span class="city-tag">Lutz</span>
+        <span class="city-tag">Carrollwood</span>
+        <span class="city-tag">Westchase</span>
+        <span class="city-tag">Seminole Heights</span>
+        <span class="city-tag">Davis Islands</span>
+        <span class="city-tag">Palm Harbor</span>
+        <span class="city-tag">Largo</span>
+        <span class="city-tag">Pinellas Park</span>
+        <span class="city-tag">Wesley Chapel</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="reviews-section" id="reviews">
+  <div class="section-head reveal">
+    <span class="section-tag">Verified 5.0 Star Client Reviews</span>
+    <h2>What Your Tampa Bay Neighbors Say</h2>
+    <p>Over 79 five-star reviews on Google. Real experiences from real local homeowners.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Lightning Bay Electric replaced our ancient Zinsco electrical panel and installed a Tesla Level 2 charger. Super communicative, finished in one day, and passed county inspection effortlessly. Highly recommend!"</p>
+      <div class="reviewer">
+        <strong>Marcus T.</strong>
+        <span>Tampa Homeowner &bull; Panel Upgrade</span>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Installed a generator inlet box and interlock kit for hurricane season. They explained everything thoroughly, tested it with my generator, and were extremely respectful of my house. True professionals."</p>
+      <div class="reviewer">
+        <strong>Sarah L.</strong>
+        <span>St. Petersburg &bull; Generator Setup</span>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Honest, prompt, and knowledgeable. We needed dedicated commercial circuits run for new equipment in our facility. Lightning Bay got us back up and running without disrupting operations."</p>
+      <div class="reviewer">
+        <strong>David R.</strong>
+        <span>Clearwater &bull; Commercial Buildout</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="logo-box" style="margin-bottom: 16px;">
+        <img src="https://www.lightningbayelectric.com/assets/img/lightning-bay-electric-logo-tampa-fl.png" alt="Lightning Bay Electric" style="height: 40px; width: auto; object-fit: contain;">
+      </div>
+      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+        State Certified Electrical Contractor serving Tampa, St. Petersburg, Clearwater, and surrounding counties. Commercial and residential master electricians.
+      </p>
+      <p style="font-size: 12px; color: var(--accent); font-weight: 700;">
+        License #EC13013571 &bull; Fully Insured &amp; Bonded
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#services">200A Panel Replacements</a></li>
+        <li><a href="#services">EV Charger Installations</a></li>
+        <li><a href="#services">Whole Home Generators</a></li>
+        <li><a href="#services">Commercial Electrical</a></li>
+        <li><a href="#services">Boat Lift &amp; Dock Wiring</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Service Coverage</h4>
+      <ul>
+        <li><a href="#service-areas">Tampa &amp; South Tampa</a></li>
+        <li><a href="#service-areas">St. Petersburg &amp; Beaches</a></li>
+        <li><a href="#service-areas">Clearwater &amp; Palm Harbor</a></li>
+        <li><a href="#service-areas">Brandon &amp; Riverview</a></li>
+        <li><a href="#service-areas">Lutz &amp; Wesley Chapel</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Information</h4>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Phone:</strong> <a href="tel:+18138972665" style="color:var(--accent); font-weight:700;">(813) 897-2665</a></p>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Email:</strong> <a href="mailto:lightningbayelectric@gmail.com">lightningbayelectric@gmail.com</a></p>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Hours:</strong> Mon – Fri: 8:00 AM – 5:00 PM</p>
+      <p style="font-size: 13px;"><strong>Emergency:</strong> Rapid Dispatch Available</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Lightning Bay Electric LLC. All rights reserved. Lic #EC13013571.</div>
+    <div>Tampa Bay Premier Licensed Electrical Contractor</div>
+  </div>
+</footer>
+
+<!-- Mobile Call Bar -->
+<div class="mobile-call-bar">
+  <div class="bar-inner">
+    <a href="tel:+18138972665" class="call-btn">
+      <span>⚡ Call (813) 897-2665</span>
+    </a>
+    <a href="#calculator" class="est-btn">
+      <span>Get Estimate</span>
+    </a>
+  </div>
+</div>
+
+<script>
+// Calculator Logic with Dynamic Range
+function calculatePrice() {
+  const selProject = document.getElementById('projectType');
+  const selProp = document.getElementById('propertyType');
+  const base = parseInt(selProject.selectedOptions[0].getAttribute('data-base'), 10);
+  let multiplier = 1.0;
+  if (selProp.value === 'historic') multiplier = 1.25;
+  if (selProp.value === 'commercial') multiplier = 1.4;
+
+  const low = Math.round(base * multiplier);
+  const high = Math.round(low * 1.35);
+
+  const display = document.getElementById('calcPriceDisplay');
+  display.style.transform = 'scale(1.08)';
+  display.innerText = '$' + low.toLocaleString() + ' – $' + high.toLocaleString();
+  setTimeout(() => { display.style.transform = 'scale(1)'; }, 200);
+}
+
+function showConfirmation() {
+  const phone = document.getElementById('leadPhone').value;
+  alert('Thank you! Your estimate request for ' + phone + ' has been received. Our master electrician will contact you shortly.');
+}
+
+// Scroll Reveal Intersection Observer (Smooth Motion)
+document.addEventListener('DOMContentLoaded', () => {
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  reveals.forEach(el => revealObserver.observe(el));
+
+  // Numeric Counter Motion Animation
+  const counters = document.querySelectorAll('.counter');
+  let hasAnimatedCounters = false;
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasAnimatedCounters) {
+        hasAnimatedCounters = true;
+        counters.forEach(counter => {
+          const target = +counter.getAttribute('data-target');
+          const duration = 1400; // ms
+          const stepTime = 25;
+          const steps = duration / stepTime;
+          const increment = target / steps;
+          let current = 0;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              counter.innerText = target;
+              clearInterval(timer);
+            } else {
+              counter.innerText = Math.floor(current);
+            }
+          }, stepTime);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+
+  const strip = document.querySelector('.trust-strip');
+  if (strip) counterObserver.observe(strip);
+});
+</script>
+
+</body>
+</html>

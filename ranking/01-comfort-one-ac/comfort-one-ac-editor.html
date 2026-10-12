@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comfort One Air Conditioning | Premier Scottsdale &amp; Paradise Valley HVAC</title>
+<meta name="description" content="Comfort One Air Conditioning provides elite AC repair, replacement, and heating services in Scottsdale and Paradise Valley, AZ. Over 400 5-Star Reviews. ROC #303388.">
+<style>
+  :root {
+    --navy-dark: #0A1128;
+    --navy-card: #101B3B;
+    --blue-accent: #0077B6;
+    --ice-cyan: #00B4D8;
+    --sun-gold: #F59E0B;
+    --text-white: #FFFFFF;
+    --text-muted: #94A3B8;
+    --text-body: #334155;
+    --bg-light: #F8FAFC;
+    --border-color: #E2E8F0;
+    --success: #10B981;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font);
+    background-color: var(--bg-light);
+    color: var(--text-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  /* Top Alert Banner */
+  .top-strip {
+    background: #060B18;
+    color: #94A3B8;
+    font-size: 13px;
+    padding: 8px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-strip .badges-row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .top-strip .badge-gold {
+    color: var(--sun-gold);
+    font-weight: 700;
+  }
+  .top-strip .quick-contact {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .top-strip a {
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+  .top-strip a:hover { color: var(--ice-cyan); }
+
+  /* Main Navigation Header */
+  header {
+    background: rgba(10, 17, 40, 0.98);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+  }
+  .header-wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .brand-logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+  }
+  .brand-fallback {
+    font-size: 20px;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+  }
+  .brand-fallback span { color: var(--ice-cyan); }
+  nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+  nav a {
+    color: #E2E8F0;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--ice-cyan); }
+  .header-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .btn-emergency-call {
+    background: linear-gradient(135deg, #0077B6 0%, #00B4D8 100%);
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 14px rgba(0, 180, 216, 0.35);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .btn-emergency-call:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 180, 216, 0.5);
+  }
+
+  /* Hero Section */
+  .hero-section {
+    background: linear-gradient(180deg, #0A1128 0%, #101B3B 100%);
+    color: #FFFFFF;
+    padding: 70px 24px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .pill-gold {
+    background: rgba(245, 158, 11, 0.15);
+    color: #FBBF24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .pill-blue {
+    background: rgba(0, 180, 216, 0.15);
+    color: #00B4D8;
+    border: 1px solid rgba(0, 180, 216, 0.3);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .hero-text h1 {
+    font-size: clamp(32px, 4vw, 50px);
+    font-weight: 900;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+  }
+  .hero-text h1 span.cyan { color: var(--ice-cyan); }
+  .hero-text p.sub {
+    font-size: 17px;
+    color: #94A3B8;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 580px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 34px;
+  }
+  .btn-hero-primary {
+    background: var(--ice-cyan);
+    color: #0A1128;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 15px 28px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-hero-primary:hover {
+    background: #0096C7;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+  }
+  .btn-hero-secondary {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid rgba(255,255,255,0.25);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px 24px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+  }
+  .btn-hero-secondary:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: #FFFFFF;
+  }
+
+  /* Trust Badges Bar */
+  .trust-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .trust-badge-img {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0.9);
+  }
+  .trust-metric {
+    display: flex;
+    flex-direction: column;
+  }
+  .trust-metric strong {
+    font-size: 18px;
+    color: #FFFFFF;
+  }
+  .trust-metric span {
+    font-size: 11px;
+    color: #94A3B8;
+  }
+
+  /* Interactive SEER2 Energy & Cost Calculator */
+  .calc-container {
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 20px 45px -10px rgba(0,0,0,0.35);
+    color: #0F172A;
+  }
+  .calc-head {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+  }
+  .calc-head h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--navy-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .calc-head p {
+    font-size: 13px;
+    color: #64748B;
+  }
+  .calc-form .form-group {
+    margin-bottom: 16px;
+  }
+  .calc-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 6px;
+  }
+  .calc-form select,
+  .calc-form input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: #F8FAFC;
+    color: #0F172A;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .calc-form select:focus,
+  .calc-form input:focus {
+    border-color: var(--blue-accent);
+    background: #FFFFFF;
+  }
+  .calc-output-box {
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 18px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .out-item strong {
+    font-size: 18px;
+    font-weight: 900;
+    color: #1E3A8A;
+    display: block;
+  }
+  .out-item span {
+    font-size: 11px;
+    color: #60A5FA;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .btn-lock-quote {
+    width: 100%;
+    background: var(--navy-dark);
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-lock-quote:hover {
+    background: #1B2A4A;
+  }
+
+  /* Section Styling */
+  .section {
+    padding: 80px 24px;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .section-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 50px;
+  }
+  .tag-label {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--blue-accent);
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  .section-header h2 {
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 800;
+    color: var(--navy-dark);
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .section-header p {
+    font-size: 16px;
+    color: #64748B;
+  }
+
+  /* Real Authentic Team & Fleet Gallery */
+  .fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .fleet-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04);
+  }
+  .fleet-img-wrap {
+    height: 230px;
+    overflow: hidden;
+    background: #0A1128;
+  }
+  .fleet-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .fleet-info {
+    padding: 22px;
+  }
+  .fleet-info span {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--blue-accent);
+  }
+  .fleet-info h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--navy-dark);
+    margin: 6px 0 8px;
+  }
+  .fleet-info p {
+    font-size: 13.5px;
+    color: #64748B;
+    line-height: 1.5;
+  }
+
+  /* Services Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .service-box {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .service-box:hover {
+    border-color: #CBD5E1;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.06);
+  }
+  .service-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #E0F2FE;
+    color: #0369A1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .service-box h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--navy-dark);
+    margin-bottom: 12px;
+  }
+  .service-box p {
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .service-perks {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+  .service-perks li {
+    font-size: 13px;
+    color: #334155;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .service-perks li::before {
+    content: "✓";
+    color: var(--success);
+    font-weight: 800;
+  }
+  .service-action-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--blue-accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Comparison Banner */
+  .why-choose-banner {
+    background: var(--navy-dark);
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 60px 48px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .why-choose-banner h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.25;
+  }
+  .why-choose-banner p.desc {
+    color: #94A3B8;
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  .reasons-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .reason-item strong {
+    font-size: 16px;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .reason-item p {
+    font-size: 13px;
+    color: #94A3B8;
+    margin: 0;
+  }
+  .coverage-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 30px;
+  }
+  .coverage-card h3 {
+    font-size: 18px;
+    color: var(--ice-cyan);
+    margin-bottom: 14px;
+  }
+  .areas-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .area-pill {
+    background: rgba(255,255,255,0.1);
+    color: #E2E8F0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* Verified Reviews */
+  .reviews-bg {
+    background: #F1F5F9;
+    padding: 80px 24px;
+  }
+  .reviews-wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .review-box {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 26px;
+    border: 1px solid var(--border-color);
+  }
+  .review-stars {
+    color: var(--sun-gold);
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .review-text {
+    font-size: 14px;
+    color: #334155;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .review-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+    font-size: 13px;
+  }
+  .review-author strong { color: var(--navy-dark); }
+  .review-author span { color: #94A3B8; font-size: 11px; }
+
+  /* Footer */
+  footer {
+    background: #060B18;
+    color: #94A3B8;
+    padding: 60px 24px 100px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+  }
+  .footer-col h4 {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { font-size: 13px; margin-bottom: 10px; }
+  .footer-col ul li a:hover { color: var(--ice-cyan); }
+  .footer-bottom {
+    max-width: 1240px;
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #64748B;
+  }
+
+  /* Sticky Mobile Emergency Bar */
+  .mobile-dispatch-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0A1128;
+    border-top: 2px solid var(--ice-cyan);
+    padding: 12px 16px;
+    z-index: 1000;
+  }
+  .mobile-dispatch-bar .bar-grid {
+    display: flex;
+    gap: 12px;
+  }
+  .mobile-dispatch-bar a.call-now {
+    flex: 1;
+    background: var(--ice-cyan);
+    color: #0A1128;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .mobile-dispatch-bar a.calc-jump {
+    flex: 1;
+    background: #101B3B;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  @media (max-width: 992px) {
+    .hero-container { grid-template-columns: 1fr; }
+    .fleet-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .why-choose-banner { grid-template-columns: 1fr; }
+    .reviews-wrapper { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    nav { display: none; }
+  }
+  @media (max-width: 768px) {
+    .mobile-dispatch-bar { display: block; }
+    .top-strip .badges-row { display: none; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .reasons-list { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Info Bar -->
+<div class="top-strip">
+  <div class="badges-row">
+    <span class="badge-gold">★ 5.0 Rated (400+ Verified Reviews)</span>
+    <span>•</span>
+    <span>Arizona Licensed ROC #303388</span>
+    <span>•</span>
+    <span>EPA Certified &bull; BBB A+ Accredited</span>
+  </div>
+  <div class="quick-contact">
+    <span>Mon - Sun: 24/7 Emergency Dispatch</span>
+    <a href="tel:+16022476151">📞 (602) 247-6151</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="header-wrap">
+    <div class="brand-logo-wrap">
+      <!-- Authentic Client Logo Image -->
+      <img src="https://www.comfort1ac.com/wp-content/uploads/2024/08/Comfort-One-Air-Conditioning-HVAC-Company-Scottsdale.webp" alt="Comfort One Air Conditioning Scottsdale" class="brand-logo-img" onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='block';">
+      <div id="logoFallback" class="brand-fallback" style="display:none;">COMFORT <span>ONE</span> AC</div>
+    </div>
+    <nav>
+      <a href="#services">AC &amp; Heating Services</a>
+      <a href="#fleet">Our Team &amp; Fleet</a>
+      <a href="#calculator">SEER2 Savings Calculator</a>
+      <a href="#why-us">Why Comfort One</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <div class="header-cta-group">
+      <a href="tel:+16022476151" class="btn-emergency-call">
+        <span>⚡ Call: (602) 247-6151</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section with Live Energy Calculator -->
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-text">
+      <div class="hero-pills">
+        <span class="pill-gold">Scottsdale's #1 Rated HVAC Company</span>
+        <span class="pill-blue">ROC #303388 &bull; Licensed &amp; Insured</span>
+      </div>
+      <h1>Uncompromising Cooling For Scottsdale &amp; <span class="cyan">Paradise Valley</span>.</h1>
+      <p class="sub">
+        When Arizona summer temperatures soar past 110°F, you need an air conditioning partner with instant response times, master technicians, and transparent flat-rate pricing. Serving Scottsdale, Paradise Valley, and the entire Valley of the Sun.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+16022476151" class="btn-hero-primary">
+          <span>Schedule Emergency Service &bull; (602) 247-6151</span>
+        </a>
+        <a href="#calculator" class="btn-hero-secondary">
+          <span>Estimate System Savings &darr;</span>
+        </a>
+      </div>
+
+      <!-- Real Verified Credentials from Site -->
+      <div class="trust-row">
+        <div class="trust-metric">
+          <strong>400+</strong>
+          <span>5-Star Google Reviews</span>
+        </div>
+        <div class="trust-metric">
+          <strong>100%</strong>
+          <span>Satisfaction Guaranteed</span>
+        </div>
+        <div class="trust-metric">
+          <strong>$0 Down</strong>
+          <span>Flexible AC Financing</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEER2 Energy & Replacement Calculator -->
+    <div class="calc-container" id="calculator">
+      <div class="calc-head">
+        <h3>⚡ Arizona AC Savings &amp; Cost Calculator</h3>
+        <p>Calculate your estimated summer energy savings and replacement costs.</p>
+      </div>
+      <form class="calc-form" onsubmit="event.preventDefault(); alert('Estimate request submitted! Our technician will call you shortly at: ' + document.getElementById('calcPhone').value);">
+        <div class="form-group">
+          <label for="homeSize">Approximate Home Square Footage</label>
+          <select id="homeSize" onchange="runCalculation()">
+            <option value="1500" data-ton="3.0">Up to 1,800 sq ft (3 Ton System)</option>
+            <option value="2500" data-ton="4.0" selected>1,800 – 2,800 sq ft (4 Ton System)</option>
+            <option value="3500" data-ton="5.0">2,800 – 3,800 sq ft (5 Ton System)</option>
+            <option value="5000" data-ton="8.0">Luxury Home / Multi-Zone (6+ Tons)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="currentAge">Age of Your Current AC Unit</label>
+          <select id="currentAge" onchange="runCalculation()">
+            <option value="old">12 to 18+ Years Old (10 SEER - Low Efficiency)</option>
+            <option value="mid">8 to 11 Years Old (13-14 SEER - Moderate)</option>
+            <option value="broken">Broken Down / Needs Urgent Diagnostic</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="calcPhone">Phone or Email for Written Quote</label>
+          <input type="text" id="calcPhone" placeholder="(602) 000-0000 or email" required>
+        </div>
+        <div class="calc-output-box">
+          <div class="out-item">
+            <span id="savingsLabel">Est. Summer Energy Savings:</span>
+            <strong id="savingsVal">$85 – $140 / mo</strong>
+          </div>
+          <div class="out-item">
+            <span>System Estimate:</span>
+            <strong id="priceRangeVal">$7,800 – $11,500</strong>
+          </div>
+        </div>
+        <button type="submit" class="btn-lock-quote">
+          Lock In Free Scottsdale In-Home Quote
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Authentic Fleet & Technician Showcase -->
+<section class="section" id="fleet">
+  <div class="section-header">
+    <span class="tag-label">Real Local Technicians</span>
+    <h2>The Comfort One Standard of Excellence</h2>
+    <p>We do not use subcontractors. Every technician arrives in a fully stocked Comfort One mobile workshop ready to diagnose and repair your AC in a single visit.</p>
+  </div>
+  <div class="fleet-grid">
+    <div class="fleet-card">
+      <div class="fleet-img-wrap">
+        <img src="https://www.comfort1ac.com/wp-content/uploads/2026/03/ComfortOneAC_BusinessBranding2026-8916.jpg" alt="Comfort One AC Diagnostic Technician" loading="lazy">
+      </div>
+      <div class="fleet-info">
+        <span>Master Certified Technicians</span>
+        <h3>Precision Diagnostic Equipment</h3>
+        <p>We check superheat, subcooling, compressor health, and airflow dynamics to ensure maximum cooling output at 115°F.</p>
+      </div>
+    </div>
+
+    <div class="fleet-card">
+      <div class="fleet-img-wrap">
+        <img src="https://www.comfort1ac.com/wp-content/uploads/2026/06/ComfortOneAC_BusinessBranding2026-8783.jpg" alt="Comfort One Clean Professional Work" loading="lazy">
+      </div>
+      <div class="fleet-info">
+        <span>Clean Home Guarantee</span>
+        <h3>White Glove Property Protection</h3>
+        <p>Shoe covers, drop cloths, and spotless clean-up. We treat your Scottsdale or Paradise Valley residence like our own.</p>
+      </div>
+    </div>
+
+    <div class="fleet-card">
+      <div class="fleet-img-wrap">
+        <img src="https://www.comfort1ac.com/wp-content/uploads/2025/10/ComfortOneAC_BusinessBranding2026-8946.jpg" alt="Comfort One Scottsdale High Efficiency AC Installation" loading="lazy">
+      </div>
+      <div class="fleet-info">
+        <span>High-Efficiency Inverters</span>
+        <h3>SEER2 Rated AC Replacements</h3>
+        <p>Whisper-quiet variable speed compressors from Trane, Carrier, and Daikin with up to 10-year manufacturer warranties.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core HVAC Services -->
+<section class="section" id="services" style="padding-top: 0;">
+  <div class="section-header">
+    <span class="tag-label">Scottsdale &amp; Valley-Wide</span>
+    <h2>Complete HVAC Solutions Engineered for the Desert</h2>
+    <p>From sudden capacitor blowouts to multi-zone inverter installations, we keep your home cool and your electric bills manageable.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-box">
+      <div>
+        <div class="service-icon-box">❄️</div>
+        <h3>Emergency 24/7 AC Repair</h3>
+        <p>AC stopped cooling or blowing warm air? Our technicians are on call 24 hours a day with fast dispatch throughout Scottsdale.</p>
+        <ul class="service-perks">
+          <li>Refrigerant leak detection &amp; recharge</li>
+          <li>Capacitor, contactor, and fan motor replacement</li>
+          <li>No overtime surprise fees</li>
+        </ul>
+      </div>
+      <a href="tel:+16022476151" class="service-action-link">Request Fast Repair &rarr;</a>
+    </div>
+
+    <div class="service-box">
+      <div>
+        <div class="service-icon-box">⚡</div>
+        <h3>High-Efficiency AC Replacement</h3>
+        <p>Replace an aging, money-draining unit with a modern 16–22 SEER2 heat pump or AC system. Enjoy dramatic drops in summer electric bills.</p>
+        <ul class="service-perks">
+          <li>Eligible for up to $2,000 in federal tax credits</li>
+          <li>$0 down financing options available</li>
+          <li>Turnkey installation with municipal permits</li>
+        </ul>
+      </div>
+      <a href="tel:+16022476151" class="service-action-link">Inquire About Systems &rarr;</a>
+    </div>
+
+    <div class="service-box">
+      <div>
+        <div class="service-icon-box">🛡️</div>
+        <h3>Pre-Summer AC Tune-Ups</h3>
+        <p>Prevent mid-summer catastrophic breakdowns with our comprehensive 24-point desert maintenance protocol.</p>
+        <ul class="service-perks">
+          <li>Coil cleaning and condensate line clearing</li>
+          <li>Electrical safety and amperage testing</li>
+          <li>Thermostat calibration and duct airflow check</li>
+        </ul>
+      </div>
+      <a href="tel:+16022476151" class="service-action-link">Book Seasonal Tune-Up &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Why Scottsdale Homeowners Choose Us -->
+  <div class="why-choose-banner" id="why-us">
+    <div>
+      <h2>Why Scottsdale &amp; Paradise Valley Homeowners Trust Comfort One</h2>
+      <p class="desc">
+        In the Arizona desert, choosing the wrong HVAC contractor can leave your family stranded in dangerous heat. Comfort One is built on non-negotiable integrity, speed, and master craftsmanship.
+      </p>
+      <div class="reasons-list">
+        <div class="reason-item">
+          <strong>400+ 5-Star Reviews</strong>
+          <p>Consistently rated the top HVAC company in Scottsdale across Google, Yelp, and Angi.</p>
+        </div>
+        <div class="reason-item">
+          <strong>Flat-Rate Pricing</strong>
+          <p>Every quote is written and approved before work begins. Zero surprise add-ons.</p>
+        </div>
+        <div class="reason-item">
+          <strong>NATE &amp; EPA Certified</strong>
+          <p>Strict technical standards ensuring optimal system efficiency and code compliance.</p>
+        </div>
+        <div class="reason-item">
+          <strong>Same-Day Dispatch</strong>
+          <p>Strategically routed service trucks across Scottsdale, Paradise Valley, and North Phoenix.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="coverage-card">
+      <h3>📍 Scottsdale &amp; East Valley Service Areas</h3>
+      <p style="color:#94A3B8; font-size:13px; margin-bottom:14px;">Prompt response times throughout:</p>
+      <div class="areas-tags">
+        <span class="area-pill">Scottsdale</span>
+        <span class="area-pill">Paradise Valley</span>
+        <span class="area-pill">Fountain Hills</span>
+        <span class="area-pill">North Scottsdale</span>
+        <span class="area-pill">Cave Creek</span>
+        <span class="area-pill">Carefree</span>
+        <span class="area-pill">Arcadia</span>
+        <span class="area-pill">North Phoenix</span>
+        <span class="area-pill">Tempe</span>
+        <span class="area-pill">Mesa</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Verified 5.0 Star Reviews -->
+<section class="reviews-bg" id="reviews">
+  <div class="section-header">
+    <span class="tag-label">Real Homeowner Experiences</span>
+    <h2>Over 400 Five-Star Ratings Across Scottsdale</h2>
+    <p>Read what your neighbors say about our response times, pricing, and master-level workmanship.</p>
+  </div>
+  <div class="reviews-wrapper">
+    <div class="review-box">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Our AC quit on a 114-degree Sunday afternoon. Comfort One had a technician at our Paradise Valley home within 90 minutes. Diagnosed the failed capacitor immediately, had the part on his truck, and charged a very fair flat rate. Lifesavers!"</p>
+      <div class="review-author">
+        <strong>Richard B.</strong>
+        <span>Paradise Valley &bull; Emergency Repair</span>
+      </div>
+    </div>
+
+    <div class="review-box">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Replaced two 16-year-old units with high-efficiency Trane systems. The Comfort One crew was courteous, laid down floor protection, and finished in a single day. Our APS summer electric bill dropped by over $180 a month."</p>
+      <div class="review-author">
+        <strong>Karen M.</strong>
+        <span>North Scottsdale &bull; System Replacement</span>
+      </div>
+    </div>
+
+    <div class="review-box">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Honest, knowledgeable, and prompt. Unlike other companies that tried to push a brand-new $15,000 system on me, Comfort One found and fixed a simple wire fault. Customer for life!"</p>
+      <div class="review-author">
+        <strong>Steven G.</strong>
+        <span>Scottsdale &bull; AC Diagnostic</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div style="margin-bottom: 16px;">
+        <img src="https://www.comfort1ac.com/wp-content/uploads/2024/08/Comfort-One-Air-Conditioning-HVAC-Company-Scottsdale.webp" alt="Comfort One Air Conditioning" style="height: 42px; width: auto; object-fit: contain;">
+      </div>
+      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+        Premier residential &amp; commercial HVAC contractor serving Scottsdale, Paradise Valley, and the Greater Phoenix metropolitan area.
+      </p>
+      <p style="font-size: 12px; color: var(--ice-cyan); font-weight: 700;">
+        Arizona ROC #303388 &bull; EPA Certified &bull; Fully Insured
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#services">24/7 Emergency AC Repair</a></li>
+        <li><a href="#services">High-Efficiency Replacements</a></li>
+        <li><a href="#services">Heat Pump Installations</a></li>
+        <li><a href="#services">Ductwork &amp; Airflow Balance</a></li>
+        <li><a href="#services">Annual Maintenance Club</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Service Areas</h4>
+      <ul>
+        <li><a href="#why-us">Scottsdale &amp; North Scottsdale</a></li>
+        <li><a href="#why-us">Paradise Valley</a></li>
+        <li><a href="#why-us">Fountain Hills</a></li>
+        <li><a href="#why-us">Cave Creek &amp; Carefree</a></li>
+        <li><a href="#why-us">Arcadia &amp; Phoenix</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Comfort One</h4>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Phone:</strong> <a href="tel:+16022476151" style="color:var(--ice-cyan); font-weight:700;">(602) 247-6151</a></p>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Office Email:</strong> <a href="mailto:office@comfort1ac.com">office@comfort1ac.com</a></p>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Support:</strong> <a href="mailto:info@comfort1ac.com">info@comfort1ac.com</a></p>
+      <p style="font-size: 13px;"><strong>Emergency Dispatch:</strong> 24 Hours / 7 Days</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Comfort One Air Conditioning LLC. All rights reserved. ROC #303388.</div>
+    <div>Scottsdale &amp; Paradise Valley Premier HVAC Contractor</div>
+  </div>
+</footer>
+
+<!-- Sticky Mobile Dispatch Bar -->
+<div class="mobile-dispatch-bar">
+  <div class="bar-grid">
+    <a href="tel:+16022476151" class="call-now">
+      <span>⚡ Call (602) 247-6151</span>
+    </a>
+    <a href="#calculator" class="calc-jump">
+      <span>Get Estimate</span>
+    </a>
+  </div>
+</div>
+
+<script>
+function runCalculation() {
+  const sizeSel = document.getElementById('homeSize');
+  const ageSel = document.getElementById('currentAge');
+  const ton = parseFloat(sizeSel.selectedOptions[0].getAttribute('data-ton'));
+  
+  let basePrice = ton * 2200;
+  let savingsMonthly = Math.round(ton * 28);
+
+  if (ageSel.value === 'old') {
+    savingsMonthly = Math.round(ton * 36);
+  } else if (ageSel.value === 'broken') {
+    savingsMonthly = Math.round(ton * 40);
+  }
+
+  const lowPrice = Math.round(basePrice * 0.95);
+  const highPrice = Math.round(basePrice * 1.38);
+
+  document.getElementById('savingsVal').innerText = '$' + savingsMonthly + ' – $' + Math.round(savingsMonthly * 1.5) + ' / mo';
+  document.getElementById('priceRangeVal').innerText = '$' + lowPrice.toLocaleString() + ' – $' + highPrice.toLocaleString();
+}
+</script>
+
+<!-- PROSPECTOR-EDITOR-START -->
+<style id="pe-style">
+#pe-bar{position:fixed;top:0;left:0;right:0;z-index:99999;background:#111;color:#fff;font:14px/1 -apple-system,Segoe UI,Roboto,sans-serif;display:flex;align-items:center;gap:16px;padding:10px 16px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+#pe-bar button{background:#22c55e;color:#fff;border:0;border-radius:8px;padding:8px 16px;font-weight:600;cursor:pointer}
+#pe-bar button:hover{background:#16a34a}
+body{margin-top:44px !important}
+.pe-hover{outline:2px dashed #22c55e !important;outline-offset:2px;cursor:pointer}
+[contenteditable="true"]:focus{outline:2px solid #3b82f6 !important;outline-offset:2px}
+</style>
+<div id="pe-bar">
+  <strong>Modo edição</strong>
+  <span>Clique em textos para editar · clique em imagens para trocar</span>
+  <button id="pe-export" type="button">Exportar página</button>
+</div>
+<input type="file" id="pe-file" accept="image/*" style="display:none">
+<script id="pe-script">
+(function(){
+  var TEXT='h1,h2,h3,h4,h5,h6,p,li,a,span,button,td,th,figcaption,blockquote,strong,em';
+  document.querySelectorAll(TEXT).forEach(function(el){
+    if(el.closest('#pe-bar'))return;
+    if(el.children.length===0||el.childElementCount<=1){
+      el.addEventListener('click',function(e){
+        if(el.tagName==='A'||el.tagName==='BUTTON')e.preventDefault();
+        el.setAttribute('contenteditable','true');el.focus();
+      });
+      el.addEventListener('mouseenter',function(){el.classList.add('pe-hover')});
+      el.addEventListener('mouseleave',function(){el.classList.remove('pe-hover')});
+      el.addEventListener('blur',function(){el.removeAttribute('contenteditable')});
+    }
+  });
+  var fileInput=document.getElementById('pe-file'),currentImg=null;
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();currentImg=img;fileInput.click()});
+    img.addEventListener('mouseenter',function(){img.classList.add('pe-hover')});
+    img.addEventListener('mouseleave',function(){img.classList.remove('pe-hover')});
+  });
+  fileInput.addEventListener('change',function(){
+    var f=fileInput.files[0];if(!f||!currentImg)return;
+    var r=new FileReader();
+    r.onload=function(){currentImg.src=r.result;if(currentImg.srcset)currentImg.removeAttribute('srcset')};
+    r.readAsDataURL(f);fileInput.value='';
+  });
+  document.getElementById('pe-export').addEventListener('click',function(){
+    var doc=document.documentElement.cloneNode(true);
+    ['#pe-bar','#pe-style','#pe-script','#pe-file'].forEach(function(s){var n=doc.querySelector(s);if(n)n.remove()});
+    doc.querySelectorAll('[contenteditable]').forEach(function(n){n.removeAttribute('contenteditable')});
+    doc.querySelectorAll('.pe-hover').forEach(function(n){n.classList.remove('pe-hover')});
+    var html='<!DOCTYPE html>\n'+doc.outerHTML;
+    var blob=new Blob([html],{type:'text/html'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='index.html';a.click();
+  });
+})();
+</script>
+<!-- PROSPECTOR-EDITOR-END -->
+</body>
+</html>

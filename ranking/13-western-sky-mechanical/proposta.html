@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Demonstration Concept for Western Sky Mechanical — Phoenix &amp; Scottsdale, AZ</title>
+<style>
+  :root {
+    --bg: #0F172A;
+    --ink: #F8FAFC;
+    --muted: #94A3B8;
+    --acc: #38BDF8;
+    --card: #1E293B;
+    --line: #334155;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .stage { width: min(1560px, 96vw); margin: 0 auto; }
+  header { padding: 56px 0 36px; text-align: center; }
+  .kicker {
+    font-size: 13px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--acc);
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .badge-exp {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--acc);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+  h1 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: clamp(28px, 4.5vw, 44px);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #fff;
+  }
+  h1 em { font-style: normal; color: var(--acc); }
+  .sub {
+    color: var(--muted);
+    max-width: 720px;
+    margin: 16px auto 0;
+    font-size: 17px;
+  }
+  .autor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .autor b { color: #fff; }
+  .toggle {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 34px 0 18px;
+  }
+  .toggle button {
+    border: 1px solid var(--line);
+    background: var(--card);
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--muted);
+    transition: all 0.2s;
+  }
+  .toggle button:first-child { border-radius: 10px 0 0 10px; }
+  .toggle button:last-child { border-radius: 0 10px 10px 0; }
+  .toggle button.on {
+    background: #0284C7;
+    color: #fff;
+    border-color: #0284C7;
+  }
+  .frame {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.5);
+  }
+  .frame-head {
+    background: #090E17;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .dots { display: flex; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: #475569; }
+  .dot.r { background: #EF4444; }
+  .dot.y { background: #F59E0B; }
+  .dot.g { background: #10B981; }
+  .frame-body {
+    height: 780px;
+    width: 100%;
+    background: #020617;
+    position: relative;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  .side-by-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+    background: #090E17;
+  }
+  @media (max-width: 900px) {
+    .side-by-side { grid-template-columns: 1fr; }
+  }
+  .side-box {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .side-label {
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+  }
+  .side-label.old { background: rgba(239, 68, 68, 0.1); color: #F87171; }
+  .side-label.new { background: rgba(16, 185, 129, 0.1); color: #34D399; }
+  .side-box iframe { height: 600px; }
+
+  .summary {
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 800px) {
+    .summary { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 24px;
+    border-radius: 14px;
+  }
+  .card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+  }
+  .card p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .cta-box {
+    text-align: center;
+    background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
+    border: 1px solid var(--line);
+    padding: 40px 20px;
+    border-radius: 16px;
+    margin: 40px 0 60px;
+  }
+  .cta-box h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #fff;
+  }
+  .cta-box p {
+    color: var(--muted);
+    max-width: 620px;
+    margin: 0 auto 24px;
+    font-size: 15px;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--acc);
+    color: #0F172A;
+    font-weight: 800;
+    padding: 14px 32px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: #0284C7; color: #fff; }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #94A3B8;
+    border: 1px solid var(--line);
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-left: 12px;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { color: #fff; border-color: #64748B; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">
+      <span>Private Interactive Preview</span>
+      <span class="badge-exp">ROC #366148</span>
+    </div>
+    <h1>Built for <em>Western Sky Mechanical</em>: Phoenix &amp; Scottsdale HVAC Authority</h1>
+    <p class="sub">
+      A working demonstration concept prepared for the Western Sky Mechanical team. Engineered to showcase your BBB accreditation, integrate your clean installation photography, and convert high-ticket AC replacements with an interactive ballpark estimator.
+    </p>
+    <div class="autor">
+      <span>Interactive Working Sample</span> &bull;
+      <span>Phone: <b>(602) 767-5341</b></span> &bull;
+      <span>Phoenix &amp; Scottsdale, AZ</span>
+    </div>
+
+    <div class="toggle">
+      <button class="on" onclick="setView('preview')">Live Interactive Redesign</button>
+      <button onclick="setView('compare')">Side-by-Side Comparison</button>
+    </div>
+  </div>
+</header>
+
+<main class="stage">
+  <div class="frame">
+    <div class="frame-head">
+      <div class="dots">
+        <div class="dot r"></div>
+        <div class="dot y"></div>
+        <div class="dot g"></div>
+      </div>
+      <span id="frame-title">Viewing: western-sky-mechanical.html (Redesign Concept)</span>
+      <a href="western-sky-mechanical.html" target="_blank" style="color:var(--acc); text-decoration:none; font-weight:600; font-size:12px;">Open Full Page &nearr;</a>
+    </div>
+
+    <div id="view-preview" class="frame-body">
+      <iframe src="western-sky-mechanical.html" title="Western Sky Mechanical Preview"></iframe>
+    </div>
+
+    <div id="view-compare" class="side-by-side" style="display:none;">
+      <div class="side-box">
+        <div class="side-label old">
+          <span>Current Website (280KB Web Page)</span>
+          <span>Dense Text Walls &bull; No Quoting Tools</span>
+        </div>
+        <iframe src="https://www.westernskymechanical.com/" title="Current Website"></iframe>
+      </div>
+      <div class="side-box">
+        <div class="side-label new">
+          <span>New High-Converting Design</span>
+          <span>Fast &bull; Modern &bull; Instant Estimates</span>
+        </div>
+        <iframe src="western-sky-mechanical.html" title="Redesign"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="summary">
+      <div class="card">
+        <h3>⚡ Instant Ballpark Price Calculator</h3>
+        <p>Gives residential and commercial visitors immediate estimate ranges for new 15.2+ SEER2 systems and heat pumps, qualifying buyers before they call.</p>
+      </div>
+      <div class="card">
+        <h3>🏆 Verified BBB &amp; ROC Authority</h3>
+        <p>Highlights your official BBB Accreditation, state ROC #366148 license, and authentic installation photos right above the fold to close big-ticket bids.</p>
+      </div>
+      <div class="card">
+        <h3>📱 Instant Mobile Booking &amp; Dispatch</h3>
+        <p>A persistent bottom call bar and rapid diagnostic triage designed to turn mobile searches in 115°F heat into instant inbound phone calls.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h2>This is an interactive concept — completely customizable to your vision.</h2>
+      <p>
+        Every word, project image, service package, and brand element can be tailored to match your preferences. We also built an in-browser live visual editor for you to test changes.
+      </p>
+      <a href="western-sky-mechanical-editor.html" target="_blank" class="btn-primary">
+        Launch Visual Editor ✏️
+      </a>
+      <a href="western-sky-mechanical.html" target="_blank" class="btn-secondary">
+        Experience Full Site 🚀
+      </a>
+    </div>
+  </div>
+</main>
+
+<script>
+function setView(mode) {
+  const p = document.getElementById('view-preview');
+  const c = document.getElementById('view-compare');
+  const btns = document.querySelectorAll('.toggle button');
+  const title = document.getElementById('frame-title');
+  if (mode === 'preview') {
+    p.style.display = 'block';
+    c.style.display = 'none';
+    btns[0].classList.add('on');
+    btns[1].classList.remove('on');
+    title.innerText = 'Viewing: western-sky-mechanical.html (Redesign Concept)';
+  } else {
+    p.style.display = 'none';
+    c.style.display = 'grid';
+    btns[0].classList.remove('on');
+    btns[1].classList.add('on');
+    title.innerText = 'Viewing: Side-by-Side Comparison';
+  }
+}
+</script>
+
+</body>
+</html>

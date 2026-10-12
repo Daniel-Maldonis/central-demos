@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>A Modern Demonstration for Reali Electric Co. — Frank Reali</title>
+<style>
+  :root {
+    --bg: #FAF9F5;
+    --ink: #0F172A;
+    --muted: #64748B;
+    --acc: #D97706;
+    --acc-hover: #B45309;
+    --card: #fff;
+    --line: #E2E8F0;
+    --navy: #1E293B;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .stage { width: min(1560px, 96vw); margin: 0 auto; }
+  header { padding: 56px 0 36px; text-align: center; }
+  .kicker {
+    font-size: 13px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--acc);
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .badge-exp {
+    background: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FCD34D;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+  h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(28px, 4.5vw, 44px);
+    font-weight: 600;
+    letter-spacing: -.01em;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 em { font-style: normal; color: var(--acc); }
+  .sub {
+    color: var(--muted);
+    max-width: 680px;
+    margin: 16px auto 0;
+    font-size: 17px;
+  }
+  .autor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .autor b { color: var(--ink); }
+  .toggle {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 34px 0 18px;
+  }
+  .toggle button {
+    border: 1px solid var(--line);
+    background: var(--card);
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--muted);
+    transition: all 0.2s;
+  }
+  .toggle button:first-child { border-radius: 10px 0 0 10px; }
+  .toggle button:last-child { border-radius: 0 10px 10px 0; }
+  .toggle button.on {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+  }
+  .frame {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(15,23,42,.08);
+  }
+  .frame .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--line);
+    background: #f4f2ec;
+  }
+  .bar-left { display: flex; align-items: center; gap: 8px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: #d9d4c7; }
+  .bar span { font-size: 12px; color: var(--muted); margin-left: 8px; }
+  .bar a { font-size: 12px; color: var(--acc); text-decoration: none; font-weight: 600; }
+  .bar a:hover { text-decoration: underline; }
+  iframe {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    min-height: 540px;
+    border: 0;
+    background: #fff;
+  }
+  .hide { display: none; }
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    max-width: 1100px;
+    margin: 40px auto 10px;
+    padding: 0 20px;
+  }
+  .hl-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  }
+  .hl-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .hl-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .cta { text-align: center; padding: 44px 0 64px; }
+  .cta p { color: var(--muted); max-width: 580px; margin: 0 auto 20px; font-size: 16px; }
+  .btn {
+    display: inline-block;
+    background: var(--acc);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 15px 34px;
+    border-radius: 12px;
+    font-size: 16px;
+    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.25);
+    transition: background 0.2s;
+  }
+  .btn:hover { background: var(--acc-hover); }
+  .micro { font-size: 13px; color: var(--muted); margin-top: 10px; }
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 22px 0 34px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">
+      <span>Private Demonstration For Frank Reali</span>
+      <span class="badge-exp">★ 26+ Years Serving St. Petersburg</span>
+    </div>
+    <h1>Reali Electric Co., here is a <em>master craftsman</em> version of your website</h1>
+    <p class="sub">
+      A dignified, clean landing page honoring your 26+ years of personal master electrical service, specialized historic home rewiring, and 5.0★ reputation.
+    </p>
+    <div class="autor">Designed by <b>Dan</b> · Web Conversion Specialist</div>
+  </header>
+</div>
+
+<div class="stage">
+  <div class="toggle">
+    <button id="bAntes" onclick="ver('antes')">Current Website (realielectric.com)</button>
+    <button id="bDepois" class="on" onclick="ver('depois')">New Master Craftsman Version</button>
+  </div>
+  <div class="frame">
+    <div class="bar">
+      <div class="bar-left">
+        <i class="dot"></i><i class="dot"></i><i class="dot"></i>
+        <span id="urlLabel">reali-electric.html</span>
+      </div>
+      <div>
+        <a id="externalLink" href="reali-electric.html" target="_blank" rel="noopener">Open in new tab ↗</a>
+      </div>
+    </div>
+    <iframe id="fDepois" src="reali-electric.html" title="Redesigned Version"></iframe>
+    <iframe id="fAntes" data-src="https://realielectric.com" class="hide" title="Current Website"></iframe>
+  </div>
+</div>
+
+<div class="highlights">
+  <div class="hl-card">
+    <h3>🏛️ Older & Historic Home Authority</h3>
+    <p>Directly highlights your specialized expertise in Old Northeast, Kenwood, and Snell Isle vintage homes.</p>
+  </div>
+  <div class="hl-card">
+    <h3>⚡ 26+ Year Master Storytelling</h3>
+    <p>Positions Frank Reali as the trusted local master electrician rather than an impersonal subcontractor.</p>
+  </div>
+  <div class="hl-card">
+    <h3>📊 Interactive Pinellas Cost Guide</h3>
+    <p>Provides homeowners with transparent ballpark estimates for panel upgrades, historic rewiring, and EV chargers.</p>
+  </div>
+  <div class="hl-card">
+    <h3>📞 Respectful 1-Tap Contact</h3>
+    <p>Streamlined direct office call button to (727) 914-5714 and direct email routing to Frank with zero unwanted text messages.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="cta">
+    <p>
+      If you'd like to test this on your phone or discuss launching it cleanly with zero downtime to realielectric.com, feel free to reply directly to our note.
+    </p>
+    <a class="btn" href="mailto:frank@realielectric.com?subject=Regarding%20Reali%20Electric%20Co.%20Website%20Redesign">Reply to Dan</a>
+    <div class="micro">No pressure or sales pitch — this private preview remains active for your review.</div>
+  </div>
+</div>
+
+<footer>
+  This presentation is a private demonstration prepared by Dan for Reali Electric Co. (FL Lic #ES12002209). All trademarks belong to their respective owners.
+</footer>
+
+<script>
+function ver(q){
+  var a = document.getElementById('fAntes'), d = document.getElementById('fDepois');
+  var ext = document.getElementById('externalLink');
+  if(q === 'antes' && !a.src){ a.src = a.dataset.src; }
+  a.classList.toggle('hide', q !== 'antes');
+  d.classList.toggle('hide', q === 'antes');
+  document.getElementById('bAntes').classList.toggle('on', q === 'antes');
+  document.getElementById('bDepois').classList.toggle('on', q !== 'antes');
+  document.getElementById('urlLabel').textContent = (q === 'antes' ? a.dataset.src : 'reali-electric.html');
+  ext.href = (q === 'antes' ? a.dataset.src : 'reali-electric.html');
+}
+</script>
+</body>
+</html>

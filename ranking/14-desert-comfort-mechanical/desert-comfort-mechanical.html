@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desert Comfort Mechanical | Scottsdale, AZ Licensed HVAC Specialists</title>
+<meta name="description" content="Desert Comfort Mechanical is Scottsdale's premier veteran-owned HVAC contractor. Non-commissioned diagnostics, expert AC repair &amp; replacement. ROC #261627.">
+<style>
+  :root {
+    --desert-dark: #0D1B2A;
+    --desert-navy: #1B263B;
+    --desert-sand: #E0A96D;
+    --desert-gold: #C68B59;
+    --ice-cyan: #38BDF8;
+    --text-white: #FFFFFF;
+    --text-muted: #94A3B8;
+    --text-dark: #0F172A;
+    --bg-light: #F8FAFC;
+    --border: #E2E8F0;
+    --success: #10B981;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  /* Utility Top Bar */
+  .top-strip {
+    background: #080F18;
+    color: #94A3B8;
+    font-size: 13px;
+    padding: 8px 24px;
+    border-bottom: 1px solid rgba(224, 169, 109, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-strip .badges {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .top-strip .sand-tag {
+    color: var(--desert-sand);
+    font-weight: 700;
+  }
+  .top-strip .quick-contact {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .top-strip a { color: #FFFFFF; font-weight: 600; }
+  .top-strip a:hover { color: var(--desert-sand); }
+
+  /* Header */
+  header {
+    background: rgba(13, 27, 42, 0.98);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .header-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand-logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+  .brand-titles h1 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .brand-titles h1 span { color: var(--desert-sand); }
+  .brand-titles p {
+    font-size: 11px;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+  }
+  nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+  nav a {
+    color: #E2E8F0;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--desert-sand); }
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn-dispatch {
+    background: linear-gradient(135deg, var(--desert-sand) 0%, var(--desert-gold) 100%);
+    color: #0D1B2A;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .btn-dispatch:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(224, 169, 109, 0.4);
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(180deg, #0D1B2A 0%, #1B263B 100%);
+    color: #FFFFFF;
+    padding: 76px 24px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .badge-tag {
+    background: rgba(224, 169, 109, 0.15);
+    color: var(--desert-sand);
+    border: 1px solid rgba(224, 169, 109, 0.4);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .badge-pill {
+    background: rgba(255, 255, 255, 0.08);
+    color: #E2E8F0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .hero-text h1 {
+    font-size: clamp(32px, 4.2vw, 50px);
+    font-weight: 900;
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+  }
+  .hero-text h1 span.sand { color: var(--desert-sand); }
+  .hero-text p.sub {
+    font-size: 17px;
+    color: #94A3B8;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 580px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 34px;
+  }
+  .btn-hero-primary {
+    background: var(--desert-sand);
+    color: #0D1B2A;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 16px 28px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(224, 169, 109, 0.35);
+    transition: all 0.2s;
+  }
+  .btn-hero-primary:hover {
+    background: #E8B882;
+    transform: translateY(-2px);
+  }
+  .btn-hero-secondary {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+  }
+  .btn-hero-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #FFFFFF;
+  }
+  .trust-strip {
+    display: flex;
+    gap: 26px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .trust-strip .item strong {
+    font-size: 20px;
+    color: #FFFFFF;
+    display: block;
+  }
+  .trust-strip .item span {
+    font-size: 12px;
+    color: #94A3B8;
+  }
+
+  /* Calculator Card */
+  .calc-card {
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    color: var(--text-dark);
+  }
+  .calc-header {
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .calc-header h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--desert-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .calc-header p {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .calc-form .form-group {
+    margin-bottom: 16px;
+  }
+  .calc-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 6px;
+  }
+  .calc-form select,
+  .calc-form input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #F8FAFC;
+    color: var(--text-dark);
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .calc-form select:focus,
+  .calc-form input:focus {
+    border-color: var(--desert-sand);
+    background: #FFFFFF;
+  }
+  .calc-result-box {
+    background: #FEF3C7;
+    border: 1px solid #FDE68A;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .calc-result-box .label {
+    font-size: 13px;
+    color: #92400E;
+    font-weight: 700;
+  }
+  .calc-result-box .price {
+    font-size: 22px;
+    font-weight: 900;
+    color: #78350F;
+  }
+  .btn-submit-estimate {
+    width: 100%;
+    background: var(--desert-dark);
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-submit-estimate:hover {
+    background: #1B263B;
+  }
+
+  /* Services Grid */
+  .section {
+    padding: 80px 24px;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .section-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 50px;
+  }
+  .section-tag {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--desert-gold);
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  .section-head h2 {
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 800;
+    color: var(--desert-dark);
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .section-head p {
+    font-size: 16px;
+    color: var(--text-muted);
+  }
+  .grid-services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .service-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .service-card:hover {
+    border-color: #CBD5E1;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.06);
+  }
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #FEF3C7;
+    color: #92400E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .service-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--desert-dark);
+    margin-bottom: 12px;
+  }
+  .service-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .service-features {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+  .service-features li {
+    font-size: 13px;
+    color: #334155;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .service-features li::before {
+    content: "✓";
+    color: var(--success);
+    font-weight: 800;
+  }
+  .service-link {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--desert-gold);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Non-Commissioned Diagnostic Pledge */
+  .pledge-banner {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .pledge-text h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--desert-dark);
+    margin-bottom: 6px;
+  }
+  .pledge-text p {
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  /* Why Choose Desert Comfort */
+  .why-box {
+    background: var(--desert-dark);
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 60px 48px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .why-box h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    line-height: 1.25;
+  }
+  .why-box p {
+    color: #94A3B8;
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  .points-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .point-item strong {
+    font-size: 16px;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .point-item p {
+    font-size: 13px;
+    color: #94A3B8;
+    margin: 0;
+  }
+  .areas-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 30px;
+  }
+  .areas-box h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--desert-sand);
+  }
+  .city-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .city-tag {
+    background: rgba(255, 255, 255, 0.08);
+    color: #E2E8F0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* Reviews */
+  .reviews-section {
+    background: #F1F5F9;
+    padding: 80px 24px;
+  }
+  .reviews-grid {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .review-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 26px;
+    border: 1px solid var(--border);
+  }
+  .stars {
+    color: #F59E0B;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .review-text {
+    font-size: 14px;
+    color: #334155;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .reviewer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    font-size: 13px;
+  }
+  .reviewer strong { color: var(--desert-dark); }
+  .reviewer span { color: var(--text-muted); font-size: 11px; }
+
+  /* Footer */
+  footer {
+    background: #080F18;
+    color: #94A3B8;
+    padding: 60px 24px 100px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+  }
+  .footer-col h4 {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { font-size: 13px; margin-bottom: 10px; }
+  .footer-col ul li a:hover { color: var(--desert-sand); }
+  .footer-bottom {
+    max-width: 1240px;
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #64748B;
+  }
+
+  /* Mobile Call Bar */
+  .mobile-call-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0D1B2A;
+    border-top: 2px solid var(--desert-sand);
+    padding: 12px 16px;
+    z-index: 1000;
+  }
+  .mobile-call-bar .bar-inner {
+    display: flex;
+    gap: 12px;
+  }
+  .mobile-call-bar a.call-btn {
+    flex: 1;
+    background: var(--desert-sand);
+    color: #0D1B2A;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .mobile-call-bar a.est-btn {
+    flex: 1;
+    background: #1B263B;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  @media (max-width: 992px) {
+    .hero-container { grid-template-columns: 1fr; }
+    .grid-services { grid-template-columns: 1fr; }
+    .why-box { grid-template-columns: 1fr; }
+    .pledge-banner { flex-direction: column; text-align: center; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    nav { display: none; }
+  }
+  @media (max-width: 768px) {
+    .mobile-call-bar { display: block; }
+    .top-strip .badges { display: none; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .points-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Info Bar -->
+<div class="top-strip">
+  <div class="badges">
+    <span class="sand-tag">🎖️ Veteran-Owned &bull; ROC #261627</span>
+    <span>•</span>
+    <span>Non-Commissioned Technicians</span>
+    <span>•</span>
+    <span>7335 E Acoma Dr, Scottsdale, AZ</span>
+  </div>
+  <div class="quick-contact">
+    <span>Scottsdale &amp; Paradise Valley Service</span>
+    <a href="tel:+14804833099">📞 (480) 483-3099</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <div class="brand-logo-box">
+      <!-- Authentic Desert Comfort Logo -->
+      <img src="https://www.desertcomfortmechanical.com/assets/dcm_logo-CSG-No3T.jpg" alt="Desert Comfort Mechanical Logo" class="brand-logo-img" onerror="this.style.display='none'; document.getElementById('brandFallback').style.display='block';">
+      <div id="brandFallback" class="brand-titles" style="display:none;">
+        <h1>DESERT <span>COMFORT</span></h1>
+        <p>Mechanical LLC &bull; ROC #261627</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#calculator">Price Calculator</a>
+      <a href="#pledge">Our Pledge</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+14804833099" class="btn-dispatch">
+        <span>⚡ Call (480) 483-3099</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section with Diagnostic Calculator -->
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <div class="hero-badges">
+        <span class="badge-tag">Veteran-Owned Scottsdale Contractor</span>
+        <span class="badge-pill">ROC #261627 &bull; BBB Accredited</span>
+      </div>
+      <h1>Honest, Veteran-Owned <span class="sand">Air Conditioning</span> in Scottsdale.</h1>
+      <p class="sub">
+        No sales pressure. No quotas. No commission-driven upselling. Just licensed master technicians diagnosing your cooling system honestly and fixing it right the first time.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+14804833099" class="btn-hero-primary">
+          <span>Schedule Service: (480) 483-3099</span>
+        </a>
+        <a href="#calculator" class="btn-hero-secondary">
+          <span>Estimate Price &darr;</span>
+        </a>
+      </div>
+      <div class="trust-strip">
+        <div class="item">
+          <strong>100%</strong>
+          <span>Non-Commission Diagnostics</span>
+        </div>
+        <div class="item">
+          <strong>Veteran</strong>
+          <span>Owned &amp; Operated</span>
+        </div>
+        <div class="item">
+          <strong>ROC #261627</strong>
+          <span>Scottsdale Licensed</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Calculator Card -->
+    <div class="calc-card" id="calculator">
+      <div class="calc-header">
+        <h3>⚡ Scottsdale AC Estimate Tool</h3>
+        <p>Instant ballpark guidance for Maricopa County residents.</p>
+      </div>
+      <form class="calc-form" onsubmit="event.preventDefault(); alert('Thank you! Estimate request logged for ' + document.getElementById('userContact').value + '. Our office will call you shortly.');">
+        <div class="form-group">
+          <label for="serviceType">Select Cooling Service</label>
+          <select id="serviceType" onchange="calcPrice()">
+            <option value="replace" data-base="7800" selected>New High-Efficiency AC Unit Replacement</option>
+            <option value="heatpump" data-base="8600">Dual-Fuel / Inverter Heat Pump System</option>
+            <option value="repair" data-base="165">Comprehensive Diagnostic &amp; System Triage</option>
+            <option value="tuneup" data-base="89">Pre-Summer AC Precision Tune-Up</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="homeTons">Home Size</label>
+          <select id="homeTons" onchange="calcPrice()">
+            <option value="3" data-mult="1.0">Up to 1,800 sq ft (3-Ton)</option>
+            <option value="4" data-mult="1.18" selected>1,800 – 2,600 sq ft (4-Ton)</option>
+            <option value="5" data-mult="1.35">2,600 – 3,600+ sq ft (5-Ton)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="userContact">Phone or Email for Written Quote</label>
+          <input type="text" id="userContact" placeholder="(480) 000-0000 or email" required>
+        </div>
+        <div class="calc-result-box">
+          <span class="label">Estimated Price Range:</span>
+          <span class="price" id="calcPriceDisplay">$9,200 – $11,800</span>
+        </div>
+        <button type="submit" class="btn-submit-estimate">
+          Lock In Free In-Home Diagnostic &bull; Fast Dispatch
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Non-Commissioned Pledge Banner -->
+<section class="section" id="pledge" style="padding-bottom: 20px;">
+  <div class="pledge-banner">
+    <div class="pledge-text">
+      <h3>The Desert Comfort Non-Commissioned Difference</h3>
+      <p>Most HVAC companies in Phoenix pay technicians a commission on parts and equipment they sell you, creating a toxic incentive to condemn working units. Our technicians are paid standard hourly wages. Their only job is to get your AC running reliably at the lowest possible cost.</p>
+    </div>
+    <div>
+      <a href="tel:+14804833099" class="btn-dispatch">Speak With A Tech</a>
+    </div>
+  </div>
+</section>
+
+<!-- Core Services -->
+<section class="section" id="services">
+  <div class="section-head">
+    <span class="section-tag">Scottsdale Air Conditioning</span>
+    <h2>Expert Cooling Engineered for 115°F Heat</h2>
+    <p>We solve the toughest cooling challenges with military-grade precision and upfront transparency.</p>
+  </div>
+  <div class="grid-services">
+    <div class="service-card">
+      <div>
+        <div class="service-icon">❄️</div>
+        <h3>Emergency AC Diagnostics</h3>
+        <p>System frozen, buzzing loudly, or blowing tepid air? We test electrical components and refrigeration circuits to pinpoint the exact failure.</p>
+        <ul class="service-features">
+          <li>Compressor, fan motor &amp; contactor testing</li>
+          <li>Refrigerant level check and leak detection</li>
+          <li>Written line-item repair quote before work</li>
+        </ul>
+      </div>
+      <a href="tel:+14804833099" class="service-link">Call For Service &rarr;</a>
+    </div>
+
+    <div class="service-card">
+      <div>
+        <div class="service-icon">⚡</div>
+        <h3>System Replacements &amp; Heat Pumps</h3>
+        <p>When an old unit is truly beyond economical repair, we install top-efficiency units engineered for the Sonoran desert climate.</p>
+        <ul class="service-features">
+          <li>15.2 to 20+ SEER2 efficiency ratings</li>
+          <li>Turnkey installation with city permits</li>
+          <li>10-year manufacturer warranty backing</li>
+        </ul>
+      </div>
+      <a href="tel:+14804833099" class="service-link">Get New System Pricing &rarr;</a>
+    </div>
+
+    <div class="service-card">
+      <div>
+        <div class="service-icon">🛠️</div>
+        <h3>Seasonal AC Maintenance</h3>
+        <p>Keep your system operating at peak thermal efficiency and prevent expensive peak-summer failures with our desert tune-up.</p>
+        <ul class="service-features">
+          <li>Outdoor coil acid wash &amp; fin comb</li>
+          <li>Condensate drain line chemically cleared</li>
+          <li>Electrical safety and amperage testing</li>
+        </ul>
+      </div>
+      <a href="tel:+14804833099" class="service-link">Schedule Tune-Up &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Why Choose Banner -->
+  <div class="why-box" id="why-us">
+    <div>
+      <h2>Why Scottsdale Neighbors Choose Desert Comfort</h2>
+      <p>
+        Located right on East Acoma Drive in Scottsdale, we are proud members of the local community who believe in doing right by our neighbors.
+      </p>
+      <div class="points-grid">
+        <div class="point-item">
+          <strong>Veteran-Led Discipline</strong>
+          <p>Punctual, thorough, and dedicated to flawless execution on every single call.</p>
+        </div>
+        <div class="point-item">
+          <strong>ROC #261627 Licensed</strong>
+          <p>Over 15 years of continuous licensing in good standing with the State of Arizona.</p>
+        </div>
+        <div class="point-item">
+          <strong>No Pressure Sales</strong>
+          <p>We present facts and repair options, giving you full control over your budget.</p>
+        </div>
+        <div class="point-item">
+          <strong>Local Scottsdale Office</strong>
+          <p>Headquartered at 7335 E Acoma Dr. Fast local dispatch across Scottsdale.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="areas-box">
+      <h3>📍 Scottsdale &amp; Valley Coverage</h3>
+      <p style="color:#94A3B8; font-size:13px; margin-bottom:14px;">Prompt response times throughout:</p>
+      <div class="city-tags">
+        <span class="city-tag">Scottsdale</span>
+        <span class="city-tag">Paradise Valley</span>
+        <span class="city-tag">Fountain Hills</span>
+        <span class="city-tag">North Scottsdale</span>
+        <span class="city-tag">Cave Creek</span>
+        <span class="city-tag">Carefree</span>
+        <span class="city-tag">Phoenix</span>
+        <span class="city-tag">Tempe</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews-section" id="reviews">
+  <div class="section-head">
+    <span class="section-tag">Verified Homeowner Feedback</span>
+    <h2>What Scottsdale Clients Say</h2>
+    <p>Read experiences from homeowners who appreciate our honest, non-commission approach.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Desert Comfort Mechanical saved us thousands. Another big company said our system was shot and quoted $14,000. Desert Comfort came out, cleaned our coils, replaced a $160 relay, and our house has been ice cold ever since!"</p>
+      <div class="reviewer">
+        <strong>Thomas W.</strong>
+        <span>Scottsdale Homeowner &bull; AC Repair</span>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Veteran-owned business that operates with total integrity. Installed a new heat pump unit on our Paradise Valley home. Clean, respectful, and punctual. You can't beat them."</p>
+      <div class="reviewer">
+        <strong>Patricia G.</strong>
+        <span>Paradise Valley &bull; System Install</span>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Honest, fair pricing, and great communication from start to finish. It's refreshing to deal with an HVAC contractor who doesn't use high-pressure tactics."</p>
+      <div class="reviewer">
+        <strong>Robert M.</strong>
+        <span>North Scottsdale &bull; Seasonal Tune-Up</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div style="margin-bottom: 16px;">
+        <img src="https://www.desertcomfortmechanical.com/assets/dcm_logo-CSG-No3T.jpg" alt="Desert Comfort Mechanical" style="height: 42px; width: auto; object-fit: contain; border-radius: 4px;">
+      </div>
+      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+        Veteran-owned residential &amp; commercial HVAC contractor serving Scottsdale, Paradise Valley, and the Greater Phoenix area.
+      </p>
+      <p style="font-size: 12px; color: var(--desert-sand); font-weight: 700;">
+        License ROC #261627 &bull; Bonded &amp; Insured
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#services">Emergency AC Diagnostics</a></li>
+        <li><a href="#services">High-Efficiency AC Installs</a></li>
+        <li><a href="#services">Heat Pump Replacements</a></li>
+        <li><a href="#services">Non-Commission Repairs</a></li>
+        <li><a href="#services">Annual Maintenance</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Service Coverage</h4>
+      <ul>
+        <li><a href="#why-us">Scottsdale</a></li>
+        <li><a href="#why-us">Paradise Valley</a></li>
+        <li><a href="#why-us">Fountain Hills</a></li>
+        <li><a href="#why-us">Cave Creek &amp; Carefree</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Information</h4>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Phone:</strong> <a href="tel:+14804833099" style="color:var(--desert-sand); font-weight:700;">(480) 483-3099</a></p>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Email:</strong> <a href="mailto:info@desertcomfortmechanical.com">info@desertcomfortmechanical.com</a></p>
+      <p style="font-size: 13px; margin-bottom: 8px;"><strong>Office:</strong> 7335 E Acoma Dr, Ste 103, Scottsdale, AZ</p>
+      <p style="font-size: 13px;"><strong>Hours:</strong> Mon – Sat: 7:00 AM – 6:00 PM</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Desert Comfort Mechanical LLC. All rights reserved. ROC #261627.</div>
+    <div>Scottsdale Premier Veteran-Owned HVAC Contractor</div>
+  </div>
+</footer>
+
+<!-- Mobile Call Bar -->
+<div class="mobile-call-bar">
+  <div class="bar-inner">
+    <a href="tel:+14804833099" class="call-btn">
+      <span>⚡ Call (480) 483-3099</span>
+    </a>
+    <a href="#calculator" class="est-btn">
+      <span>Get Estimate</span>
+    </a>
+  </div>
+</div>
+
+<script>
+function calcPrice() {
+  const s = document.getElementById('serviceType');
+  const t = document.getElementById('homeTons');
+  const base = parseInt(s.selectedOptions[0].getAttribute('data-base'), 10);
+  const mult = parseFloat(t.selectedOptions[0].getAttribute('data-mult'));
+
+  let low, high;
+  if (base < 1000) {
+    low = base;
+    high = Math.round(base * 1.5);
+  } else {
+    low = Math.round(base * mult);
+    high = Math.round(low * 1.28);
+  }
+
+  document.getElementById('calcPriceDisplay').innerText = 
+    '$' + low.toLocaleString() + ' – $' + high.toLocaleString();
+}
+</script>
+
+</body>
+</html>

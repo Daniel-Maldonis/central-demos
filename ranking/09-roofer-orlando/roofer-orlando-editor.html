@@ -1,0 +1,1477 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roofer Orlando | Certified Roof Replacement & Emergency Repair</title>
+  <meta name="description" content="Orlando's top-rated roofing contractor. FL License CCC1333142. GAF & CertainTeed certified. Free 21-point roof inspection & 15-year workmanship warranty. Call (407) 203-9545.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #0F172A;
+      --primary-dark: #070B14;
+      --primary-light: #1E293B;
+      --gold: #F59E0B;
+      --gold-dark: #D97706;
+      --gold-light: #FEF3C7;
+      --accent: #E11D48;
+      --green: #10B981;
+      --text: #334155;
+      --text-dark: #0F172A;
+      --text-muted: #64748B;
+      --bg: #FFFFFF;
+      --bg-alt: #F8FAFC;
+      --border: #E2E8F0;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 24px -4px rgba(15,23,42,0.1);
+      --shadow-lg: 0 16px 36px -6px rgba(15,23,42,0.16);
+      --font-display: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; height: auto; display: block; object-fit: cover; }
+    a { text-decoration: none; color: inherit; transition: all 0.25s ease; }
+    button, input, select { font-family: inherit; }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Emergency Alert Bar */
+    .top-bar {
+      background: #0B1120;
+      color: #94A3B8;
+      padding: 10px 0;
+      font-size: 0.85rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .top-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #E2E8F0;
+      font-weight: 500;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #10B981;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+    .top-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .top-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Main Navigation Header */
+    .site-header {
+      background: #FFFFFF;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 86px;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .client-logo-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-menu a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .nav-menu a:hover {
+      color: var(--gold-dark);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .phone-pill {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+    }
+    .phone-pill .phone-sub {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--gold-dark);
+      letter-spacing: 0.05em;
+    }
+    .phone-pill .phone-val {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--primary);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold) 0%, #D97706 100%);
+      color: #0F172A;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+    }
+    .btn-outline {
+      border: 2px solid var(--border);
+      background: transparent;
+      color: var(--primary);
+    }
+    .btn-outline:hover {
+      background: var(--bg-alt);
+      border-color: var(--text);
+    }
+
+    /* Hero Section with REAL Background Photo */
+    .hero {
+      position: relative;
+      background: linear-gradient(180deg, rgba(11, 17, 32, 0.88) 0%, rgba(15, 23, 42, 0.92) 100%), 
+                  url('https://drrooferorlando.com/assets/images/hero-poster-roofing.jpg') center/cover no-repeat;
+      color: #FFFFFF;
+      padding: 80px 0 100px;
+      overflow: hidden;
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-badge-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      padding: 7px 16px;
+      border-radius: 40px;
+      border: 1px solid rgba(255,255,255,0.18);
+      margin-bottom: 24px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .hero-badge-stars {
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      color: #FFFFFF;
+    }
+    .hero-title span {
+      background: linear-gradient(135deg, #FDE68A 0%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-lead {
+      font-size: 1.15rem;
+      color: #CBD5E1;
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 600px;
+    }
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px 20px;
+      margin-bottom: 36px;
+    }
+    .point-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: #E2E8F0;
+      font-weight: 600;
+    }
+    .point-icon {
+      width: 22px;
+      height: 22px;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid #10B981;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: #34D399;
+      flex-shrink: 0;
+    }
+
+    /* Hero Lead Card (Interactive Quote) */
+    .hero-card {
+      background: #FFFFFF;
+      color: var(--text-dark);
+      padding: 36px 32px;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .hero-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .hero-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      background: var(--bg-alt);
+      outline: none;
+      transition: all 0.2s;
+    }
+    .form-control:focus {
+      border-color: var(--gold-dark);
+      background: #FFF;
+      box-shadow: 0 0 0 3px rgba(245,158,11,0.15);
+    }
+    .card-footer-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 14px;
+    }
+
+    /* Trust Accreditations Bar */
+    .trust-bar {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+    }
+    .trust-bar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .trust-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px;
+    }
+    .trust-icon-box {
+      width: 48px;
+      height: 48px;
+      background: var(--bg-alt);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+    }
+    .trust-info h4 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+    .trust-info p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Standard Sections */
+    .section {
+      padding: 90px 0;
+    }
+    .section-alt {
+      background-color: var(--bg-alt);
+    }
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 56px;
+    }
+    .kicker {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      background: var(--gold-light);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+
+    /* REAL PROJECT GALLERY (Visual Proof) */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .gallery-item {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .gallery-img-wrap {
+      position: relative;
+      height: 230px;
+      overflow: hidden;
+      background: #E2E8F0;
+    }
+    .gallery-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover .gallery-img-wrap img {
+      transform: scale(1.05);
+    }
+    .gallery-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(6px);
+      color: #FFF;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .gallery-body {
+      padding: 22px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .gallery-body h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .gallery-body p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Real Services Grid with Photos */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .service-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--gold);
+    }
+    .service-img-header {
+      height: 180px;
+      width: 100%;
+      position: relative;
+    }
+    .service-img-header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .service-body {
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+    .service-card .spec-list {
+      list-style: none;
+      margin-bottom: 20px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+    .service-card .spec-list li {
+      font-size: 0.85rem;
+      color: var(--text);
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .service-link {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--gold-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Before / After Section */
+    .ba-section {
+      background: #0B1120;
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 56px 48px;
+      margin-top: 40px;
+    }
+    .ba-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+    .ba-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .ba-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .ba-img {
+      height: 260px;
+      width: 100%;
+      position: relative;
+    }
+    .ba-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .ba-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .ba-badge.before { background: #EF4444; color: #FFF; }
+    .ba-badge.after { background: #10B981; color: #FFF; }
+    .ba-text {
+      padding: 24px;
+    }
+    .ba-text h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .ba-text p {
+      color: #94A3B8;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* Process Flow */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .step-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 30px 24px;
+      position: relative;
+    }
+    .step-number {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: rgba(245, 158, 11, 0.25);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .step-card h4 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .step-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Real Google Reviews */
+    .reviews-badge-hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .google-badge-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      background: #FFFFFF;
+      padding: 12px 28px;
+      border-radius: 40px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .review-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+    .review-stars {
+      color: var(--gold);
+      margin-bottom: 14px;
+      font-size: 1.1rem;
+    }
+    .review-quote {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.65;
+      font-style: italic;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+    .author-avatar {
+      width: 42px;
+      height: 42px;
+      background: var(--primary-light);
+      color: #FFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .author-name {
+      font-weight: 800;
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+    .author-loc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* FAQ */
+    .faq-grid {
+      max-width: 840px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .faq-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 20px 24px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary);
+      background: #FFF;
+      user-select: none;
+    }
+    .faq-a {
+      padding: 0 24px 22px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Final CTA Banner with photo background */
+    .cta-banner {
+      position: relative;
+      background: linear-gradient(135deg, rgba(11,17,32,0.92) 0%, rgba(30,58,138,0.92) 100%), 
+                  url('https://drrooferorlando.com/assets/images/cta-roofing.jpg') center/cover no-repeat;
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 70px 48px;
+      text-align: center;
+      overflow: hidden;
+      margin: 60px 0 20px;
+    }
+    .cta-banner h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 3.6vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #FFF;
+    }
+    .cta-banner p {
+      font-size: 1.15rem;
+      color: #E2E8F0;
+      max-width: 640px;
+      margin: 0 auto 32px;
+    }
+    .cta-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #0B1120;
+      color: #94A3B8;
+      padding: 70px 0 30px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 50px;
+    }
+    .footer-col h4 {
+      color: #FFFFFF;
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .footer-links {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.8rem;
+    }
+
+    /* Floating Emergency Call */
+    .floating-call {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      background: linear-gradient(135deg, var(--gold) 0%, #D97706 100%);
+      color: #0F172A;
+      font-weight: 800;
+      padding: 14px 22px;
+      border-radius: 50px;
+      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.45);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.25s ease;
+    }
+    .floating-call:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(245, 158, 11, 0.6);
+    }
+
+    /* Responsiveness */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .trust-bar-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav-menu { display: none; }
+      .top-meta { display: none; }
+      .ba-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .cta-banner { padding: 40px 20px; }
+      .hero-points { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .trust-bar-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .floating-call span { display: none; }
+      .floating-call { padding: 14px; border-radius: 50%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Emergency Alert Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-status">
+        <span class="pulse-dot"></span>
+        <span>Crews On Standby: Available 24/7 for Storm & Leak Emergencies in Central FL</span>
+      </div>
+      <div class="top-meta">
+        <span>ðŸ“ Serving Orange, Seminole, Osceola & Lake Counties</span>
+        <span>ðŸ›¡ï¸ FL State License #CCC1333142</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header with REAL Logo -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand-logo">
+        <img src="https://drrooferorlando.com/wp-content/uploads/logo-roofer-orlando.png" alt="Roofer Orlando Logo" class="client-logo-img">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#projects">Recent Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#before-after">Restorations</a></li>
+        <li><a href="#reviews">Reviews (4.9â˜…)</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="header-actions">
+        <div class="phone-pill">
+          <span class="phone-sub">Call or Text 24/7</span>
+          <a href="tel:+14072039545" class="phone-val">(407) 203-9545</a>
+        </div>
+        <a href="#estimate" class="btn btn-gold">Free Inspection</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Real Job Site Background Image -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge-group">
+          <span class="hero-badge-stars">â˜…â˜…â˜…â˜…â˜…</span>
+          <span>4.9 Star Rating Â· 133 Verified Google Reviews</span>
+        </div>
+        <h2 class="hero-title">Protecting Orlando Homes With <span>Storm-Proven</span> Roofs.</h2>
+        <p class="hero-lead">
+          Floridaâ€™s brutal sun and hurricane seasons cut standard roof lifespans in half. We build every roof to the latest Florida Building Code standards, backed by a written 15-year workmanship guarantee.
+        </p>
+        <div class="hero-points">
+          <div class="point-item">
+            <span class="point-icon">âœ“</span>
+            <span>Free 21-Point Inspection & Photo Report</span>
+          </div>
+          <div class="point-item">
+            <span class="point-icon">âœ“</span>
+            <span>GAF & CertainTeed Certified Master Installers</span>
+          </div>
+          <div class="point-item">
+            <span class="point-icon">âœ“</span>
+            <span>15-Year Written Workmanship Warranty</span>
+          </div>
+          <div class="point-item">
+            <span class="point-icon">âœ“</span>
+            <span>Complete Insurance Claim Assistance</span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="#estimate" class="btn btn-gold" style="padding: 16px 32px; font-size: 1.05rem;">Book Free Roof Inspection â†’</a>
+          <a href="tel:+14072039545" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #FFF; padding: 16px 28px;">
+            ðŸ“ž Emergency Call (407) 203-9545
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Interactive Estimate Form -->
+      <div class="hero-card" id="estimate">
+        <h3>Request Your Free Inspection</h3>
+        <p>Get a comprehensive roof analysis with detailed photos. Zero obligation, zero sales pressure.</p>
+        <form onsubmit="event.preventDefault(); alert('Thank you! Your inspection request has been received. A project manager will call you within 15 minutes.');">
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select class="form-control" required>
+              <option value="">Select Service...</option>
+              <option value="inspection">Free 21-Point Roof Inspection</option>
+              <option value="replacement">Full Roof Replacement (Shingle, Metal, Tile)</option>
+              <option value="repair">Emergency Leak or Storm Damage Repair</option>
+              <option value="insurance">Insurance Claim Assessment</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" class="form-control" placeholder="John Smith" required>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" class="form-control" placeholder="(407) 000-0000" required>
+          </div>
+          <div class="form-group">
+            <label>Property Address / Zip Code</label>
+            <input type="text" class="form-control" placeholder="Orlando, FL" required>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width: 100%; padding: 14px; font-size: 1rem; margin-top: 8px;">
+            Schedule My Free Inspection Now
+          </button>
+          <div class="card-footer-note">
+            <span>ðŸ”’ Your privacy is strictly protected Â· No spam guaranteed</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="container trust-bar-grid">
+      <div class="trust-card">
+        <div class="trust-icon-box">ðŸ“œ</div>
+        <div class="trust-info">
+          <h4>State Licensed</h4>
+          <p>FL License CCC1333142</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon-box">ðŸ†</div>
+        <div class="trust-info">
+          <h4>Certified Installers</h4>
+          <p>GAF & CertainTeed Certified</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon-box">ðŸŽ–ï¸</div>
+        <div class="trust-info">
+          <h4>Veteran-Owned</h4>
+          <p>A+ Rated BBB Accredited</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon-box">âš¡</div>
+        <div class="trust-info">
+          <h4>24/7 Response</h4>
+          <p>Rapid Tarping & Leak Repairs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT PROJECTS SHOWCASE (REAL PHOTOS FROM THE JOB SITES) -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="kicker">Real Local Work</span>
+        <h2 class="section-title">Recent Roofing Projects Across Central Florida</h2>
+        <p class="section-lead">Take a look at our certified crews in action on residential and commercial roofs in Orlando and surrounding counties.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Photo 1: Replacement -->
+        <div class="gallery-item">
+          <div class="gallery-img-wrap">
+            <span class="gallery-tag">Full Replacement</span>
+            <img src="https://drrooferorlando.com/wp-content/uploads/orlando-roof-replacement.jpg" alt="Orlando Roof Replacement">
+          </div>
+          <div class="gallery-body">
+            <h4>Architectural Shingle Replacement</h4>
+            <p>Complete tear-off with secondary water barrier and ring-shank nail renailing in Orlando.</p>
+          </div>
+        </div>
+
+        <!-- Photo 2: Inspection in progress -->
+        <div class="gallery-item">
+          <div class="gallery-img-wrap">
+            <span class="gallery-tag">21-Point Inspection</span>
+            <img src="https://drrooferorlando.com/wp-content/uploads/roof-inspection-florida.jpg" alt="Florida Roof Inspection">
+          </div>
+          <div class="gallery-body">
+            <h4>Detailed Roof Diagnostic & Photo Report</h4>
+            <p>Full surface inspection mapping flashing integrity, tile underlayment, and pipe boots.</p>
+          </div>
+        </div>
+
+        <!-- Photo 3: Certified Roofer -->
+        <div class="gallery-item">
+          <div class="gallery-img-wrap">
+            <span class="gallery-tag">Expert Crew</span>
+            <img src="https://drrooferorlando.com/wp-content/uploads/roofer-orlando.jpg" alt="Certified Roofer Orlando">
+          </div>
+          <div class="gallery-body">
+            <h4>Safety-Certified Master Installers</h4>
+            <p>Every project managed by dedicated W-2 supervisors with 30+ years of Florida experience.</p>
+          </div>
+        </div>
+
+        <!-- Photo 4: Tile & Slates -->
+        <div class="gallery-item">
+          <div class="gallery-img-wrap">
+            <span class="gallery-tag">Tile & Slates</span>
+            <img src="https://drrooferorlando.com/wp-content/uploads/roofing-slates-orlando.jpg" alt="Tile Roofing Orlando">
+          </div>
+          <div class="gallery-body">
+            <h4>Slate & Spanish Tile Restoration</h4>
+            <p>Preserving luxury architectural aesthetics with heavy-duty weatherproofing underneath.</p>
+          </div>
+        </div>
+
+        <!-- Photo 5: Leak Repair -->
+        <div class="gallery-item">
+          <div class="gallery-img-wrap">
+            <span class="gallery-tag">Emergency Dispatch</span>
+            <img src="https://drrooferorlando.com/wp-content/uploads/roofing-leak-repair-orlando.jpg" alt="Roofing Leak Repair Orlando">
+          </div>
+          <div class="gallery-body">
+            <h4>Storm Damage & Emergency Tarping</h4>
+            <p>Rapid response during tropical storm season to prevent interior ceiling collapse.</p>
+          </div>
+        </div>
+
+        <!-- Photo 6: Reroof Complete -->
+        <div class="gallery-item">
+          <div class="gallery-img-wrap">
+            <span class="gallery-tag">Warranty Backed</span>
+            <img src="https://drrooferorlando.com/wp-content/uploads/orlando-roofing-replacement.jpg" alt="Completed Orlando Roof">
+          </div>
+          <div class="gallery-body">
+            <h4>Final Clean-Up & 15-Year Delivery</h4>
+            <p>Double magnetic driveway sweep and written workmanship certificate handed to owner.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION WITH REAL PHOTOS -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="kicker">Full-Service Roofing</span>
+        <h2 class="section-title">Engineered For Florida's Toughest Weather</h2>
+        <p class="section-lead">From emergency leak fixes to complete re-roofs, every service is tailored to the 8th Edition Florida Building Code.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-img-header">
+            <img src="https://drrooferorlando.com/wp-content/uploads/orlando-roof-replacement.jpg" alt="Architectural Shingles">
+          </div>
+          <div class="service-body">
+            <h3>Architectural Shingle Roofing</h3>
+            <p>Engineered for high wind resistance and modern curb appeal. Featuring GAF Timberline HDZ with lifetime manufacturer protection.</p>
+            <ul class="spec-list">
+              <li>âœ” Wind rated up to 130 mph</li>
+              <li>âœ” Class A fire resistance</li>
+              <li>âœ” Algae-resistant StainGuard Plusâ„¢</li>
+            </ul>
+            <a href="#estimate" class="service-link">Schedule Shingle Estimate â†’</a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-img-header">
+            <img src="https://drrooferorlando.com/wp-content/uploads/roofing-slates-orlando.jpg" alt="Tile & Metal Systems">
+          </div>
+          <div class="service-body">
+            <h3>Tile & Metal Roofing Systems</h3>
+            <p>The ultimate long-term Florida roof. Standing seam metal and concrete tile that reflects solar heat to slash summer air conditioning bills.</p>
+            <ul class="spec-list">
+              <li>âœ” 50+ year estimated lifespan</li>
+              <li>âœ” Cuts cooling costs by up to 25%</li>
+              <li>âœ” Category 5 hurricane wind rating</li>
+            </ul>
+            <a href="#estimate" class="service-link">Explore Metal & Tile â†’</a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-img-header">
+            <img src="https://drrooferorlando.com/wp-content/uploads/roof-leak-orlando.jpg" alt="Emergency Leak Repair">
+          </div>
+          <div class="service-body">
+            <h3>Emergency Leak Detection & Repair</h3>
+            <p>Water dripping through your ceiling? Our emergency technicians deploy immediately to locate the exact source and execute durable repairs.</p>
+            <ul class="spec-list">
+              <li>âœ” 24/7 priority emergency dispatch</li>
+              <li>âœ” Structural leak source detection</li>
+              <li>âœ” Full insurance damage reports</li>
+            </ul>
+            <a href="tel:+14072039545" class="service-link" style="color: var(--accent);">Call (407) 203-9545 Now â†’</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE & AFTER VISUAL RESTORATION -->
+  <section class="section" id="before-after">
+    <div class="container">
+      <div class="ba-section">
+        <div class="ba-header">
+          <span class="kicker" style="background: rgba(245,158,11,0.2); color: var(--gold);">Before & After Transformation</span>
+          <h2 style="font-family: var(--font-display); font-size: 2.2rem; color: #FFF; margin: 12px 0;">See the Difference Quality Makes</h2>
+          <p style="color: #CBD5E1;">A neglected or storm-damaged roof threatens your home's foundation. Here is how our crews restore safety and curb appeal.</p>
+        </div>
+
+        <div class="ba-grid">
+          <!-- Before Card -->
+          <div class="ba-card">
+            <div class="ba-img">
+              <span class="ba-badge before">Before: Active Water Damage</span>
+              <img src="https://drrooferorlando.com/wp-content/uploads/roof-leak-orlando.jpg" alt="Damaged Roof Before">
+            </div>
+            <div class="ba-text">
+              <h4>Severe Leak & Rotten Underlayment</h4>
+              <p>Old, degraded materials causing ceiling staining, attic moisture buildup, and imminent collapse danger during tropical rainfall.</p>
+            </div>
+          </div>
+
+          <!-- After Card -->
+          <div class="ba-card">
+            <div class="ba-img">
+              <span class="ba-badge after">After: Certified Restoration</span>
+              <img src="https://drrooferorlando.com/wp-content/uploads/orlando-roof-replacement.jpg" alt="Restored Roof After">
+            </div>
+            <div class="ba-text">
+              <h4>Storm-Hardened Florida Code Build</h4>
+              <p>Completely stripped, renailed with ring-shank fasteners, sealed with a secondary water barrier, and finished with architectural shingles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="section section-alt" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="kicker">How We Work</span>
+        <h2 class="section-title">A Seamless, 4-Step Roofing Experience</h2>
+        <p class="section-lead">We take the stress out of roof replacements and insurance claims. Here is what to expect from day one.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h4>Free Roof Analysis</h4>
+          <p>A certified project manager inspects your entire roof, documenting all issues with high-resolution photos and diagnostic reports.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h4>Transparent Estimate</h4>
+          <p>You receive an itemized proposal with zero hidden fees. We guide you through shingle/tile colors, warranties, and insurance options.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h4>Expert Installation</h4>
+          <p>Our experienced crew completes most residential roofs in 1 to 2 days, strictly adhering to Florida Building Code renailing and sealing.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <h4>Spotless Clean & Warranty</h4>
+          <p>We run magnetic rollers across your lawn twice to remove every nail, followed by the final city inspection and your 15-year warranty delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof / Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="kicker">Customer Satisfaction</span>
+        <h2 class="section-title">Trusted by Hundreds of Orlando Homeowners</h2>
+        <p class="section-lead">Read what your neighbors say about our reliability, speed, and craftsmanship.</p>
+      </div>
+
+      <div class="reviews-badge-hero">
+        <div class="google-badge-box">
+          <span style="font-weight: 800; font-size: 1.1rem; color: #0F172A;">Google Rating: <strong>4.9 / 5.0</strong></span>
+          <span style="color: var(--gold); font-size: 1.2rem;">â˜…â˜…â˜…â˜…â˜…</span>
+          <span style="color: var(--text-muted); font-size: 0.9rem;">(133 verified local reviews)</span>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">â˜…â˜…â˜…â˜…â˜…</div>
+          <p class="review-quote">
+            "After Hurricane season I had missing shingles and water leaks in two bedrooms. Roofer Orlando was out the next morning, tarped it immediately, and helped us navigate the entire insurance claim. The new roof looks incredible!"
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <div class="author-name">Michael R.</div>
+              <div class="author-loc">Windermere, Orlando</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">â˜…â˜…â˜…â˜…â˜…</div>
+          <p class="review-quote">
+            "Honest contractors are hard to find in Florida. Two other companies told me I needed a complete $22,000 replacement. Roofer Orlando inspected it, found the pipe boot was cracked, and repaired it for a fraction of the cost. True integrity."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">SD</div>
+            <div>
+              <div class="author-name">Sarah D.</div>
+              <div class="author-loc">Winter Park, FL</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">â˜…â˜…â˜…â˜…â˜…</div>
+          <p class="review-quote">
+            "They completed our architectural shingle reroof in just two days. The crew was polite, on time, and left my driveway and yard cleaner than they found it. Their 15-year workmanship warranty gave us complete peace of mind."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">JT</div>
+            <div>
+              <div class="author-name">James T.</div>
+              <div class="author-loc">Orlando (Conway area)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="kicker">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-lead">Everything you need to know about roof replacements, insurance, and costs in Central Florida.</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-q">How much does a typical roof replacement cost in Orlando?</div>
+          <div class="faq-a">
+            Roof replacements in Central Florida typically range from $7,000 to $16,000+ for asphalt shingles depending on square footage, pitch, and code requirements. Tile and standing seam metal roofs sit higher due to their 40-50+ year lifespans. We provide free on-site inspections with exact, written pricing.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Are you licensed and insured in the State of Florida?</div>
+          <div class="faq-a">
+            Yes. We hold an active Certified Roofing Contractor license (CCC1333142) issued by the Florida Department of Business and Professional Regulation (DBPR). We also carry $2,000,000 in general liability and complete workers' compensation insurance.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How long does a roof replacement take?</div>
+          <div class="faq-a">
+            Most single-family residential shingle replacements in the Orlando area are finished in 1 to 2 days, weather permitting. Tile and complex metal projects typically take 3 to 5 days.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Will my homeowner's insurance cover roof damage?</div>
+          <div class="faq-a">
+            If your roof has sustained damage from storms, hail, fallen branches, or high winds, your homeowner's insurance policy often covers the replacement cost minus your deductible. We provide complete photo documentation and damage reports to assist your adjuster.
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Call to Action Banner with Photo Background -->
+      <div class="cta-banner">
+        <h2>Don't Wait for the Next Orlando Storm to Test Your Roof.</h2>
+        <p>Book your 100% free, no-obligation 21-point roof inspection today. Find out exactly how many years your roof has left.</p>
+        <div class="cta-actions">
+          <a href="#estimate" class="btn btn-gold" style="padding: 16px 36px; font-size: 1.05rem;">Schedule Free Inspection â†’</a>
+          <a href="tel:+14072039545" class="btn btn-outline" style="border-color: #FFF; color: #FFF; padding: 16px 28px;">
+            ðŸ“ž Call (407) 203-9545
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <img src="https://drrooferorlando.com/wp-content/uploads/logo-roofer-orlando.png" alt="Roofer Orlando Logo" style="height: 40px; width: auto;">
+          </div>
+          <p style="line-height: 1.6; margin-bottom: 16px;">
+            Orlando's trusted local roofing contractor. Certified, insured, and dedicated to protecting Central Florida homes with superior craftsmanship.
+          </p>
+          <p style="color: #E2E8F0; font-weight: 700;">FL State License #CCC1333142</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Architectural Shingles</a></li>
+            <li><a href="#services">Metal Roofing</a></li>
+            <li><a href="#services">Tile Underlayment</a></li>
+            <li><a href="#services">Emergency Tarping</a></li>
+            <li><a href="#services">Commercial TPO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <ul class="footer-links">
+            <li>Downtown Orlando & Metro</li>
+            <li>Winter Park & Maitland</li>
+            <li>Windermere & Dr. Phillips</li>
+            <li>Kissimmee & St. Cloud</li>
+            <li>Altamonte Springs & Lake Mary</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Contact</h4>
+          <p style="margin-bottom: 8px;"><strong>Phone:</strong> <a href="tel:+14072039545" style="color: var(--gold);">(407) 203-9545</a></p>
+          <p style="margin-bottom: 8px;"><strong>Email:</strong> cs@drrooferflorida.com</p>
+          <p style="margin-bottom: 8px;"><strong>Hours:</strong> Mon - Sun: 24/7 Emergency Dispatch</p>
+          <p><strong>HQ:</strong> Orange County, Orlando, FL 32801</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>Â© 2026 Roofer Orlando / Sunny Roofing. All rights reserved. Built to Florida Building Code standards.</div>
+        <div>License CCC1333142 Â· GAF Certified Â· CertainTeed ShingleMaster</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Call Button for Mobile & Quick Access -->
+  <a href="tel:+14072039545" class="floating-call" title="Call Roofer Orlando">
+    <span>ðŸ“ž (407) 203-9545</span>
+    <span style="font-size: 0.8rem; background: rgba(0,0,0,0.15); padding: 2px 8px; border-radius: 10px;">24/7</span>
+  </a>
+
+<!-- PROSPECTOR-EDITOR-START -->
+<style id="pe-style">
+#pe-bar{position:fixed;top:0;left:0;right:0;z-index:99999;background:#111;color:#fff;font:14px/1 -apple-system,Segoe UI,Roboto,sans-serif;display:flex;align-items:center;gap:16px;padding:10px 16px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+#pe-bar button{background:#22c55e;color:#fff;border:0;border-radius:8px;padding:8px 16px;font-weight:600;cursor:pointer}
+#pe-bar button:hover{background:#16a34a}
+body{margin-top:44px !important}
+.pe-hover{outline:2px dashed #22c55e !important;outline-offset:2px;cursor:pointer}
+[contenteditable="true"]:focus{outline:2px solid #3b82f6 !important;outline-offset:2px}
+</style>
+<div id="pe-bar">
+  <strong>Modo edição</strong>
+  <span>Clique em textos para editar · clique em imagens para trocar</span>
+  <button id="pe-export" type="button">Exportar página</button>
+</div>
+<input type="file" id="pe-file" accept="image/*" style="display:none">
+<script id="pe-script">
+(function(){
+  var TEXT='h1,h2,h3,h4,h5,h6,p,li,a,span,button,td,th,figcaption,blockquote,strong,em';
+  document.querySelectorAll(TEXT).forEach(function(el){
+    if(el.closest('#pe-bar'))return;
+    if(el.children.length===0||el.childElementCount<=1){
+      el.addEventListener('click',function(e){
+        if(el.tagName==='A'||el.tagName==='BUTTON')e.preventDefault();
+        el.setAttribute('contenteditable','true');el.focus();
+      });
+      el.addEventListener('mouseenter',function(){el.classList.add('pe-hover')});
+      el.addEventListener('mouseleave',function(){el.classList.remove('pe-hover')});
+      el.addEventListener('blur',function(){el.removeAttribute('contenteditable')});
+    }
+  });
+  var fileInput=document.getElementById('pe-file'),currentImg=null;
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();currentImg=img;fileInput.click()});
+    img.addEventListener('mouseenter',function(){img.classList.add('pe-hover')});
+    img.addEventListener('mouseleave',function(){img.classList.remove('pe-hover')});
+  });
+  fileInput.addEventListener('change',function(){
+    var f=fileInput.files[0];if(!f||!currentImg)return;
+    var r=new FileReader();
+    r.onload=function(){currentImg.src=r.result;if(currentImg.srcset)currentImg.removeAttribute('srcset')};
+    r.readAsDataURL(f);fileInput.value='';
+  });
+  document.getElementById('pe-export').addEventListener('click',function(){
+    var doc=document.documentElement.cloneNode(true);
+    ['#pe-bar','#pe-style','#pe-script','#pe-file'].forEach(function(s){var n=doc.querySelector(s);if(n)n.remove()});
+    doc.querySelectorAll('[contenteditable]').forEach(function(n){n.removeAttribute('contenteditable')});
+    doc.querySelectorAll('.pe-hover').forEach(function(n){n.classList.remove('pe-hover')});
+    var html='<!DOCTYPE html>\n'+doc.outerHTML;
+    var blob=new Blob([html],{type:'text/html'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='index.html';a.click();
+  });
+})();
+</script>
+<!-- PROSPECTOR-EDITOR-END -->
+</body>
+</html>

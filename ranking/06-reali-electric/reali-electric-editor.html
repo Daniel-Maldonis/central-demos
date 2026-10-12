@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reali Electric Co. | St. Petersburg Licensed Electrician | Older Home Specialists</title>
+  <meta name="description" content="St. Petersburg's master electrical contractor (FL Lic #ES12002209). 26+ years specializing in residential upgrades, older historic homes, panel replacements, and EV chargers. Call (727) 914-5714.">
+  <style>
+    :root {
+      --navy: #0F172A;
+      --navy-light: #1E293B;
+      --copper: #D97706;
+      --copper-hover: #B45309;
+      --copper-soft: #FEF3C7;
+      --amber: #F59E0B;
+      --slate: #334155;
+      --muted: #64748B;
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --line: #E2E8F0;
+      --green: #059669;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--navy);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    /* Top Strip */
+    .top-bar {
+      background: var(--navy);
+      color: #94A3B8;
+      font-size: 13px;
+      padding: 8px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .license-tag {
+      background: rgba(217, 119, 6, 0.2);
+      color: #FBBF24;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 11px;
+    }
+    .top-bar a { color: #F8FAFC; text-decoration: none; font-weight: 600; }
+    .top-bar a:hover { color: #FBBF24; }
+
+    /* Header */
+    header {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--navy);
+    }
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 22px;
+      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+    }
+    .brand-text h1 {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .brand-text span {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--slate);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--copper); }
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .phone-box {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      text-decoration: none;
+    }
+    .phone-box span { font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; }
+    .phone-box strong { font-size: 17px; font-weight: 800; color: var(--navy); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .btn-copper {
+      background: var(--copper);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3);
+    }
+    .btn-copper:hover { background: var(--copper-hover); transform: translateY(-1px); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 55%, #182234 100%);
+      color: #FFFFFF;
+      padding: 64px 20px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #FDE68A;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-size: clamp(32px, 4.4vw, 50px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+      color: #F8FAFC;
+    }
+    .hero-title em { font-style: normal; color: #F59E0B; }
+    .hero-sub {
+      font-size: 17px;
+      color: #CBD5E1;
+      margin-bottom: 28px;
+      max-width: 580px;
+      line-height: 1.6;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 24px;
+      margin-top: 28px;
+    }
+    .stat-num { font-size: 26px; font-weight: 800; color: #F59E0B; line-height: 1; margin-bottom: 4px; }
+    .stat-lbl { font-size: 12px; color: #94A3B8; font-weight: 500; }
+
+    /* Lead Form */
+    .hero-card {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 32px 26px;
+      color: var(--navy);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+    .hero-card h3 { font-size: 20px; font-weight: 800; }
+    .hero-card p { font-size: 13px; color: var(--muted); margin: 4px 0 18px; }
+    .form-group { margin-bottom: 14px; }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--slate);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+    .form-control {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--navy);
+      background: #F8FAFC;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--copper);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--copper);
+      color: #fff;
+      font-weight: 800;
+      font-size: 15px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 6px;
+    }
+    .submit-btn:hover { background: var(--copper-hover); }
+
+    /* Trust Proof Bar */
+    .proof-bar {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--line);
+      padding: 24px 20px;
+    }
+    .proof-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--slate);
+    }
+    .proof-check { color: var(--green); font-size: 18px; }
+
+    /* Services */
+    .section { padding: 80px 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .sec-head {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+    .sec-tag {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--copper);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .sec-title {
+      font-size: clamp(26px, 3.2vw, 38px);
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .sec-desc { color: var(--muted); font-size: 16px; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 30px;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--copper);
+      box-shadow: 0 16px 30px rgba(217, 119, 6, 0.1);
+    }
+    .card-icon {
+      width: 54px;
+      height: 54px;
+      background: var(--copper-soft);
+      color: var(--copper);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .card h3 { font-size: 19px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+    .card p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
+    .card-list { list-style: none; font-size: 13px; color: var(--slate); margin-bottom: 20px; }
+    .card-list li { padding: 4px 0; display: flex; align-items: center; gap: 8px; }
+    .card-list li::before { content: "✓"; color: var(--green); font-weight: 800; }
+    .card-link { font-size: 14px; font-weight: 700; color: var(--copper); text-decoration: none; }
+    .card-link:hover { text-decoration: underline; }
+
+    /* Frank Reali Experience Box */
+    .master-box {
+      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+      color: #FFFFFF;
+      border-radius: 16px;
+      padding: 44px 36px;
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 34px;
+      align-items: center;
+    }
+    .badge-26 {
+      width: 100px;
+      height: 100px;
+      background: var(--copper);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 30px rgba(217, 119, 6, 0.4);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .badge-26 strong { font-size: 28px; line-height: 1; font-weight: 800; }
+    .badge-26 span { font-size: 10px; font-weight: 700; text-transform: uppercase; }
+    .master-text h3 { font-size: 26px; font-weight: 800; margin-bottom: 12px; color: #F8FAFC; }
+    .master-text p { font-size: 15px; color: #CBD5E1; line-height: 1.6; margin-bottom: 18px; }
+
+    /* Interactive Estimator */
+    .calc-box-wrap {
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 40px;
+      margin: 60px auto 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+    .calc-box-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin: 24px 0;
+    }
+    .calc-btn {
+      border: 2px solid var(--line);
+      border-radius: 10px;
+      padding: 16px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .calc-btn:hover, .calc-btn.active {
+      border-color: var(--copper);
+      background: var(--copper-soft);
+    }
+    .calc-btn-title { font-weight: 800; font-size: 15px; color: var(--navy); }
+    .calc-btn-desc { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .calc-disp {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .calc-disp-lbl { font-size: 12px; color: #94A3B8; text-transform: uppercase; font-weight: 700; }
+    .calc-disp-val { font-size: 34px; font-weight: 800; color: #F59E0B; margin: 4px 0; }
+    .calc-disp-sub { font-size: 12px; color: #CBD5E1; }
+
+    /* Reviews */
+    .reviews-bg { background: #F1F5F9; padding: 80px 20px; }
+    .rev-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .rev-card { background: #fff; border-radius: 12px; padding: 26px; border: 1px solid var(--line); }
+    .rev-stars { color: #F59E0B; font-size: 16px; margin-bottom: 10px; }
+    .rev-text { font-size: 14px; color: var(--slate); line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+    .rev-author { display: flex; align-items: center; gap: 10px; }
+    .rev-initial {
+      width: 36px;
+      height: 36px;
+      background: var(--copper-soft);
+      color: var(--copper);
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .rev-info h5 { font-size: 14px; font-weight: 700; color: var(--navy); }
+    .rev-info span { font-size: 11px; color: var(--muted); }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: #94A3B8;
+      padding: 60px 20px 30px;
+      font-size: 13px;
+    }
+    .foot-grid {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 30px;
+    }
+    .foot-col h4 { color: #FFFFFF; font-size: 15px; font-weight: 700; margin-bottom: 14px; }
+    .foot-col ul { list-style: none; }
+    .foot-col ul li { margin-bottom: 8px; }
+    .foot-col ul a { color: #94A3B8; text-decoration: none; }
+    .foot-col ul a:hover { color: #F59E0B; }
+    .foot-bot {
+      max-width: 1200px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+    }
+
+    /* Mobile Bar */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #FFFFFF;
+      border-top: 1px solid var(--line);
+      padding: 10px 16px;
+      z-index: 9999;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+    }
+    .mobile-bar-inner { display: flex; gap: 10px; }
+    .mob-btn {
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .mob-call { background: var(--copper); color: #fff; }
+    .mob-email { background: var(--navy); color: #fff; }
+
+    @media (max-width: 900px) {
+      .hero-container { grid-template-columns: 1fr; }
+      .master-box { grid-template-columns: 1fr; text-align: center; }
+      .foot-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 40px 16px 60px; }
+      .foot-grid { grid-template-columns: 1fr; }
+      .mobile-bar { display: block; }
+      body { padding-bottom: 60px; }
+      .header-cta .btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div>
+      <span class="license-tag">FL STATE LIC #ES12002209</span>
+      <span>⚡ 26+ Years of Master Electrical Craftsmanship in St. Petersburg</span>
+    </div>
+    <div>
+      <span>Direct Office Line: <a href="tel:+17279145714">(727) 914-5714</a></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="brand">
+        <div class="brand-mark">⚡</div>
+        <div class="brand-text">
+          <h1>Reali Electric Co.</h1>
+          <span>St. Petersburg, FL · Frank Reali</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#historic">Older Homes</a></li>
+        <li><a href="#panels">Panel Upgrades</a></li>
+        <li><a href="#calculator">Estimator</a></li>
+        <li><a href="#reviews">5.0★ Reviews</a></li>
+      </ul>
+
+      <div class="header-cta">
+        <a href="tel:+17279145714" class="phone-box">
+          <span>Direct Office Call</span>
+          <strong>(727) 914-5714</strong>
+        </a>
+        <a href="#contact" class="btn btn-copper">Request Estimate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div>
+        <div class="hero-pill">
+          <span>★★★★★ 5.0 Star Rating · 26+ Years Experience</span>
+        </div>
+        <h2 class="hero-title">
+          St. Petersburg's Trusted Specialist for <em>Older Homes & Electrical Upgrades</em>
+        </h2>
+        <p class="hero-sub">
+          Owned and operated by master electrician Frank Reali. Expert knob-and-tube rewiring, 200-Amp breaker panel upgrades, EV wall chargers, and residential remodeling done with meticulous precision.
+        </p>
+
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="tel:+17279145714" class="btn btn-copper" style="font-size:16px; padding:14px 28px;">
+            📞 Call Frank (727) 914-5714
+          </a>
+          <a href="#calculator" class="btn" style="background:rgba(255,255,255,0.1); color:#fff; border:1px solid rgba(255,255,255,0.3);">
+            📊 Project Cost Guide
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">26+</div>
+            <div class="stat-lbl">Years Serving St. Pete</div>
+          </div>
+          <div>
+            <div class="stat-num">5.0 ★</div>
+            <div class="stat-lbl">Perfect Customer Rating</div>
+          </div>
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-lbl">Permitted & Code Compliant</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lead Form -->
+      <div class="hero-card" id="contact">
+        <h3>Contact Reali Electric</h3>
+        <p>Direct communication with Frank Reali · Prompt, courteous reply</p>
+        <form onsubmit="event.preventDefault(); alert('Thank you! Frank Reali will review your inquiry and call you back at ' + document.getElementById('rPhone').value);">
+          <div class="form-group">
+            <label>Service Required</label>
+            <select class="form-control">
+              <option>Older Home / Historic Rewiring</option>
+              <option>200A Breaker Panel Replacement</option>
+              <option>Tesla / EV Home Charger Installation</option>
+              <option>Residential Remodeling & Additions</option>
+              <option>General Electrical Repairs & Code Fixes</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" class="form-control" placeholder="e.g. William Taylor" required>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="rPhone" class="form-control" placeholder="(727) 000-0000" required>
+          </div>
+          <div class="form-group">
+            <label>Neighborhood / Home Age</label>
+            <input type="text" class="form-control" placeholder="Old Northeast, Kenwood, Snell Isle...">
+          </div>
+          <button type="submit" class="submit-btn">⚡ Submit Inquiry to Frank</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof Strip -->
+  <div class="proof-bar">
+    <div class="proof-container">
+      <div class="proof-item"><span class="proof-check">✓</span> FL State License #ES12002209</div>
+      <div class="proof-item"><span class="proof-check">✓</span> Master Electrician On-Site</div>
+      <div class="proof-item"><span class="proof-check">✓</span> Historic Home Specialists</div>
+      <div class="proof-item"><span class="proof-check">✓</span> Clean, Respectful Workmanship</div>
+      <div class="proof-item"><span class="proof-check">✓</span> Fair, Upfront Pricing</div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">Master Craftsmanship</span>
+        <h2 class="sec-title">Electrical Solutions Built to Last</h2>
+        <p class="sec-desc">St. Petersburg has some of Florida's most beautiful vintage architecture. We understand the unique challenges of plaster walls, crawl spaces, and legacy wiring.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Older Homes -->
+        <div class="card" id="historic">
+          <div class="card-icon">🏛️</div>
+          <h3>Older & Historic Home Rewiring</h3>
+          <p>Preserve your home's integrity while eliminating fire hazards from cloth wiring, knob-and-tube, and ungrounded circuits in St. Pete's vintage neighborhoods.</p>
+          <ul class="card-list">
+            <li>Knob-and-tube replacement & safe decommissioning</li>
+            <li>Ungrounded 2-prong to 3-prong outlet updates</li>
+            <li>Careful fishing through lath and plaster walls</li>
+            <li>Full insurance inspection compliance signoffs</li>
+          </ul>
+          <a href="tel:+17279145714" class="card-link">Discuss Your Home's Wiring →</a>
+        </div>
+
+        <!-- Panel Upgrades -->
+        <div class="card" id="panels">
+          <div class="card-icon">🛡️</div>
+          <h3>200-Amp Main Panel Upgrades</h3>
+          <p>Modern air conditioners, induction stoves, and EV chargers overload 100-amp panels. We install code-compliant, modern breaker systems.</p>
+          <ul class="card-list">
+            <li>Replacement of unsafe Zinsco & Challenger boxes</li>
+            <li>Service mast, meter base, and grounding rods</li>
+            <li>Whole-home surge protection installation</li>
+            <li>Seamless city permit & Duke Energy coordination</li>
+          </ul>
+          <a href="tel:+17279145714" class="card-link">Upgrade Your Panel →</a>
+        </div>
+
+        <!-- EV Chargers -->
+        <div class="card">
+          <div class="card-icon">🚗</div>
+          <h3>Tesla & EV Level 2 Charging</h3>
+          <p>Charge at home safely and quickly. Dedicated 240-volt charging circuits installed cleanly in your garage or exterior parking pad.</p>
+          <ul class="card-list">
+            <li>Tesla Wall Connector hardwire installations</li>
+            <li>50A NEMA 14-50 heavy-duty outlets</li>
+            <li>Panel capacity and electrical load verification</li>
+            <li>Neat, code-compliant conduit bending</li>
+          </ul>
+          <a href="tel:+17279145714" class="card-link">Schedule EV Charger Setup →</a>
+        </div>
+
+        <!-- Remodeling -->
+        <div class="card">
+          <div class="card-icon">🔨</div>
+          <h3>Kitchen & Bath Remodel Wiring</h3>
+          <p>Upgrading your kitchen or bathroom? We install dedicated GFCI circuits for dishwashers, disposals, microwaves, and luxury bath ventilation.</p>
+          <ul class="card-list">
+            <li>Under-cabinet and task lighting layout</li>
+            <li>Quiet bathroom exhaust fan wiring</li>
+            <li>Dedicated appliance circuits</li>
+            <li>GFCI moisture-area protection</li>
+          </ul>
+          <a href="tel:+17279145714" class="card-link">Plan Remodeling Electrical →</a>
+        </div>
+
+        <!-- Lighting -->
+        <div class="card">
+          <div class="card-icon">💡</div>
+          <h3>Recessed LED & Fixture Installs</h3>
+          <p>Brighten your living spaces with energy-efficient LED recessed lighting, designer chandelier hanging, and wobble-free ceiling fans.</p>
+          <ul class="card-list">
+            <li>Dimmable canless LED recessed lights</li>
+            <li>Heavy ceiling fan reinforcement boxes</li>
+            <li>Smart dimmer and switch integrations</li>
+            <li>Exterior security and landscape illumination</li>
+          </ul>
+          <a href="tel:+17279145714" class="card-link">Upgrade Lighting Fixtures →</a>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="card">
+          <div class="card-icon">🔍</div>
+          <h3>Diagnostics & Safety Inspections</h3>
+          <p>Electrical issues need experienced eyes. Frank Reali personally diagnoses intermittent faults, flickering circuits, and breaker trips.</p>
+          <ul class="card-list">
+            <li>Comprehensive 4-point electrical inspections</li>
+            <li>Circuit overload & short diagnostics</li>
+            <li>Smoke detector and safety updates</li>
+            <li>Pre-purchase residential electrical evaluations</li>
+          </ul>
+          <a href="tel:+17279145714" class="card-link">Book Inspection with Frank →</a>
+        </div>
+      </div>
+
+      <!-- Estimator -->
+      <div class="calc-box-wrap" id="calculator">
+        <h3 style="text-align:center; font-size:22px; font-weight:800; color:var(--navy);">St. Petersburg Electrical Cost Guide</h3>
+        <p style="text-align:center; color:var(--muted); font-size:14px; margin:6px 0 24px;">Ballpark project ranges based on 26+ years of Pinellas County electrical work</p>
+
+        <div class="calc-box-grid">
+          <div class="calc-btn active" onclick="setRealiCalc(1850, 3600, '200A Main Panel Replacement & Permitting', this)">
+            <div class="calc-btn-title">⚡ 200A Panel Upgrade</div>
+            <div class="calc-btn-desc">Permits, grounding & meter base</div>
+          </div>
+          <div class="calc-btn" onclick="setRealiCalc(2500, 7500, 'Older Home Wiring Remediation', this)">
+            <div class="calc-btn-title">🏛️ Historic Home Rewire</div>
+            <div class="calc-btn-desc">Knob & tube / ungrounded fixes</div>
+          </div>
+          <div class="calc-btn" onclick="setRealiCalc(550, 1150, 'Level 2 EV Charger Dedicated Circuit', this)">
+            <div class="calc-btn-title">🚗 EV Wall Charger</div>
+            <div class="calc-btn-desc">240V 50A garage connection</div>
+          </div>
+          <div class="calc-btn" onclick="setRealiCalc(350, 800, 'LED Recessed Lighting Package', this)">
+            <div class="calc-btn-title">💡 Canless LED Lighting</div>
+            <div class="calc-btn-desc">Kitchen / living room package</div>
+          </div>
+        </div>
+
+        <div class="calc-disp">
+          <div class="calc-disp-lbl" id="realiLabel">Estimated Range for: 200A Main Panel Replacement & Permitting</div>
+          <div class="calc-disp-val" id="realiVal">$1,850 – $3,600</div>
+          <div class="calc-disp-sub">Every home is unique. Frank Reali provides exact on-site binding estimates before starting work.</div>
+        </div>
+      </div>
+
+      <!-- Frank Reali Story -->
+      <div class="master-box">
+        <div>
+          <div class="badge-26">
+            <strong>26+</strong>
+            <span>Years</span>
+          </div>
+        </div>
+        <div class="master-text">
+          <h3>Personal Master Electrician Attention</h3>
+          <p>
+            When you hire Reali Electric Co., you are not getting a revolving door of junior subcontractors. You work directly with Frank Reali — a licensed electrician with more than 26 years of hands-on experience in Pinellas County.
+          </p>
+          <p>
+            We take pride in fair pricing, arriving when we say we will, and leaving your home spotless after completing clean, permitted work that passes municipal inspections with flying colors.
+          </p>
+          <div style="color:#F59E0B; font-weight:800; font-size:15px;">
+            ★ Florida Certified Residential Specialty Contractor #ES12002209
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews-bg" id="reviews">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">Reputation</span>
+        <h2 class="sec-title">What St. Petersburg Neighbors Say</h2>
+        <p class="sec-desc">A perfect 5.0 rating earned through honesty, punctual service, and master craftsmanship.</p>
+      </div>
+
+      <div class="rev-grid">
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">
+            "Frank Reali is the best electrician we've ever hired. He rewired our 1925 bungalow in Old Northeast without damaging our historic trim. Honest, punctual, and very fair with his estimates!"
+          </p>
+          <div class="rev-author">
+            <div class="rev-initial">FR</div>
+            <div class="rev-info">
+              <h5>Richard & Susan K.</h5>
+              <span>Old Northeast · St. Petersburg</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">
+            "Replaced our old fuse box with a 200-amp breaker panel and installed a Tesla charger in the garage. Frank handled the city permit and Duke Energy coordination smoothly. Couldn't be happier!"
+          </p>
+          <div class="rev-author">
+            <div class="rev-initial">DM</div>
+            <div class="rev-info">
+              <h5>David M.</h5>
+              <span>Kenwood Homeowner · St. Pete</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rev-card">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-text">
+            "Knowledgeable, professional, and courteous. Frank diagnosed our tripping kitchen circuits quickly and gave us upfront options. Highly recommend Reali Electric to anyone in Pinellas!"
+          </p>
+          <div class="rev-author">
+            <div class="rev-initial">EL</div>
+            <div class="rev-info">
+              <h5>Elena L.</h5>
+              <span>Snell Isle · St. Petersburg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+          <span style="font-size:22px;">⚡</span>
+          <strong style="color:#FFFFFF; font-size:17px;">Reali Electric Co.</strong>
+        </div>
+        <p style="margin-bottom:14px; line-height:1.6;">
+          Master electrical contractor in St. Petersburg, FL. Owned and operated by Frank Reali. Specializing in older homes, 200A panel upgrades, and EV chargers.
+        </p>
+        <p style="color:#F59E0B; font-weight:700;">FL State License #ES12002209</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Electrical Services</h4>
+        <ul>
+          <li><a href="#historic">Older Home Rewiring</a></li>
+          <li><a href="#panels">200A Panel Replacements</a></li>
+          <li><a href="#services">Tesla / EV Chargers</a></li>
+          <li><a href="#services">Kitchen & Bath Electrical</a></li>
+          <li><a href="#services">Recessed LED Lighting</a></li>
+          <li><a href="#services">Safety Diagnostics</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Neighborhoods</h4>
+        <ul>
+          <li>Old Northeast & Historic Kenwood</li>
+          <li>Snell Isle & Shore Acres</li>
+          <li>Downtown St. Petersburg</li>
+          <li>Gulfport & South Pasadena</li>
+          <li>Seminole & Pinellas Park</li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Office Contact</h4>
+        <ul>
+          <li>📍 P.O. Box 16179, St. Petersburg, FL 33733</li>
+          <li>📞 <a href="tel:+17279145714">(727) 914-5714</a></li>
+          <li>✉️ <a href="mailto:frank@realielectric.com">frank@realielectric.com</a></li>
+          <li>⏰ Mon–Fri: 9:00am – 5:00pm</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bot">
+      <div>
+        © 2026 Reali Electric Co. All rights reserved. Licensed & Insured.
+      </div>
+      <div>
+        <span>Pinellas County Residential Electrical Contractor #ES12002209</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-bar">
+    <div class="mobile-bar-inner">
+      <a href="tel:+17279145714" class="mob-btn mob-call">
+        <span>📞 Call Frank (727) 914-5714</span>
+      </a>
+      <a href="mailto:frank@realielectric.com?subject=Electrical%20Inquiry%20via%20Website" class="mob-btn mob-email">
+        <span>✉️ Email Frank</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function setRealiCalc(min, max, title, btn) {
+      document.querySelectorAll('.calc-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('realiLabel').textContent = 'Estimated Range for: ' + title;
+      document.getElementById('realiVal').textContent = '$' + min.toLocaleString() + ' – $' + max.toLocaleString();
+    }
+  </script>
+<!-- PROSPECTOR-EDITOR-START -->
+<style id="pe-style">
+#pe-bar{position:fixed;top:0;left:0;right:0;z-index:99999;background:#111;color:#fff;font:14px/1 -apple-system,Segoe UI,Roboto,sans-serif;display:flex;align-items:center;gap:16px;padding:10px 16px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+#pe-bar button{background:#22c55e;color:#fff;border:0;border-radius:8px;padding:8px 16px;font-weight:600;cursor:pointer}
+#pe-bar button:hover{background:#16a34a}
+body{margin-top:44px !important}
+.pe-hover{outline:2px dashed #22c55e !important;outline-offset:2px;cursor:pointer}
+[contenteditable="true"]:focus{outline:2px solid #3b82f6 !important;outline-offset:2px}
+</style>
+<div id="pe-bar">
+  <strong>Modo edição</strong>
+  <span>Clique em textos para editar · clique em imagens para trocar</span>
+  <button id="pe-export" type="button">Exportar página</button>
+</div>
+<input type="file" id="pe-file" accept="image/*" style="display:none">
+<script id="pe-script">
+(function(){
+  var TEXT='h1,h2,h3,h4,h5,h6,p,li,a,span,button,td,th,figcaption,blockquote,strong,em';
+  document.querySelectorAll(TEXT).forEach(function(el){
+    if(el.closest('#pe-bar'))return;
+    if(el.children.length===0||el.childElementCount<=1){
+      el.addEventListener('click',function(e){
+        if(el.tagName==='A'||el.tagName==='BUTTON')e.preventDefault();
+        el.setAttribute('contenteditable','true');el.focus();
+      });
+      el.addEventListener('mouseenter',function(){el.classList.add('pe-hover')});
+      el.addEventListener('mouseleave',function(){el.classList.remove('pe-hover')});
+      el.addEventListener('blur',function(){el.removeAttribute('contenteditable')});
+    }
+  });
+  var fileInput=document.getElementById('pe-file'),currentImg=null;
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();currentImg=img;fileInput.click()});
+    img.addEventListener('mouseenter',function(){img.classList.add('pe-hover')});
+    img.addEventListener('mouseleave',function(){img.classList.remove('pe-hover')});
+  });
+  fileInput.addEventListener('change',function(){
+    var f=fileInput.files[0];if(!f||!currentImg)return;
+    var r=new FileReader();
+    r.onload=function(){currentImg.src=r.result;if(currentImg.srcset)currentImg.removeAttribute('srcset')};
+    r.readAsDataURL(f);fileInput.value='';
+  });
+  document.getElementById('pe-export').addEventListener('click',function(){
+    var doc=document.documentElement.cloneNode(true);
+    ['#pe-bar','#pe-style','#pe-script','#pe-file'].forEach(function(s){var n=doc.querySelector(s);if(n)n.remove()});
+    doc.querySelectorAll('[contenteditable]').forEach(function(n){n.removeAttribute('contenteditable')});
+    doc.querySelectorAll('.pe-hover').forEach(function(n){n.classList.remove('pe-hover')});
+    var html='<!DOCTYPE html>\n'+doc.outerHTML;
+    var blob=new Blob([html],{type:'text/html'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='index.html';a.click();
+  });
+})();
+</script>
+<!-- PROSPECTOR-EDITOR-END -->
+</body>
+</html>
